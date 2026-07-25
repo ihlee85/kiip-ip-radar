@@ -25,15 +25,17 @@ DAILY_CAP = 10
 RECENT_DAYS = 7
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/126.0 Safari/537.36",
-      "Accept-Language": "ko,en;q=0.8"}
+      "Accept-Language": "ko,en;q=0.8",
+      "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html, */*"}
 
 # ── 원출처 목록 (KIIP IP 동향 News 인용 출처 역추적 기반) ─────────────
 # type: "rss" = RSS/Atom 피드, "html" = 뉴스목록 페이지 크롤링(간이)
 # 첫 실행 로그의 소스별 상태표를 보고 죽은 피드는 교체/삭제하세요.
 SOURCES = [
     # ── 미국 ──
-    {"type":"rss","country":"US","source":"USPTO",
-     "url":"https://www.uspto.gov/rss/uspto-news.xml"},
+    {"type":"html","country":"US","source":"USPTO",
+     "url":"https://www.uspto.gov/about-us/news-updates",
+     "link_pat":r'/about-us/news-updates/[^"#?]+', "base":"https://www.uspto.gov"},
     {"type":"rss","country":"US","source":"미국 백악관",
      "url":"https://www.whitehouse.gov/presidential-actions/feed/"},
     {"type":"rss","country":"US","source":"Unified Patents",
@@ -42,21 +44,36 @@ SOURCES = [
      "url":"https://ipwatchdog.com/feed/"},
     {"type":"rss","country":"US","source":"Patently-O",
      "url":"https://patentlyo.com/feed"},
+    {"type":"rss","country":"US","source":"Patent Docs",
+     "url":"https://www.patentdocs.org/atom.xml"},
+    {"type":"rss","country":"US","source":"Law360 IP",
+     "url":"https://www.law360.com/ip/rss"},
+    {"type":"html","country":"US","source":"미국 무역대표부(USTR)",
+     "url":"https://ustr.gov/about-us/policy-offices/press-office/press-releases",
+     "link_pat":r'/about-us/policy-offices/press-office/press-releases/[^"#?]+',
+     "base":"https://ustr.gov"},
     # ── 유럽 ──
-    {"type":"rss","country":"EU","source":"EPO",
-     "url":"https://www.epo.org/en/rss/news"},
+    {"type":"html","country":"EU","source":"EPO",
+     "url":"https://www.epo.org/en/news-events/news",
+     "link_pat":r'/en/news-events/news/[^"#?]+', "base":"https://www.epo.org"},
     {"type":"rss","country":"EU","source":"영국 지식재산청(UKIPO)",
      "url":"https://www.gov.uk/government/organisations/intellectual-property-office.atom"},
     {"type":"rss","country":"EU","source":"JUVE Patent",
      "url":"https://www.juve-patent.com/feed/"},
     # ── 일본 (RSS 미제공 → 간이 크롤) ──
     {"type":"html","country":"JP","source":"일본 특허청(JPO)",
-     "url":"https://www.jpo.go.jp/news/index.html",
-     "link_pat":r'/news/[^"]+\.html', "base":"https://www.jpo.go.jp"},
+     "url":"https://www.jpo.go.jp/news/press/index.html",
+     "link_pat":r'/news/press/[^"]+\.html', "base":"https://www.jpo.go.jp"},
+    {"type":"html","country":"JP","source":"JETRO",
+     "url":"https://www.jetro.go.jp/biznews/",
+     "link_pat":r'/biznews/\d{4}/\d{2}/[^"]+\.html', "base":"https://www.jetro.go.jp"},
     # ── 중국 (RSS 미제공 → 간이 크롤; 해외 러너에서 차단될 수 있음) ──
     {"type":"html","country":"CN","source":"중국 국가지식산권국(CNIPA)",
      "url":"https://www.cnipa.gov.cn/col/col61/index.html",
      "link_pat":r'/art/[^"]+\.html', "base":"https://www.cnipa.gov.cn"},
+    {"type":"html","country":"CN","source":"인민망 지식재산",
+     "url":"http://ip.people.com.cn/",
+     "link_pat":r'/n1/\d{4}/\d{4}/[^"]+\.html', "base":"http://ip.people.com.cn"},
     # ── 국제기구 ──
     {"type":"rss","country":"INT","source":"WIPO",
      "url":"https://www.wipo.int/pressroom/en/rss.xml"},
@@ -68,6 +85,9 @@ SOURCES = [
 KIIP_TREND_RSS = "https://www.kiip.re.kr/rss/list.do?rsskey=trend"
 
 TOPICS = ["AI·IP", "정책·법제", "심사·제도", "분쟁·소송", "보호·집행", "통계·보고서"]
+# 자국 행정 소식만 내는 관청 소스는 국가를 고정 (AI 오분류 방지)
+OFFICE_COUNTRY = {"일본 특허청(JPO)": "JP", "중국 국가지식산권국(CNIPA)": "CN",
+                  "인민망 지식재산": "CN", "JETRO": "JP", "미국 무역대표부(USTR)": "US"}
 COUNTRIES = ["US", "CN", "JP", "EU", "KR", "INT", "ETC"]
 
 CLASSIFY_PROMPT = """당신은 한국지식재산연구원 'IP 동향 News' 담당자를 지원하는 수집 에이전트입니다.
@@ -75,7 +95,7 @@ CLASSIFY_PROMPT = """당신은 한국지식재산연구원 'IP 동향 News' 담�
 선별 결과는 담당자가 검수 후 게재 여부를 결정하는 '초안 후보'로 쓰입니다.
 
 선별 규칙:
-1. 관련 없는 항목, 단순 홍보·행사 안내는 제외
+1. 관련 없는 항목, 단순 홍보·행사 안내는 제외. 단, 관청 공식 발표(JPO·CNIPA·USPTO·EPO 등)는 휴무·조달·시스템점검 같은 행정공지가 아닌 한 관련성을 폭넓게 인정하세요. 일본어·중국어 후보는 제목만으로 판단하되 언어를 이유로 제외하지 마세요.
 2. [KIIP 기게재 목록] 또는 [최근 아카이브]와 사실상 같은 사건은 제외 (이미 다룬 소식)
 3. 같은 사건의 후보가 여럿이면 가장 원출처에 가까운 것 1건만 선택
 4. 기본 상한 {cap}건, 정책적 중요도가 높은 순
@@ -85,7 +105,7 @@ CLASSIFY_PROMPT = """당신은 한국지식재산연구원 'IP 동향 News' 담�
 {{"idx": 후보번호,
   "topic": {topics} 중 하나 (핵심 주제 1개),
   "ai": AI·데이터 관련 여부 true/false,
-  "country": {countries} 중 하나 (기사 내용 기준. 미국=US, 중국=CN, 일본=JP, 유럽 각국=EU, 한국=KR, WIPO 등 국제기구=INT, 그 외=ETC),
+  "country": {countries} 중 하나. 판별 기준은 '행위 주체 기관의 소속 국가'입니다. 예: CNIPA(중국 지식산권국) 발표는 국제협력 내용이라도 CN, JPO 발표는 JP, 영국 지식재산청은 EU. WIPO·WTO 등 국제기구가 행위 주체일 때만 INT.
   "title_ko": "한국어 제목 (KIIP 동향뉴스 문체: '주체, 행위' 형식. 예: '미국 백악관, ○○ 행정명령 발표')",
   "summary_ko": "2문장 이내 한국어 요약 (사실 위주, 원문 문장 복제 금지)"}}
 
@@ -177,6 +197,11 @@ def fetch_kiip_published():
             parsed = feedparser.parse(resp.content)
             titles = [re.sub(r"\s+", " ", e.get("title", "")).strip()
                       for e in parsed.entries[:60]]
+            if not titles:  # 비표준 RSS 대비 수동 파싱 폴백
+                raw = resp.content.decode(resp.apparent_encoding or "utf-8", "ignore")
+                titles = [re.sub(r"\s+", " ", t).strip()
+                          for t in re.findall(r"<item>.*?<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>",
+                                              raw, re.S)][:60]
             print(f"KIIP 대조({url.split(':')[0]}): HTTP {resp.status_code}, "
                   f"{len(titles)}건, content-type={resp.headers.get('content-type','?')[:40]}")
             if titles:
@@ -217,7 +242,7 @@ def classify(candidates, archive, kiip_titles):
         except (KeyError, ValueError, IndexError):
             continue
         topic = p.get("topic", "정책·법제")
-        country = p.get("country", c.get("chint", "ETC"))
+        country = OFFICE_COUNTRY.get(c["source"]) or p.get("country", c.get("chint", "ETC"))
         results.append({"id": c["id"], "date": c["date"],
                         "country": country if country in COUNTRIES else "ETC",
                         "source": c["source"],
