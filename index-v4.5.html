@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KIIP Global IP Radar — 글로벌 지식재산 동향 아카이브</title>
+<meta name="description" content="한국지식재산연구원 시범 프로젝트 — AI가 매일 수집·중복제거한 글로벌 IP 뉴스 아카이브">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --blue:#1668C4;      /* KIIP 블루 */
+  --blue-soft:#EAF2FC;
+  --cyan:#29B6EA;
+  --green:#97B23A;     /* KIIP 연두 포인트 */
+  --navy:#16295E;
+  --ink:#232B38;
+  --muted:#7A859B;
+  --line:#E6EAF1;
+  --bg:#F7F9FC;
+  --r:12px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Pretendard Variable",Pretendard,-apple-system,"Malgun Gothic",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+svg.flag{width:22px;height:15px;border-radius:2.5px;box-shadow:0 0 0 1px rgba(0,0,0,.07);flex-shrink:0}
+
+/* ═══ 헤더 ═══ */
+header{background:#fff;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:12px;padding:14px 20px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo .mark{font-weight:900;font-size:1.25rem;letter-spacing:-.02em;color:var(--blue)}
+.logo .mark i{font-style:normal;position:relative}
+.logo .mark i::before{content:"";position:absolute;top:.09em;left:50%;transform:translateX(-50%);width:.26em;height:.26em;border-radius:50%}
+.logo .mark i.g::before{background:var(--green)}
+.logo .mark i.b::before{background:var(--cyan)}
+.logo .name{font-size:.98rem;font-weight:800}
+.logo .name small{display:block;font-size:.68rem;font-weight:500;color:var(--muted);line-height:1.2}
+.head-right{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:.78rem;color:var(--muted)}
+.badge-live{display:flex;align-items:center;gap:6px;background:var(--blue-soft);color:var(--blue);font-weight:700;border-radius:99px;padding:5px 12px}
+.badge-live .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+
+/* ═══ 인트로 스트립 ═══ */
+.intro{background:linear-gradient(100deg,var(--blue) 0%,#2E86D8 70%,#3FA3E6 100%);color:#fff}
+.intro .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;padding:16px 20px}
+.intro p{font-size:.86rem;color:#E3EFFB}
+.intro p b{color:#fff}
+.intro .nums{margin-left:auto;display:flex;gap:18px;font-size:.78rem;color:#CDE3F8}
+.intro .nums b{display:block;font-size:1.05rem;color:#fff;font-variant-numeric:tabular-nums;line-height:1.2}
+
+/* ═══ 스티키 필터 툴바 ═══ */
+.toolbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(22,41,94,.04)}
+.toolbar .wrap{display:flex;flex-direction:column;gap:10px;padding:12px 20px}
+.tb-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.searchbox{display:flex;align-items:center;flex:1;min-width:230px;background:var(--bg);
+  border:1.5px solid var(--line);border-radius:99px;padding:0 6px 0 16px;transition:border-color .15s}
+.searchbox:focus-within{border-color:var(--blue);background:#fff}
+.searchbox svg{width:17px;height:17px;stroke:var(--muted);flex-shrink:0}
+.searchbox input{flex:1;border:none;background:transparent;font-size:.9rem;padding:10px;color:var(--ink);min-width:0}
+.searchbox input::placeholder{color:#A6B0C2}
+.searchbox .clear{font-size:.75rem;color:var(--muted);padding:6px 10px;border-radius:99px}
+.searchbox .clear:hover{background:var(--line)}
+.chip{display:flex;align-items:center;gap:7px;border:1.5px solid var(--line);background:#fff;
+  border-radius:99px;padding:7px 14px;font-size:.83rem;font-weight:600;color:#49556C;transition:all .13s}
+.chip:hover{border-color:var(--blue);color:var(--blue)}
+.chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.chip.on svg.flag{box-shadow:0 0 0 1.5px rgba(255,255,255,.7)}
+.chip .n{font-size:.72rem;opacity:.65;font-weight:500}
+.tb-label{font-size:.74rem;font-weight:700;color:var(--muted);margin-right:2px;flex-shrink:0}
+.resetAll{font-size:.78rem;color:var(--muted);text-decoration:underline;margin-left:auto;flex-shrink:0}
+.resetAll:hover{color:var(--blue)}
+
+/* ═══ 결과 영역 ═══ */
+main{padding:22px 0 50px}
+.result-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.result-head h2{font-size:1.05rem;font-weight:800}
+.result-head .cnt{font-size:.8rem;color:var(--muted)}
+.result-head .sort{margin-left:auto;display:flex;gap:2px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px}
+.result-head .sort button{font-size:.76rem;font-weight:600;color:var(--muted);border-radius:99px;padding:4px 12px}
+.result-head .sort button.on{background:var(--blue-soft);color:var(--blue)}
+
+/* 날짜 그룹 */
+.dgroup{margin-top:20px}
+.dhead{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.dhead .d{font-size:.82rem;font-weight:800;color:var(--blue)}
+.dhead .line{flex:1;height:1px;background:var(--line)}
+.dhead .dn{font-size:.72rem;color:var(--muted)}
+
+/* 뉴스 카드 행 */
+.news{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:15px 18px;margin-bottom:8px;transition:border-color .13s,box-shadow .13s}
+.news:hover{border-color:#BFD4EE;box-shadow:0 4px 14px rgba(22,104,196,.08)}
+.news .flagcol{padding-top:3px}
+.news .body{flex:1;min-width:0}
+.news .meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.74rem;color:var(--muted)}
+.news .topic{color:var(--blue);background:var(--blue-soft);border-radius:5px;padding:1px 8px;font-weight:700}
+.aibadge{color:#fff;background:var(--green);border-radius:5px;padding:1px 7px;font-weight:800;font-size:.68rem;letter-spacing:.03em}
+.news h3{font-size:.99rem;font-weight:700;letter-spacing:-.01em;line-height:1.5;margin:3px 0 2px}
+.news:hover h3{color:var(--blue)}
+.news .sum{font-size:.83rem;color:#66718A}
+.news .arrow{align-self:center;color:#C3CBDA;font-size:1.1rem;flex-shrink:0}
+.news:hover .arrow{color:var(--blue)}
+
+.empty{background:#fff;border:1px dashed var(--line);border-radius:var(--r);text-align:center;color:var(--muted);padding:54px 16px;margin-top:20px;font-size:.9rem}
+.empty button{color:var(--blue);text-decoration:underline;font-size:.9rem}
+.list-foot{display:flex;justify-content:center;padding-top:18px}
+.more{background:#fff;border:1.5px solid var(--line);border-radius:99px;padding:11px 42px;font-size:.88rem;font-weight:700}
+.more:hover{border-color:var(--blue);color:var(--blue)}
+
+/* ═══ 하단 안내 & 푸터 ═══ */
+.about{background:#fff;border-top:1px solid var(--line);padding:26px 0}
+.about .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 26px;font-size:.8rem;color:#5A6478}
+.about h4{font-size:.82rem;color:var(--blue);margin-bottom:2px}
+.about a{color:var(--blue);text-decoration:underline}
+footer{background:var(--navy);color:#9FB0C6;font-size:.76rem;padding:22px 0;line-height:1.8;text-align:center}
+footer b{color:#fff}
+
+@media(max-width:720px){
+  .intro .nums{margin-left:0;width:100%;justify-content:space-between}
+  .news{padding:13px 14px}
+  .news .arrow{display:none}
+  .head-right span.hide-m{display:none}
+}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="logo" href="#" onclick="location.reload();return false">
+    <span class="mark">K<i class="g">i</i><i class="b">i</i>P</span>
+    <span class="name">Global IP Radar<small>글로벌 지식재산 동향 아카이브</small></span>
+  </a>
+  <div class="head-right">
+    <span class="hide-m">한국지식재산연구원 시범 서비스</span>
+    <span class="badge-live"><span class="dot"></span><span id="lastUpdated">기준일 —</span></span>
+  </div>
+</div></header>
+
+<div class="intro"><div class="wrap">
+  <p><b>AI가 매일 오전 6시,</b> IP5 관청·WIPO·전문매체를 스캔해 중복을 제거하고 요약해 쌓아둡니다. 본문 없이 요약과 원문 링크만 제공합니다.</p>
+  <div class="nums">
+    <span><b id="numTotal">—</b>누적 뉴스</span>
+    <span><b id="numWeek">—</b>최근 7일</span>
+    <span><b>6</b>주제 분류</span>
+  </div>
+</div></div>
+
+<div class="toolbar"><div class="wrap">
+  <div class="tb-row">
+    <div class="searchbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+      <input type="search" id="q" placeholder="검색어 입력 (예: AI 발명, 상표, 심사)" aria-label="키워드 검색">
+      <button class="clear" id="qClear" hidden>지우기</button>
+    </div>
+    <span class="resetAll" id="resetBtn" role="button" tabindex="0">전체 초기화</span>
+  </div>
+  <div class="tb-row" id="countryRow"><span class="tb-label">국가</span></div>
+  <div class="tb-row" id="topicRow"><span class="tb-label">주제</span></div>
+</div></div>
+
+<main class="wrap">
+  <div class="result-head">
+    <h2 id="resultTitle">전체 동향</h2>
+    <span class="cnt" id="countLabel">—</span>
+    <div class="sort" role="group" aria-label="정렬">
+      <button id="sortNew" class="on">최신순</button>
+      <button id="sortOld">오래된순</button>
+    </div>
+  </div>
+  <div id="board" aria-live="polite"></div>
+  <div class="list-foot"><button class="more" id="moreBtn" hidden>더 보기</button></div>
+</main>
+
+<div class="about"><div class="wrap">
+  <div><h4>수집 대상</h4>IP5 관청(한·미·중·일·유럽), WIPO, 신뢰도 높은 전문매체의 지식재산 정책·법제·심사·분쟁·통계 뉴스</div>
+  <div><h4>AI 처리</h4>관련성 판단 → 중복제거 → 주제분류 → 2문장 한글 요약 순으로 자동 처리 후 매일 누적</div>
+  <div><h4>더 찾아보기</h4><a href="https://www.kiip.re.kr/board/trend/list.do?bd_gb=trend&bd_cd=1&bd_item=0" target="_blank" rel="noopener">연구원 IP 동향 News</a> · <a href="https://www.kiip.re.kr/law/list.do?bd_gb=statute&bd_cd=1&bd_item=0" target="_blank" rel="noopener">해외법령정보</a></div>
+</div></div>
+
+<footer><div class="wrap">
+  <b>KIIP Global IP Radar (시범)</b> — 한국지식재산연구원 공식 누리집이 아닌 AI 활용 업무혁신 시범 프로젝트입니다.<br>
+  뉴스 본문을 재게시하지 않으며 AI 요약과 원문 링크만 제공합니다 · Generated with Claude
+</div></footer>
+
+<script>
+/* 배포 후에는 GitHub Actions가 data/news.json 을 매일 갱신합니다. 아래는 시연용 예시 데이터입니다. */
+const SEED = [
+ {date:"2026-07-23",country:"KR",office:"KIPO",source:"지식재산처",ai:true,topic:"심사·제도",
+  title:"지식재산처, AI를 활용하여 창작한 디자인에 대한 출원가이드 배포",
+  summary:"AI를 활용해 창작한 디자인의 출원 요건과 기재 방법을 안내하는 가이드를 배포. AI 창작 디자인의 심사 기준 명확화가 목적.",
+  url:"https://www.kiip.re.kr/board/trend/view.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=KR&po_no=24572"},
+ {date:"2026-07-22",country:"US",office:"기타",source:"Unified Patents",ai:false,topic:"분쟁·소송",
+  title:"미국 Unified Patent社, 2026년 상반기 특허 분쟁 보고서 발표",
+  summary:"2026년 상반기 미국 특허 소송 동향 통계 발표. NPE 소송 비중과 기술분야별 분쟁 추이를 정리.",
+  url:"https://www.kiip.re.kr/board/trend/view.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=US&po_no=24583"},
+ {date:"2026-07-21",country:"CN",office:"CNIPA",source:"상하이시 지식재산국",ai:false,topic:"정책·법제",
+  title:"중국 상하이시 지식재산국, 지식재산 고품질 창출 및 고효율 활용 3년 행동 계획 발표",
+  summary:"상하이시가 지식재산 창출 품질 제고와 활용 효율화를 위한 3개년 행동계획을 공개. AI 등 신기술 분야 IP 육성 포함.",
+  url:"https://www.kiip.re.kr/board/trend/view.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=CN&po_no=24581"},
+ {date:"2026-07-20",country:"JP",office:"JPO",source:"일본 특허청",ai:true,topic:"AI·IP",
+  title:"일본 특허청, AI 발명의 보호에 관한 조사 연구 보고서 발표",
+  summary:"AI가 관여한 발명의 발명자 적격성·보호범위에 관한 조사연구 결과를 공표. 주요국 제도 비교와 실무 쟁점 정리.",
+  url:"https://www.kiip.re.kr/board/trend/view.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=JP&po_no=24578"},
+ {date:"2026-07-18",country:"EU",office:"기타",source:"EU 집행위원회",ai:false,topic:"통계·보고서",
+  title:"유럽연합 집행위원회, '2026년 유럽 혁신 스코어보드' 발표",
+  summary:"EU 회원국 및 주요국 혁신성과 평가 결과 발표. 한국이 글로벌 혁신성과 1위를 유지.",
+  url:"https://www.kiip.re.kr/board/trend/view.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=EU&po_no=24574"},
+ {date:"2026-07-17",country:"INT",office:"WIPO",source:"WIPO",ai:true,topic:"분쟁·소송",
+  title:"WIPO 도메인분쟁 패널, 'creditGPT.com' 청구를 '역도메인네임강탈' 판정",
+  summary:"WIPO UDRP 패널이 creditGPT.com 도메인 이전 청구를 기각하고 역도메인네임강탈(RDNH)의 전형적 사례로 규정.",
+  url:"https://kklique.github.io/ipax-news/"},
+ {date:"2026-07-16",country:"US",office:"USPTO",source:"PR Newswire",ai:true,topic:"심사·제도",
+  title:"USPTO, 공개 상표검색 'TM Search'에 AI 이미지검색 정식 도입",
+  summary:"USPTO가 상표검색시스템 TM Search에 AI 기반 이미지검색 기능을 정식 서비스로 확대 도입.",
+  url:"https://kklique.github.io/ipax-news/"},
+ {date:"2026-07-15",country:"EU",office:"EUIPO",source:"EU 일반법원",ai:true,topic:"분쟁·소송",
+  title:"EU 일반법원, 'OPENAI' 상표 등록 항소 기각 — 기술적 서술어일 뿐",
+  summary:"EU 일반법원이 EUIPO의 OPENAI 상표 부분거절 결정을 확정. 해당 표장은 기술적·서술적 표현이라고 판단.",
+  url:"https://kklique.github.io/ipax-news/"},
+ {date:"2026-07-14",country:"INT",office:"WIPO",source:"WIPO",ai:true,topic:"통계·보고서",
+  title:"WIPO 생성형AI 특허 동향보고서 개정판 — 2년새 특허 출원 급증",
+  summary:"2024~2025년 생성형AI 특허 출원이 직전 10년 전체보다 많은 수준으로 급증. 소프트뱅크 계열이 출원 1위.",
+  url:"https://kklique.github.io/ipax-news/"},
+ {date:"2026-07-10",country:"ETC",office:"기타",source:"호주 감사원(ANAO)",ai:true,topic:"심사·제도",
+  title:"호주 감사원(ANAO), IP Australia의 특허심사 AI 활용 감사보고서 발표",
+  summary:"AI 조기 도입 기관으로서 거버넌스·위험관리 체계는 지속 개선 중이나, 성과측정·통제 체계 미비를 지적하고 모니터링 체계 마련을 권고.",
+  url:"https://kklique.github.io/ipax-news/"},
+ {date:"2026-07-08",country:"US",office:"기타",source:"Domain Name Wire",ai:true,topic:"분쟁·소송",
+  title:"미국 AI 스타트업 두 곳, 같은 'Kepler' 브랜드 놓고 상표소송",
+  summary:"AI 전자상거래 스타트업이 동명의 금융서비스 AI 기업을 상대로 Kepler 브랜드 상표침해 소송 제기.",
+  url:"https://kklique.github.io/ipax-news/"},
+ {date:"2026-07-05",country:"KR",office:"KIPO",source:"지식재산처",ai:true,topic:"AI·IP",
+  title:"지식재산처, AI 학습데이터와 지식재산 쟁점 검토 착수",
+  summary:"AI 학습용 데이터의 저작권·부정경쟁 쟁점에 대한 제도 정비 방향 검토. 산업계 의견수렴 병행 예정.",
+  url:"https://www.kiip.re.kr/board/trend/list.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=KR"}
+];
+
+/* 인라인 SVG 국기 (윈도우에서도 렌더링 보장 · 세부 도안은 추후 보정) */
+const FLAGS={
+ US:`<svg class="flag" viewBox="0 0 26 18"><rect width="26" height="18" fill="#fff"/><g fill="#B22234"><rect y="0.00" width="26" height="1.38"/><rect y="2.77" width="26" height="1.38"/><rect y="5.54" width="26" height="1.38"/><rect y="8.31" width="26" height="1.38"/><rect y="11.08" width="26" height="1.38"/><rect y="13.85" width="26" height="1.38"/><rect y="16.62" width="26" height="1.38"/></g><rect width="10.4" height="9.69" fill="#3C3B6E"/><g fill="#fff"><circle cx="1.04" cy="1.21" r=".42"/><circle cx="3.12" cy="1.21" r=".42"/><circle cx="5.20" cy="1.21" r=".42"/><circle cx="7.28" cy="1.21" r=".42"/><circle cx="9.36" cy="1.21" r=".42"/><circle cx="1.04" cy="3.63" r=".42"/><circle cx="3.12" cy="3.63" r=".42"/><circle cx="5.20" cy="3.63" r=".42"/><circle cx="7.28" cy="3.63" r=".42"/><circle cx="9.36" cy="3.63" r=".42"/><circle cx="1.04" cy="6.06" r=".42"/><circle cx="3.12" cy="6.06" r=".42"/><circle cx="5.20" cy="6.06" r=".42"/><circle cx="7.28" cy="6.06" r=".42"/><circle cx="9.36" cy="6.06" r=".42"/><circle cx="1.04" cy="8.48" r=".42"/><circle cx="3.12" cy="8.48" r=".42"/><circle cx="5.20" cy="8.48" r=".42"/><circle cx="7.28" cy="8.48" r=".42"/><circle cx="9.36" cy="8.48" r=".42"/></g></svg>`,
+ CN:`<svg class="flag" viewBox="0 0 26 18"><rect width="26" height="18" fill="#DE2910"/><path fill="#FFDE00" d="m5 3 .9 2.8H8.8L6.4 7.5l.9 2.8L5 8.6 2.7 10.3l.9-2.8L1.2 5.8h2.9Z"/></svg>`,
+ JP:`<svg class="flag" viewBox="0 0 26 18"><rect width="26" height="18" fill="#fff"/><circle cx="13" cy="9" r="5" fill="#BC002D"/></svg>`,
+ EU:`<svg class="flag" viewBox="0 0 26 18"><rect width="26" height="18" fill="#003399"/><g fill="#FFCC00">${Array.from({length:12},(_,i)=>{const a=i*30*Math.PI/180;return `<circle cx="${(13+5.5*Math.sin(a)).toFixed(2)}" cy="${(9-5.5*Math.cos(a)).toFixed(2)}" r=".9"/>`}).join("")}</g></svg>`,
+ KR:`<svg class="flag" viewBox="0 0 26 18"><rect width="26" height="18" fill="#fff"/><g transform="rotate(33.7 13 9)"><circle cx="13" cy="9" r="4.5" fill="#0047A0"/><path d="M 8.5,9 A 4.5,4.5 0 0 1 17.5,9 A 2.25,2.25 0 0 0 13,9 A 2.25,2.25 0 0 1 8.5,9 Z" fill="#CD2E3A"/></g><g transform="translate(3.6,3.4) rotate(-33.7)" fill="#111"><rect x="-1.9" y="-1.35" width="3.8" height="0.6"/><rect x="-1.9" y="-0.30" width="3.8" height="0.6"/><rect x="-1.9" y="0.75" width="3.8" height="0.6"/></g><g transform="translate(22.4,3.4) rotate(33.7)" fill="#111"><rect x="-1.9" y="-1.35" width="1.55" height="0.6"/><rect x="0.35" y="-1.35" width="1.55" height="0.6"/><rect x="-1.9" y="-0.30" width="3.8" height="0.6"/><rect x="-1.9" y="0.75" width="1.55" height="0.6"/><rect x="0.35" y="0.75" width="1.55" height="0.6"/></g><g transform="translate(3.6,14.6) rotate(33.7)" fill="#111"><rect x="-1.9" y="-1.35" width="3.8" height="0.6"/><rect x="-1.9" y="-0.30" width="1.55" height="0.6"/><rect x="0.35" y="-0.30" width="1.55" height="0.6"/><rect x="-1.9" y="0.75" width="3.8" height="0.6"/></g><g transform="translate(22.4,14.6) rotate(-33.7)" fill="#111"><rect x="-1.9" y="-1.35" width="1.55" height="0.6"/><rect x="0.35" y="-1.35" width="1.55" height="0.6"/><rect x="-1.9" y="-0.30" width="1.55" height="0.6"/><rect x="0.35" y="-0.30" width="1.55" height="0.6"/><rect x="-1.9" y="0.75" width="1.55" height="0.6"/><rect x="0.35" y="0.75" width="1.55" height="0.6"/></g></svg>`,
+ INT:`<svg class="flag" viewBox="0 0 26 18"><rect width="26" height="18" rx="2" fill="#EAF2FC"/><circle cx="13" cy="9" r="6" fill="none" stroke="#1668C4" stroke-width="1.2"/><path d="M7 9h12M13 3c2 1.8 2.8 3.7 2.8 6S15 13.2 13 15c-2-1.8-2.8-3.7-2.8-6S11 4.8 13 3Z" fill="none" stroke="#1668C4" stroke-width="1"/></svg>`,
+ ETC:`<svg class="flag" viewBox="0 0 26 18"><rect width="26" height="18" rx="2" fill="#DEE5EF"/><path d="M8 14V4.5l7 2-7 2" fill="none" stroke="#77839B" stroke-width="1.4" stroke-linejoin="round"/></svg>`
+};
+const CNAME={US:"미국",CN:"중국",JP:"일본",EU:"유럽",KR:"한국",INT:"국제기구",ETC:"기타"};
+const TOPICS=["AI·IP","정책·법제","심사·제도","분쟁·소송","보호·집행","통계·보고서"];
+const CORDER=["US","CN","JP","EU","KR","ETC","INT"];
+const DOW=["일","월","화","수","목","금","토"];
+
+let DATA=[...SEED];
+let state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12};
+
+fetch("data/news.json").then(r=>r.ok?r.json():null).then(j=>{
+  if(j&&Array.isArray(j.items)&&j.items.length){DATA=j.items;}
+  init();
+}).catch(init);
+
+function init(){
+  DATA.sort((a,b)=>b.date.localeCompare(a.date));
+  document.getElementById("lastUpdated").textContent="기준일 "+(DATA[0]?.date||"—");
+  document.getElementById("numTotal").textContent=DATA.length;
+  const week=new Date(Date.now()-7*864e5).toISOString().slice(0,10);
+  document.getElementById("numWeek").textContent=DATA.filter(d=>d.date>=week).length;
+  buildChips();bind();render();
+}
+
+/* 다중선택 칩: 국가·주제 */
+function buildChips(){
+  const cRow=document.getElementById("countryRow");
+  CORDER.filter(c=>DATA.some(d=>d.country===c)).forEach(c=>{
+    const n=DATA.filter(d=>d.country===c).length;
+    cRow.insertAdjacentHTML("beforeend",
+      `<button class="chip" data-c="${c}">${FLAGS[c]}${CNAME[c]}<span class="n">${n}</span></button>`);
+  });
+  const tRow=document.getElementById("topicRow");
+  TOPICS.forEach(t=>{
+    const n=DATA.filter(d=>d.topic===t).length;
+    tRow.insertAdjacentHTML("beforeend",
+      `<button class="chip" data-t="${t}">${t}<span class="n">${n}</span></button>`);
+  });
+  cRow.querySelectorAll(".chip").forEach(ch=>ch.addEventListener("click",()=>{
+    toggle(state.countries,ch.dataset.c);ch.classList.toggle("on");refresh();
+  }));
+  tRow.querySelectorAll(".chip").forEach(ch=>ch.addEventListener("click",()=>{
+    toggle(state.topics,ch.dataset.t);ch.classList.toggle("on");refresh();
+  }));
+}
+function toggle(set,v){set.has(v)?set.delete(v):set.add(v);}
+function refresh(){state.shown=12;render();}
+
+function bind(){
+  const q=document.getElementById("q"),clear=document.getElementById("qClear");
+  q.addEventListener("input",()=>{state.q=q.value.trim();clear.hidden=!state.q;refresh();});
+  clear.addEventListener("click",()=>{q.value="";state.q="";clear.hidden=true;refresh();q.focus();});
+  const reset=()=>{
+    state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12};
+    q.value="";clear.hidden=true;
+    document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));
+    document.getElementById("sortNew").classList.add("on");
+    document.getElementById("sortOld").classList.remove("on");
+    render();
+  };
+  document.getElementById("resetBtn").addEventListener("click",reset);
+  document.getElementById("resetBtn").addEventListener("keydown",e=>{if(e.key==="Enter")reset();});
+  document.getElementById("sortNew").addEventListener("click",()=>setSort("new"));
+  document.getElementById("sortOld").addEventListener("click",()=>setSort("old"));
+  document.getElementById("moreBtn").addEventListener("click",()=>{state.shown+=12;render();});
+  document.addEventListener("keydown",e=>{if(e.key==="/"&&document.activeElement!==q){e.preventDefault();q.focus();}});
+}
+function setSort(s){
+  state.sort=s;
+  document.getElementById("sortNew").classList.toggle("on",s==="new");
+  document.getElementById("sortOld").classList.toggle("on",s==="old");
+  render();
+}
+
+function filtered(){
+  const q=state.q.toLowerCase();
+  let r=DATA.filter(d=>
+    (!state.topics.size||state.topics.has(d.topic))&&
+    (!state.countries.size||state.countries.has(d.country))&&
+    (!q||(d.title+d.summary+d.source).toLowerCase().includes(q))
+  );
+  r.sort((a,b)=>state.sort==="new"?b.date.localeCompare(a.date):a.date.localeCompare(b.date));
+  return r;
+}
+
+function titleOf(){
+  const parts=[];
+  if(state.countries.size)parts.push([...state.countries].map(c=>CNAME[c]).join("·"));
+  if(state.topics.size)parts.push([...state.topics].join("·"));
+  if(state.q)parts.push(`"${state.q}"`);
+  return parts.length?parts.join(" / "):"전체 동향";
+}
+
+function render(){
+  const r=filtered();
+  document.getElementById("resultTitle").textContent=titleOf();
+  document.getElementById("countLabel").textContent=`${r.length}건 (누적 ${DATA.length}건)`;
+  const board=document.getElementById("board");
+  if(!r.length){
+    board.innerHTML=`<div class="empty">조건에 맞는 뉴스가 없습니다.<br><br><button id="emptyReset">필터 초기화하기</button></div>`;
+    document.getElementById("emptyReset").addEventListener("click",()=>document.getElementById("resetBtn").click());
+    document.getElementById("moreBtn").hidden=true;return;
+  }
+  /* 날짜별 그룹핑 */
+  const slice=r.slice(0,state.shown);
+  const groups={};
+  slice.forEach(d=>{(groups[d.date]=groups[d.date]||[]).push(d);});
+  board.innerHTML=Object.keys(groups).sort((a,b)=>state.sort==="new"?b.localeCompare(a):a.localeCompare(b)).map(date=>{
+    const dt=new Date(date+"T00:00:00");
+    const label=`${date.replace(/-/g,".")} (${DOW[dt.getDay()]})`;
+    return `<div class="dgroup">
+      <div class="dhead"><span class="d">${label}</span><span class="line"></span><span class="dn">${groups[date].length}건</span></div>
+      ${groups[date].map(d=>`
+        <a class="news" href="${d.url}" target="_blank" rel="noopener">
+          <span class="flagcol">${FLAGS[d.country]||""}</span>
+          <span class="body">
+            <span class="meta">${CNAME[d.country]||d.country} · ${d.office} · ${d.source}<span class="topic">${d.topic}</span>${d.ai?'<span class="aibadge">AI</span>':""}</span>
+            <h3>${d.title}</h3>
+            <p class="sum">${d.summary}</p>
+          </span>
+          <span class="arrow">↗</span>
+        </a>`).join("")}
+    </div>`;
+  }).join("");
+  document.getElementById("moreBtn").hidden=r.length<=state.shown;
+}
+</script>
+</body>
+</html>
