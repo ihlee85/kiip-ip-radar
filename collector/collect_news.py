@@ -35,7 +35,8 @@ SOURCES = [
     # ── 미국 ──
     {"type":"html","country":"US","source":"USPTO",
      "url":"https://www.uspto.gov/about-us/news-updates",
-     "link_pat":r'/about-us/news-updates/[^"#?]+', "base":"https://www.uspto.gov"},
+     "link_pat":r'/about-us/news-updates/[^"#?]+', "base":"https://www.uspto.gov",
+     "fallback_rss":"https://news.google.com/rss/search?q=site:uspto.gov&hl=en-US&gl=US&ceid=US:en"},
     {"type":"rss","country":"US","source":"미국 백악관",
      "url":"https://www.whitehouse.gov/presidential-actions/feed/"},
     {"type":"rss","country":"US","source":"Unified Patents",
@@ -63,7 +64,8 @@ SOURCES = [
     # ── 일본 (RSS 미제공 → 간이 크롤) ──
     {"type":"html","country":"JP","source":"일본 특허청(JPO)",
      "url":"https://www.jpo.go.jp/news/press/index.html",
-     "link_pat":r'/news/press/[^"]+\.html', "base":"https://www.jpo.go.jp"},
+     "link_pat":r'/news/press/[^"]+\.html', "base":"https://www.jpo.go.jp",
+     "fallback_rss":"https://news.google.com/rss/search?q=%E7%89%B9%E8%A8%B1%E5%BA%81&hl=ja&gl=JP&ceid=JP:ja"},
     {"type":"html","country":"JP","source":"JETRO",
      "url":"https://www.jetro.go.jp/biznews/",
      "link_pat":r'/biznews/\d{4}/\d{2}/[^"]+\.html', "base":"https://www.jetro.go.jp"},
@@ -73,7 +75,8 @@ SOURCES = [
      "link_pat":r'/art/[^"]+\.html', "base":"https://www.cnipa.gov.cn"},
     {"type":"html","country":"CN","source":"인민망 지식재산",
      "url":"http://ip.people.com.cn/",
-     "link_pat":r'/n1/\d{4}/\d{4}/[^"]+\.html', "base":"http://ip.people.com.cn"},
+     "link_pat":r'/n1/\d{4}/\d{4}/[^"]+\.html', "base":"http://ip.people.com.cn",
+     "fallback_rss":"https://news.google.com/rss/search?q=%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83+%E5%9B%BD%E5%AE%B6%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E5%B1%80&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"},
     # ── 국제기구 ──
     {"type":"rss","country":"INT","source":"WIPO",
      "url":"https://www.wipo.int/pressroom/en/rss.xml"},
@@ -161,7 +164,13 @@ def fetch_html(src):
         out.append({"date": TODAY, "title": title, "url": url, "desc": ""})
         if len(out) >= 12:
             break
-    return out, f"HTTP {resp.status_code}, 링크매칭 {len(seen)}건"
+    diag = f"HTTP {resp.status_code}, 링크매칭 {len(seen)}건"
+    if not out and src.get("fallback_rss"):  # 차단/JS렌더링 → 구글뉴스 RSS 우회
+        rows, d2 = fetch_rss({"url": src["fallback_rss"]})
+        for r in rows:
+            r["title"] = re.sub(r"\s+-\s+[^-]+$", "", r["title"])  # 매체명 꼬리 제거
+        return rows, diag + f" → 구글뉴스 폴백({d2})"
+    return out, diag
 
 def fetch_candidates(archive):
     seen_ids = {i.get("id") for i in archive["items"]}
@@ -200,7 +209,7 @@ def fetch_kiip_published():
             if not titles:  # 비표준 RSS 대비 수동 파싱 폴백
                 raw = resp.content.decode(resp.apparent_encoding or "utf-8", "ignore")
                 titles = [re.sub(r"\s+", " ", t).strip()
-                          for t in re.findall(r"<item>.*?<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>",
+                          for t in re.findall(r"<item[^>]*>.*?<title[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>",
                                               raw, re.S)][:60]
             print(f"KIIP 대조({url.split(':')[0]}): HTTP {resp.status_code}, "
                   f"{len(titles)}건, content-type={resp.headers.get('content-type','?')[:40]}")
@@ -208,7 +217,19 @@ def fetch_kiip_published():
                 return titles
         except Exception as ex:
             print(f"[warn] KIIP RSS({url.split(':')[0]}) 실패: {ex}")
-    return []
+    # 최종 폴백: 동향뉴스 게시판에서 제목 직접 추출
+    try:
+        board = "https://www.kiip.re.kr/board/trend/list.do?bd_gb=trend&bd_cd=1&bd_item=0"
+        resp = requests.get(board, timeout=25, headers=UA)
+        titles = [re.sub(r"<[^>]+>|\s+", " ", t).strip() for t in
+                  re.findall(r'href="[^"]*?/board/trend/view\.do[^"]*?"[^>]*>(.*?)</a>',
+                             resp.text, re.S)]
+        titles = [t for t in titles if len(t) > 8][:60]
+        print(f"KIIP 대조(게시판 폴백): HTTP {resp.status_code}, {len(titles)}건")
+        return titles
+    except Exception as ex:
+        print(f"[warn] KIIP 게시판 폴백 실패: {ex}")
+        return []
 
 def classify(candidates, archive, kiip_titles):
     if not candidates:
