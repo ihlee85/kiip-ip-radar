@@ -255,7 +255,7 @@ const CORDER=["US","CN","JP","EU","KR","ETC","INT"];
 const DOW=["일","월","화","수","목","금","토"];
 
 let DATA=[...SEED];
-let state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12,aiOnly:false};
+let state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12};
 
 fetch("data/news.json").then(r=>r.ok?r.json():null).then(j=>{
   if(j&&Array.isArray(j.items)&&j.items.length){DATA=j.items;}
@@ -285,13 +285,6 @@ function buildChips(){
     tRow.insertAdjacentHTML("beforeend",
       `<button class="chip" data-t="${t}">${t}<span class="n">${n}</span></button>`);
   });
-  tRow.insertAdjacentHTML("beforeend",
-      `<button class="chip" id="aiChip" style="border-color:var(--green);color:#6E8420">AI 관련만<span class="n">${DATA.filter(d=>d.ai).length}</span></button>`);
-  document.getElementById("aiChip").addEventListener("click",function(){
-    state.aiOnly=!state.aiOnly;this.classList.toggle("on",state.aiOnly);
-    if(state.aiOnly){this.style.background="var(--green)";this.style.color="#fff";}
-    else{this.style.background="";this.style.color="#6E8420";}
-    refresh();});
   cRow.querySelectorAll(".chip").forEach(ch=>ch.addEventListener("click",()=>{
     toggle(state.countries,ch.dataset.c);ch.classList.toggle("on");refresh();
   }));
@@ -307,9 +300,8 @@ function bind(){
   q.addEventListener("input",()=>{state.q=q.value.trim();clear.hidden=!state.q;refresh();});
   clear.addEventListener("click",()=>{q.value="";state.q="";clear.hidden=true;refresh();q.focus();});
   const reset=()=>{
-    state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12,aiOnly:false};
+    state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12};
     q.value="";clear.hidden=true;
-    const ac=document.getElementById("aiChip");if(ac){ac.classList.remove("on");ac.style.background="";ac.style.color="#6E8420";}
     document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));
     document.getElementById("sortNew").classList.add("on");
     document.getElementById("sortOld").classList.remove("on");
@@ -332,7 +324,6 @@ function setSort(s){
 function filtered(){
   const q=state.q.toLowerCase();
   let r=DATA.filter(d=>
-    (!state.aiOnly||d.ai)&&
     (!state.topics.size||state.topics.has(d.topic))&&
     (!state.countries.size||state.countries.has(d.country))&&
     (!q||(d.title+d.summary+d.source).toLowerCase().includes(q))
@@ -345,7 +336,6 @@ function titleOf(){
   const parts=[];
   if(state.countries.size)parts.push([...state.countries].map(c=>CNAME[c]).join("·"));
   if(state.topics.size)parts.push([...state.topics].join("·"));
-  if(state.aiOnly)parts.push("AI 관련");
   if(state.q)parts.push(`"${state.q}"`);
   return parts.length?parts.join(" / "):"전체 동향";
 }
