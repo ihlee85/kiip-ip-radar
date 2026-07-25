@@ -98,6 +98,7 @@ main{padding:22px 0 50px}
 .news .body{flex:1;min-width:0}
 .news .meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.74rem;color:var(--muted)}
 .news .topic{color:var(--blue);background:var(--blue-soft);border-radius:5px;padding:1px 8px;font-weight:700}
+.aibadge{color:#fff;background:var(--green);border-radius:5px;padding:1px 7px;font-weight:800;font-size:.68rem;letter-spacing:.03em}
 .news h3{font-size:.99rem;font-weight:700;letter-spacing:-.01em;line-height:1.5;margin:3px 0 2px}
 .news:hover h3{color:var(--blue)}
 .news .sum{font-size:.83rem;color:#66718A}
@@ -188,51 +189,51 @@ footer b{color:#fff}
 <script>
 /* 배포 후에는 GitHub Actions가 data/news.json 을 매일 갱신합니다. 아래는 시연용 예시 데이터입니다. */
 const SEED = [
- {date:"2026-07-23",country:"KR",office:"KIPO",source:"지식재산처",topic:"심사시스템",
+ {date:"2026-07-23",country:"KR",office:"KIPO",source:"지식재산처",ai:true,topic:"심사·제도",
   title:"지식재산처, AI를 활용하여 창작한 디자인에 대한 출원가이드 배포",
   summary:"AI를 활용해 창작한 디자인의 출원 요건과 기재 방법을 안내하는 가이드를 배포. AI 창작 디자인의 심사 기준 명확화가 목적.",
-  url:"https://www.kiip.re.kr/board/trend/list.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=KR"},
- {date:"2026-07-22",country:"US",office:"기타",source:"Unified Patents",topic:"분쟁·소송",
+  url:"https://www.kiip.re.kr/board/trend/view.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=KR&po_no=24572"},
+ {date:"2026-07-22",country:"US",office:"기타",source:"Unified Patents",ai:false,topic:"분쟁·소송",
   title:"미국 Unified Patent社, 2026년 상반기 특허 분쟁 보고서 발표",
   summary:"2026년 상반기 미국 특허 소송 동향 통계 발표. NPE 소송 비중과 기술분야별 분쟁 추이를 정리.",
-  url:"https://www.kiip.re.kr/board/trend/list.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=US"},
- {date:"2026-07-21",country:"CN",office:"CNIPA",source:"상하이시 지식재산국",topic:"AI·IP정책",
+  url:"https://www.kiip.re.kr/board/trend/view.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=US&po_no=24583"},
+ {date:"2026-07-21",country:"CN",office:"CNIPA",source:"상하이시 지식재산국",ai:false,topic:"정책·법제",
   title:"중국 상하이시 지식재산국, 지식재산 고품질 창출 및 고효율 활용 3년 행동 계획 발표",
   summary:"상하이시가 지식재산 창출 품질 제고와 활용 효율화를 위한 3개년 행동계획을 공개. AI 등 신기술 분야 IP 육성 포함.",
-  url:"https://www.kiip.re.kr/board/trend/list.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=CN"},
- {date:"2026-07-20",country:"JP",office:"JPO",source:"일본 특허청",topic:"특허적격성",
+  url:"https://www.kiip.re.kr/board/trend/view.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=CN&po_no=24581"},
+ {date:"2026-07-20",country:"JP",office:"JPO",source:"일본 특허청",ai:true,topic:"AI·IP",
   title:"일본 특허청, AI 발명의 보호에 관한 조사 연구 보고서 발표",
   summary:"AI가 관여한 발명의 발명자 적격성·보호범위에 관한 조사연구 결과를 공표. 주요국 제도 비교와 실무 쟁점 정리.",
-  url:"https://www.kiip.re.kr/board/trend/list.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=JP"},
- {date:"2026-07-18",country:"EU",office:"기타",source:"EU 집행위원회",topic:"통계·보고서",
+  url:"https://www.kiip.re.kr/board/trend/view.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=JP&po_no=24578"},
+ {date:"2026-07-18",country:"EU",office:"기타",source:"EU 집행위원회",ai:false,topic:"통계·보고서",
   title:"유럽연합 집행위원회, '2026년 유럽 혁신 스코어보드' 발표",
   summary:"EU 회원국 및 주요국 혁신성과 평가 결과 발표. 한국이 글로벌 혁신성과 1위를 유지.",
-  url:"https://www.kiip.re.kr/board/trend/list.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=EU"},
- {date:"2026-07-17",country:"INT",office:"WIPO",source:"WIPO",topic:"분쟁·소송",
+  url:"https://www.kiip.re.kr/board/trend/view.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=EU&po_no=24574"},
+ {date:"2026-07-17",country:"INT",office:"WIPO",source:"WIPO",ai:true,topic:"분쟁·소송",
   title:"WIPO 도메인분쟁 패널, 'creditGPT.com' 청구를 '역도메인네임강탈' 판정",
   summary:"WIPO UDRP 패널이 creditGPT.com 도메인 이전 청구를 기각하고 역도메인네임강탈(RDNH)의 전형적 사례로 규정.",
   url:"https://kklique.github.io/ipax-news/"},
- {date:"2026-07-16",country:"US",office:"USPTO",source:"PR Newswire",topic:"심사시스템",
+ {date:"2026-07-16",country:"US",office:"USPTO",source:"PR Newswire",ai:true,topic:"심사·제도",
   title:"USPTO, 공개 상표검색 'TM Search'에 AI 이미지검색 정식 도입",
   summary:"USPTO가 상표검색시스템 TM Search에 AI 기반 이미지검색 기능을 정식 서비스로 확대 도입.",
   url:"https://kklique.github.io/ipax-news/"},
- {date:"2026-07-15",country:"EU",office:"EUIPO",source:"EU 일반법원",topic:"분쟁·소송",
+ {date:"2026-07-15",country:"EU",office:"EUIPO",source:"EU 일반법원",ai:true,topic:"분쟁·소송",
   title:"EU 일반법원, 'OPENAI' 상표 등록 항소 기각 — 기술적 서술어일 뿐",
   summary:"EU 일반법원이 EUIPO의 OPENAI 상표 부분거절 결정을 확정. 해당 표장은 기술적·서술적 표현이라고 판단.",
   url:"https://kklique.github.io/ipax-news/"},
- {date:"2026-07-14",country:"INT",office:"WIPO",source:"WIPO",topic:"통계·보고서",
+ {date:"2026-07-14",country:"INT",office:"WIPO",source:"WIPO",ai:true,topic:"통계·보고서",
   title:"WIPO 생성형AI 특허 동향보고서 개정판 — 2년새 특허 출원 급증",
   summary:"2024~2025년 생성형AI 특허 출원이 직전 10년 전체보다 많은 수준으로 급증. 소프트뱅크 계열이 출원 1위.",
   url:"https://kklique.github.io/ipax-news/"},
- {date:"2026-07-10",country:"ETC",office:"기타",source:"호주 감사원(ANAO)",topic:"심사시스템",
+ {date:"2026-07-10",country:"ETC",office:"기타",source:"호주 감사원(ANAO)",ai:true,topic:"심사·제도",
   title:"호주 감사원(ANAO), IP Australia의 특허심사 AI 활용 감사보고서 발표",
   summary:"AI 조기 도입 기관으로서 거버넌스·위험관리 체계는 지속 개선 중이나, 성과측정·통제 체계 미비를 지적하고 모니터링 체계 마련을 권고.",
   url:"https://kklique.github.io/ipax-news/"},
- {date:"2026-07-08",country:"US",office:"기타",source:"Domain Name Wire",topic:"분쟁·소송",
+ {date:"2026-07-08",country:"US",office:"기타",source:"Domain Name Wire",ai:true,topic:"분쟁·소송",
   title:"미국 AI 스타트업 두 곳, 같은 'Kepler' 브랜드 놓고 상표소송",
   summary:"AI 전자상거래 스타트업이 동명의 금융서비스 AI 기업을 상대로 Kepler 브랜드 상표침해 소송 제기.",
   url:"https://kklique.github.io/ipax-news/"},
- {date:"2026-07-05",country:"KR",office:"KIPO",source:"지식재산처",topic:"데이터·학습",
+ {date:"2026-07-05",country:"KR",office:"KIPO",source:"지식재산처",ai:true,topic:"AI·IP",
   title:"지식재산처, AI 학습데이터와 지식재산 쟁점 검토 착수",
   summary:"AI 학습용 데이터의 저작권·부정경쟁 쟁점에 대한 제도 정비 방향 검토. 산업계 의견수렴 병행 예정.",
   url:"https://www.kiip.re.kr/board/trend/list.do?bd_gb=trend&bd_cd=1&bd_item=0&po_item_gb=KR"}
@@ -249,12 +250,12 @@ const FLAGS={
  ETC:`<svg class="flag" viewBox="0 0 26 18"><rect width="26" height="18" rx="2" fill="#DEE5EF"/><path d="M8 14V4.5l7 2-7 2" fill="none" stroke="#77839B" stroke-width="1.4" stroke-linejoin="round"/></svg>`
 };
 const CNAME={US:"미국",CN:"중국",JP:"일본",EU:"유럽",KR:"한국",INT:"국제기구",ETC:"기타"};
-const TOPICS=["AI·IP정책","특허적격성","심사시스템","데이터·학습","분쟁·소송","통계·보고서"];
+const TOPICS=["AI·IP","정책·법제","심사·제도","분쟁·소송","보호·집행","통계·보고서"];
 const CORDER=["US","CN","JP","EU","KR","ETC","INT"];
 const DOW=["일","월","화","수","목","금","토"];
 
 let DATA=[...SEED];
-let state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12};
+let state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12,aiOnly:false};
 
 fetch("data/news.json").then(r=>r.ok?r.json():null).then(j=>{
   if(j&&Array.isArray(j.items)&&j.items.length){DATA=j.items;}
@@ -284,6 +285,13 @@ function buildChips(){
     tRow.insertAdjacentHTML("beforeend",
       `<button class="chip" data-t="${t}">${t}<span class="n">${n}</span></button>`);
   });
+  tRow.insertAdjacentHTML("beforeend",
+      `<button class="chip" id="aiChip" style="border-color:var(--green);color:#6E8420">AI 관련만<span class="n">${DATA.filter(d=>d.ai).length}</span></button>`);
+  document.getElementById("aiChip").addEventListener("click",function(){
+    state.aiOnly=!state.aiOnly;this.classList.toggle("on",state.aiOnly);
+    if(state.aiOnly){this.style.background="var(--green)";this.style.color="#fff";}
+    else{this.style.background="";this.style.color="#6E8420";}
+    refresh();});
   cRow.querySelectorAll(".chip").forEach(ch=>ch.addEventListener("click",()=>{
     toggle(state.countries,ch.dataset.c);ch.classList.toggle("on");refresh();
   }));
@@ -299,8 +307,9 @@ function bind(){
   q.addEventListener("input",()=>{state.q=q.value.trim();clear.hidden=!state.q;refresh();});
   clear.addEventListener("click",()=>{q.value="";state.q="";clear.hidden=true;refresh();q.focus();});
   const reset=()=>{
-    state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12};
+    state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12,aiOnly:false};
     q.value="";clear.hidden=true;
+    const ac=document.getElementById("aiChip");if(ac){ac.classList.remove("on");ac.style.background="";ac.style.color="#6E8420";}
     document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));
     document.getElementById("sortNew").classList.add("on");
     document.getElementById("sortOld").classList.remove("on");
@@ -323,6 +332,7 @@ function setSort(s){
 function filtered(){
   const q=state.q.toLowerCase();
   let r=DATA.filter(d=>
+    (!state.aiOnly||d.ai)&&
     (!state.topics.size||state.topics.has(d.topic))&&
     (!state.countries.size||state.countries.has(d.country))&&
     (!q||(d.title+d.summary+d.source).toLowerCase().includes(q))
@@ -335,6 +345,7 @@ function titleOf(){
   const parts=[];
   if(state.countries.size)parts.push([...state.countries].map(c=>CNAME[c]).join("·"));
   if(state.topics.size)parts.push([...state.topics].join("·"));
+  if(state.aiOnly)parts.push("AI 관련");
   if(state.q)parts.push(`"${state.q}"`);
   return parts.length?parts.join(" / "):"전체 동향";
 }
@@ -362,7 +373,7 @@ function render(){
         <a class="news" href="${d.url}" target="_blank" rel="noopener">
           <span class="flagcol">${FLAGS[d.country]||""}</span>
           <span class="body">
-            <span class="meta">${CNAME[d.country]||d.country} · ${d.office} · ${d.source}<span class="topic">${d.topic}</span></span>
+            <span class="meta">${CNAME[d.country]||d.country} · ${d.office} · ${d.source}<span class="topic">${d.topic}</span>${d.ai?'<span class="aibadge">AI</span>':""}</span>
             <h3>${d.title}</h3>
             <p class="sum">${d.summary}</p>
           </span>
