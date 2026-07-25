@@ -217,18 +217,29 @@ def fetch_kiip_published():
                 return titles
         except Exception as ex:
             print(f"[warn] KIIP RSS({url.split(':')[0]}) 실패: {ex}")
-    # 최종 폴백: 동향뉴스 게시판에서 제목 직접 추출
+    # 폴백 2: 동향뉴스 게시판에서 제목 직접 추출
     try:
         board = "https://www.kiip.re.kr/board/trend/list.do?bd_gb=trend&bd_cd=1&bd_item=0"
-        resp = requests.get(board, timeout=25, headers=UA)
+        h = dict(UA); h["Referer"] = "https://www.kiip.re.kr/index.do"
+        resp = requests.get(board, timeout=25, headers=h)
         titles = [re.sub(r"<[^>]+>|\s+", " ", t).strip() for t in
-                  re.findall(r'href="[^"]*?/board/trend/view\.do[^"]*?"[^>]*>(.*?)</a>',
+                  re.findall(r'href="[^"]*?view\.do[^"]*?"[^>]*>(.*?)</a>',
                              resp.text, re.S)]
         titles = [t for t in titles if len(t) > 8][:60]
-        print(f"KIIP 대조(게시판 폴백): HTTP {resp.status_code}, {len(titles)}건")
-        return titles
+        print(f"KIIP 대조(게시판 폴백): HTTP {resp.status_code}, {len(titles)}건, "
+              f"응답 {len(resp.text)}자, view.do 포함={'view.do' in resp.text}")
+        if titles:
+            return titles
     except Exception as ex:
         print(f"[warn] KIIP 게시판 폴백 실패: {ex}")
+    # 폴백 3: 구글뉴스에서 KIIP 게재 기사 검색
+    try:
+        rows, d = fetch_rss({"url": "https://news.google.com/rss/search?q=site:kiip.re.kr&hl=ko&gl=KR&ceid=KR:ko"})
+        titles = [re.sub(r"\s+-\s+[^-]+$", "", r["title"]) for r in rows][:60]
+        print(f"KIIP 대조(구글뉴스 폴백): {len(titles)}건 ({d})")
+        return titles
+    except Exception as ex:
+        print(f"[warn] KIIP 구글뉴스 폴백 실패: {ex}")
         return []
 
 def classify(candidates, archive, kiip_titles):
