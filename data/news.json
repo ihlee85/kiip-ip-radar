@@ -2,6 +2,50 @@
  "updated": "2026-07-25",
  "items": [
   {
+   "id": "932d51eb6fc8",
+   "date": "2026-07-25",
+   "country": "CN",
+   "source": "중국 국가지식산권국(CNIPA)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "중국 CNIPA, 2026년 6월 성(省)별 특허침해 행정재결 건수 통계 공개",
+   "summary": "중국 국가지식산권국(CNIPA)이 2026년 6월 기준 각 성·자치구·직할시의 특허침해 분쟁 행정재결 건수 통계를 발표하였다. 해당 통계는 중국 내 특허 행정 집행 현황을 지역별로 파악할 수 있는 자료이다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/7/16/art_89_207201.html"
+  },
+  {
+   "id": "b202e3d62f12",
+   "date": "2026-07-25",
+   "country": "CN",
+   "source": "중국 국가지식산권국(CNIPA)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "중국 CNIPA, 「2025년 중국 특허집약산업 통계 모니터링 보고서」 발간",
+   "summary": "중국 국가지식산권국이 특허집약산업의 경제적 기여와 현황을 분석한 2025년판 통계 모니터링 보고서를 공개하였다. 이 보고서는 중국 내 특허집약산업의 규모·성장세 등을 종합적으로 제시하고 있다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/7/7/art_88_207087.html"
+  },
+  {
+   "id": "3e1c6de73c3a",
+   "date": "2026-07-25",
+   "country": "INT",
+   "source": "중국 국가지식산권국(CNIPA)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "CNIPA, 「2024년 세계 5대 지식재산청 주요 통계 인포그래픽」 중·영문판 공개",
+   "summary": "중국 국가지식산권국이 한·중·일·미·유럽 5대 특허청의 2024년 주요 통계를 인포그래픽 형태로 정리한 자료의 중문판 및 영문판을 발표하였다. 출원·등록 건수 등 주요 지표를 국제 비교 관점에서 확인할 수 있다.",
+   "url": "https://www.cnipa.gov.cn/art/2025/5/7/art_90_199521.html"
+  },
+  {
+   "id": "ad2ff6e6ce26",
+   "date": "2026-07-24",
+   "country": "EU",
+   "source": "영국 지식재산청(UKIPO)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "영국 UKIPO, 2026년 접수된 특허 의견 요청(Opinions) 현황 공개",
+   "summary": "영국 지식재산청(UKIPO)이 2026년 중 접수된 특허 유효성·침해 여부에 관한 의견 요청 사건 목록을 게시하였다. 해당 제도는 소송 없이 특허 문제에 대한 비구속적 공식 의견을 제공하는 절차이다.",
+   "url": "https://www.gov.uk/guidance/requests-for-opinions-2026"
+  },
+  {
    "id": "94d725b36cb2",
    "date": "2026-07-24",
    "country": "EU",
@@ -11,6 +55,17 @@
    "title": "UPC 뒤셀도르프 지부, InterDigital의 Disney 대상 스트리밍 특허 침해금지 명령 인용",
    "summary": "UPC 뒤셀도르프 지역부가 InterDigital의 EP 2 449 782 특허를 침해한 인코딩 영상 데이터 및 비트스트림 제공 행위에 대해 Disney 11개 법인에 침해금지 명령을 내렸다. 이는 UPC에서 스트리밍 관련 표준필수특허(SEP) 분쟁으로 나온 주목할 만한 금지 명령이다.",
    "url": "https://www.juve-patent.com/cases/interdigital-wins-another-upc-injunction-in-streaming-dispute-with-disney/"
+  },
+  {
+   "id": "e7b34eb5516f",
+   "date": "2026-07-23",
+   "country": "US",
+   "source": "Unified Patents",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "Unified Patents, Malikie Innovations의 Wi-Fi 특허에 직권 재심사 신청",
+   "summary": "Unified Patents는 NPE인 Malikie Innovations Limited가 보유한 미국 특허 12,395,899에 대해 직권 재심사(ex parte reexamination)를 신청하였다. Malikie는 Key Patent Innovations의 계열사로, 해당 특허는 Wi-Fi 기술에 관한 것이다.",
+   "url": "https://www.unifiedpatents.com/insights/2026/7/22/malikie-wi-fi-patent-challenged"
   },
   {
    "id": "e158bf303013",
@@ -68,6 +123,28 @@
    "url": "https://www.unifiedpatents.com/insights/2026/7/22/usitc-litigation-funding-disclosure-comments-reveal-overwhelming-public-support"
   },
   {
+   "id": "5df258457f0f",
+   "date": "2026-07-21",
+   "country": "US",
+   "source": "Unified Patents",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "Unified Patents, Velos Media의 H.265 비디오 코덱 특허에 직권 재심사 신청",
+   "summary": "Unified Patents는 NPE인 Velos Media가 보유한 미국 특허 12,088,843에 대해 직권 재심사를 신청하였다. 해당 특허는 H.265 비디오 코덱에서 최적 모드 선택 기술에 관한 것이다.",
+   "url": "https://www.unifiedpatents.com/insights/2026/7/21/velos-h265-video-codec-patent-challenged"
+  },
+  {
+   "id": "463f0d19d807",
+   "date": "2026-07-21",
+   "country": "US",
+   "source": "Unified Patents",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "Unified Patents, Fortress Investment 계열 DivX의 비디오 재생 특허에 직권 재심사 신청",
+   "summary": "Unified Patents는 Fortress Investment Group 산하 NPE인 DivX LLC가 보유·주장하는 미국 특허 10,574,716에 대해 직권 재심사를 신청하였다. 해당 특허는 비디오 재생 기술에 관한 것이다.",
+   "url": "https://www.unifiedpatents.com/insights/2026/7/21/fortress-investment-entity-divx-video-playback-patent-challenged"
+  },
+  {
    "id": "a06e8c5198fe",
    "date": "2026-07-21",
    "country": "US",
@@ -110,6 +187,17 @@
    "title": "UPC 항소법원, 취소 반소 조건부 제기 관련 절차 규칙 명확화",
    "summary": "미국 의료기기 회사 Emboline과 이탈리아 경쟁사 AorticLab 간의 EP 2 129 425 특허 침해 소송에서 UPC 항소법원이 취소 반소의 조건부 제기 요건에 관한 절차적 규칙을 명확히 하였다. 이 결정은 UPC 절차 내 반소 활용 방식에 관한 중요한 선례로 작용할 전망이다.",
    "url": "https://www.juve-patent.com/cases/upc-court-of-appeal-clarifies-rules-on-conditional-counterclaims-for-revocation/"
+  },
+  {
+   "id": "40ce546d5238",
+   "date": "2026-07-18",
+   "country": "US",
+   "source": "Patently-O",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "Patently-O, USPTO 전자출원의 시간대별 제출 패턴 분석 발표",
+   "summary": "USPTO 전자출원은 동부 시간 오후 3시에 가장 많이 집중되며, 전체의 4분의 1은 오후 5시 이후에 접수되는 것으로 나타났다. 신규 출원은 금요일에, 거절이유 답변서는 월요일에 집중되는 경향이 확인되었다.",
+   "url": "https://patentlyo.com/patent/2026/07/the-filing-clock-hour-of-day-patterns-in-uspto-electronic-submissions.html"
   }
  ]
 }
