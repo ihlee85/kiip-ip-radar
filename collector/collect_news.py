@@ -23,7 +23,9 @@ DATA_FILE = ROOT / "data" / "news.json"
 TODAY = datetime.date.today().isoformat()
 DAILY_CAP = 10
 RECENT_DAYS = 7
-UA = {"User-Agent": "KIIP-IP-Radar/0.3 (pilot; contact via repo)"}
+UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                    "(KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+      "Accept-Language": "ko,en;q=0.8"}
 
 # ── 원출처 목록 (KIIP IP 동향 News 인용 출처 역추적 기반) ─────────────
 # type: "rss" = RSS/Atom 피드, "html" = 뉴스목록 페이지 크롤링(간이)
@@ -50,13 +52,11 @@ SOURCES = [
     # ── 일본 (RSS 미제공 → 간이 크롤) ──
     {"type":"html","country":"JP","source":"일본 특허청(JPO)",
      "url":"https://www.jpo.go.jp/news/index.html",
-     "link_pat":r'href="(/news/[^"]+\.html)"[^>]*>([^<]{10,120})<',
-     "base":"https://www.jpo.go.jp"},
+     "link_pat":r'/news/[^"]+\.html', "base":"https://www.jpo.go.jp"},
     # ── 중국 (RSS 미제공 → 간이 크롤; 해외 러너에서 차단될 수 있음) ──
     {"type":"html","country":"CN","source":"중국 국가지식산권국(CNIPA)",
      "url":"https://www.cnipa.gov.cn/col/col61/index.html",
-     "link_pat":r'href="(/art/[^"]+\.html)"[^>]*>([^<]{10,120})<',
-     "base":"https://www.cnipa.gov.cn"},
+     "link_pat":r'/art/[^"]+\.html', "base":"https://www.cnipa.gov.cn"},
     # ── 국제기구 ──
     {"type":"rss","country":"INT","source":"WIPO",
      "url":"https://www.wipo.int/pressroom/en/rss.xml"},
@@ -78,7 +78,8 @@ CLASSIFY_PROMPT = """당신은 한국지식재산연구원 'IP 동향 News' 담�
 1. 관련 없는 항목, 단순 홍보·행사 안내는 제외
 2. [KIIP 기게재 목록] 또는 [최근 아카이브]와 사실상 같은 사건은 제외 (이미 다룬 소식)
 3. 같은 사건의 후보가 여럿이면 가장 원출처에 가까운 것 1건만 선택
-4. 최대 {cap}건, 정책적 중요도가 높은 순
+4. 기본 상한 {cap}건, 정책적 중요도가 높은 순
+5. 국가 다양성 보장: 관련성 있는 후보가 존재하는 국가(US/CN/JP/EU/KR/INT/ETC)가 선별 결과에서 빠져 있으면, 그 국가에서 가장 중요한 1건을 추가로 선별하세요. 이 추가분은 상한 {cap}건을 초과해도 됩니다. 단, 지식재산 관련성이 없는 기사를 다양성 명목으로 억지로 포함하지는 마세요.
 
 각 선별 항목을 JSON 배열로만 응답하세요(설명·마크다운 금지). 각 원소:
 {{"idx": 후보번호,
@@ -109,6 +110,9 @@ def item_id(url, title):
 def fetch_rss(src):
     resp = requests.get(src["url"], timeout=25, headers=UA)
     parsed = feedparser.parse(resp.content)
+    diag = f"HTTP {resp.status_code}, 전체 {len(parsed.entries)}건"
+    if getattr(parsed, "bozo", 0) and not parsed.entries:
+        diag += f", 파싱오류({str(parsed.bozo_exception)[:60]})"
     out = []
     for e in parsed.entries[:20]:
         title = re.sub(r"\s+", " ", e.get("title", "")).strip()
@@ -119,22 +123,25 @@ def fetch_rss(src):
         date = datetime.date(*pub[:3]).isoformat() if pub else TODAY
         out.append({"date": date, "title": title, "url": url,
                     "desc": re.sub(r"<[^>]+>", "", e.get("summary", ""))[:400]})
-    return out
+    return out, diag
 
 def fetch_html(src):
     resp = requests.get(src["url"], timeout=25, headers=UA)
     resp.encoding = resp.apparent_encoding
     out, seen = [], set()
-    for m in re.finditer(src["link_pat"], resp.text):
-        path, title = m.group(1), re.sub(r"\s+", " ", m.group(2)).strip()
-        url = src["base"] + path
+    # 앵커 태그 전체를 잡고 내부 태그 제거 (제목이 span 등으로 감싸진 경우 대응)
+    pat = r'<a[^>]+href="((?:https?://[^"]+)?' + src["link_pat"] + r')"[^>]*>(.*?)</a>'
+    for m in re.finditer(pat, resp.text, re.S):
+        href, title = m.group(1), re.sub(r"<[^>]+>", " ", m.group(2))
+        title = re.sub(r"\s+", " ", title).strip()
+        url = href if href.startswith("http") else src["base"] + href
         if url in seen or len(title) < 8:
             continue
         seen.add(url)
         out.append({"date": TODAY, "title": title, "url": url, "desc": ""})
         if len(out) >= 12:
             break
-    return out
+    return out, f"HTTP {resp.status_code}, 링크매칭 {len(seen)}건"
 
 def fetch_candidates(archive):
     seen_ids = {i.get("id") for i in archive["items"]}
@@ -142,7 +149,7 @@ def fetch_candidates(archive):
     out, status = [], []
     for src in SOURCES:
         try:
-            rows = fetch_rss(src) if src["type"] == "rss" else fetch_html(src)
+            rows, diag = fetch_rss(src) if src["type"] == "rss" else fetch_html(src)
             fresh = 0
             for r in rows:
                 age = (datetime.date.today()
@@ -155,7 +162,7 @@ def fetch_candidates(archive):
                 out.append({**r, "id": iid, "source": src["source"],
                             "chint": src["country"]})
                 fresh += 1
-            status.append(f"  ✔ {src['source']}: 신규 {fresh}건")
+            status.append(f"  ✔ {src['source']}: 신규 {fresh}건 ({diag})")
         except Exception as ex:
             status.append(f"  ✘ {src['source']}: 실패 ({type(ex).__name__}: {ex})")
     print("── 소스별 수집 상태 ──")
@@ -164,16 +171,19 @@ def fetch_candidates(archive):
 
 def fetch_kiip_published():
     """KIIP 지식재산동향 RSS에서 최근 게재 제목을 가져와 중복 제외에 사용"""
-    try:
-        resp = requests.get(KIIP_TREND_RSS, timeout=25, headers=UA)
-        parsed = feedparser.parse(resp.content)
-        titles = [re.sub(r"\s+", " ", e.get("title", "")).strip()
-                  for e in parsed.entries[:60]]
-        print(f"KIIP 기게재 대조 목록 {len(titles)}건 확보")
-        return titles
-    except Exception as ex:
-        print(f"[warn] KIIP RSS 대조 실패: {ex}")
-        return []
+    for url in (KIIP_TREND_RSS, KIIP_TREND_RSS.replace("https://", "http://")):
+        try:
+            resp = requests.get(url, timeout=25, headers=UA)
+            parsed = feedparser.parse(resp.content)
+            titles = [re.sub(r"\s+", " ", e.get("title", "")).strip()
+                      for e in parsed.entries[:60]]
+            print(f"KIIP 대조({url.split(':')[0]}): HTTP {resp.status_code}, "
+                  f"{len(titles)}건, content-type={resp.headers.get('content-type','?')[:40]}")
+            if titles:
+                return titles
+        except Exception as ex:
+            print(f"[warn] KIIP RSS({url.split(':')[0]}) 실패: {ex}")
+    return []
 
 def classify(candidates, archive, kiip_titles):
     if not candidates:
@@ -201,7 +211,7 @@ def classify(candidates, archive, kiip_titles):
     except json.JSONDecodeError:
         print("[warn] 분류 응답 파싱 실패:", text[:300]); return []
     results = []
-    for p in picks[:DAILY_CAP]:
+    for p in picks[:DAILY_CAP + len(COUNTRIES)]:  # 국가 다양성 추가분 허용
         try:
             c = candidates[int(p["idx"])]
         except (KeyError, ValueError, IndexError):
@@ -224,7 +234,7 @@ def main():
     candidates = fetch_candidates(archive)
     print(f"신규 후보 {len(candidates)}건")
     new_items = classify(candidates, archive, kiip_titles)
-    print(f"선별 {len(new_items)}건 (상한 {DAILY_CAP}건)")
+    print(f"선별 {len(new_items)}건 (기본 상한 {DAILY_CAP}건 + 국가별 보장분)")
     archive["items"] = sorted(new_items + archive["items"],
                               key=lambda x: x["date"], reverse=True)
     archive["updated"] = TODAY
