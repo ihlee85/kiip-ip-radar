@@ -2,6 +2,50 @@
  "updated": "2026-07-25",
  "items": [
   {
+   "id": "eb0527444693",
+   "date": "2026-07-25",
+   "country": "EU",
+   "source": "EPO",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "유럽특허청(EPO), PCT 국제조사 및 예비심사기관 역할 2037년까지 연장",
+   "summary": "EPO가 PCT(특허협력조약) 체계 내 국제조사기관(ISA) 및 국제예비심사기관(IPEA)으로서의 역할을 2037년까지 계속 수행하기로 확정했다. 이는 국제 특허출원인에 대한 EPO 서비스 지속성을 보장하는 조치다.",
+   "url": "https://www.epo.org/en/news-events/news/epo-continue-key-role-pct-authority-until-2037"
+  },
+  {
+   "id": "e1581dfa787b",
+   "date": "2026-07-25",
+   "country": "EU",
+   "source": "EPO",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "유럽특허청(EPO), 2027년 4월부터 특허 부여 절차 전면 디지털화 시행",
+   "summary": "EPO는 2027년 4월 1일부터 특허 부여 절차를 완전히 디지털화한다고 발표했다. 이를 통해 종이 기반 절차가 전면 폐지되고 전자 처리 시스템으로 일원화된다.",
+   "url": "https://www.epo.org/en/news-events/news/patent-granting-process-fully-digital-1-april-2027"
+  },
+  {
+   "id": "861b0687630a",
+   "date": "2026-07-25",
+   "country": "CN",
+   "source": "중국 국가지식산권국(CNIPA)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "중국 CNIPA, 「2025년 전국 지식재산 서비스업 통계조사 보고서」 발간",
+   "summary": "CNIPA가 2025년 기준 중국 전국 지식재산 서비스업 현황을 담은 통계조사 보고서를 공개했다. 보고서에는 특허·상표·저작권 관련 서비스 기업 수, 종사자 규모, 매출 등 산업 전반의 통계가 수록된 것으로 알려졌다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/4/17/art_88_205903.html"
+  },
+  {
+   "id": "3b7b824ca5df",
+   "date": "2026-07-25",
+   "country": "CN",
+   "source": "중국 국가지식산권국(CNIPA)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "중국 CNIPA, 2026년 5월 성(省)별 특허침해 행정재결 건수 통계 공개",
+   "summary": "CNIPA가 2026년 5월 기준 각 성·자치구·직할시별 특허침해 행정재결 사건 수를 공개했다. 이는 중국 내 특허 집행 현황을 지역별로 파악할 수 있는 월별 공식 통계자료다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/6/18/art_89_206827.html"
+  },
+  {
    "id": "932d51eb6fc8",
    "date": "2026-07-25",
    "country": "CN",
@@ -35,6 +79,39 @@
    "url": "https://www.cnipa.gov.cn/art/2025/5/7/art_90_199521.html"
   },
   {
+   "id": "88883563291a",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "미국 USPTO·연방순회항소법원, 머신러닝 특허 적격성 판단 기준 불일치 심화",
+   "summary": "USPTO와 연방순회항소법원(CAFC) 간 머신러닝 특허의 적격성 판단 기준이 크게 엇갈리고 있어 특허 출원인들의 전략 수립에 혼란을 주고 있다. 전문가들은 기능적 청구항과 명세서 의존을 피하는 방향을 권고한다.",
+   "url": "https://www.law360.com/ip/articles/2503349?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
+   "id": "65be25f86aa6",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국, 2026년 하반기 주목할 상표 판례 5건 및 핵심 전략 분석",
+   "summary": "미 연방대법원이 상표의 고유 식별력 판단 주체(배심원 vs. 판사) 문제를 다루는 상표 분쟁을 심리할 예정이며, Janus Films 판결 파급효과를 둘러싼 소송들도 계속된다. 2026년 하반기 상표 분야 주요 쟁점이 정리·분석됐다.",
+   "url": "https://www.law360.com/ip/articles/2502742?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
+   "id": "abc7aeae85eb",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "미국 ITC, 신임 커미셔너 5명 상원 인준…IP 전문가 포함으로 IP 분야 영향력 강화 전망",
+   "summary": "미국 상원이 ITC 신임 커미셔너 5명을 인준했으며, 이 중 일부는 의회 지식재산 위원회 출신 전문가로 구성됐다. IP 전문 인력의 합류로 ITC의 지식재산 관련 조사 및 판단 기조 변화가 주목된다.",
+   "url": "https://www.law360.com/ip/articles/2505733?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
    "id": "ad2ff6e6ce26",
    "date": "2026-07-24",
    "country": "EU",
@@ -55,6 +132,17 @@
    "title": "UPC 뒤셀도르프 지부, InterDigital의 Disney 대상 스트리밍 특허 침해금지 명령 인용",
    "summary": "UPC 뒤셀도르프 지역부가 InterDigital의 EP 2 449 782 특허를 침해한 인코딩 영상 데이터 및 비트스트림 제공 행위에 대해 Disney 11개 법인에 침해금지 명령을 내렸다. 이는 UPC에서 스트리밍 관련 표준필수특허(SEP) 분쟁으로 나온 주목할 만한 금지 명령이다.",
    "url": "https://www.juve-patent.com/cases/interdigital-wins-another-upc-injunction-in-streaming-dispute-with-disney/"
+  },
+  {
+   "id": "09c22012ebb2",
+   "date": "2026-07-23",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "미국 특허변호사, USPTO 징계 절차의 위법성 주장하며 소송 제기",
+   "summary": "오하이오주 특허변호사가 USPTO의 변호사 징계 절차가 '유료 특혜' 구조를 갖춘 위법한 시스템이라며 소송을 제기했다. 해당 변호사는 징계 절차 자체의 적법성에 이의를 제기하고 있다.",
+   "url": "https://www.law360.com/ip/articles/2505281?utm_source=rss&utm_medium=rss&utm_campaign=section"
   },
   {
    "id": "e7b34eb5516f",
@@ -90,6 +178,17 @@
    "url": "https://www.gov.uk/government/publications/technological-protection-measures-tpms-complaints-process"
   },
   {
+   "id": "6e4024b72382",
+   "date": "2026-07-22",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "미국 USPTO, 직권 재심사 청구 시 실제 이해당사자 진술 의무화 규칙 제안",
+   "summary": "USPTO가 제3자의 직권 재심사(ex parte reexamination) 청구 시 실제 이해당사자(RPI) 정보를 의무적으로 제출하도록 하는 규칙 개정안을 연방관보에 공개했다. 이는 익명 청구 남용을 방지하고 절차 투명성을 높이기 위한 조치다.",
+   "url": "https://ipwatchdog.com/2026/07/22/uspto-proposes-rule-to-require-statement-of-rpis-for-all-ex-parte-reexam-requests/"
+  },
+  {
    "id": "c0632bc8e154",
    "date": "2026-07-22",
    "country": "EU",
@@ -121,6 +220,28 @@
    "title": "미국 USITC, 337조 조사 내 소송 펀딩 공개 규칙 의견수렴 결과 공개 지지 우세",
    "summary": "USITC가 제안한 제3자 소송 펀딩 공개 규칙(§ 210.14a)에 대한 의견수렴에서 총 28개 의견 중 약 82%가 공개 의무화를 지지한 것으로 분석되었다. 이는 ITC 337조 조사에서 소송 자금 출처의 투명성 확보에 대한 광범위한 지지 여론을 보여준다.",
    "url": "https://www.unifiedpatents.com/insights/2026/7/22/usitc-litigation-funding-disclosure-comments-reveal-overwhelming-public-support"
+  },
+  {
+   "id": "297d9edddf8d",
+   "date": "2026-07-21",
+   "country": "US",
+   "source": "Patent Docs",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "미국 PTAB, Squires 청장 취임 후 §101 거절 유지율 하락 추세 분석",
+   "summary": "5년 연속 조사 결과, PTAB의 §101(특허적격성) 거절 유지율이 Squires 청장 취임 이후 감소한 것으로 나타났다. 이는 특허청의 특허적격성 심사 기조 변화를 시사한다.",
+   "url": "https://patentdocs.org/2026/07/20/ptab-%c2%a7-101-affirmance-rates-dip-under-director-squires/"
+  },
+  {
+   "id": "c8e3bf3d8703",
+   "date": "2026-07-21",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "미국, 생성형 AI 도입으로 정부 조달 계약 및 IP법 규제 공백 문제 대두",
+   "summary": "정부 계약업체들이 LLM·생성형 AI를 빠르게 도입하면서 데이터 소유권 및 지식재산 귀속 문제에 대한 규제 공백이 부각되고 있다. 미국 조달청(GSA) 등 규제 당국이 관련 기준 마련에 나서고 있다.",
+   "url": "https://ipwatchdog.com/2026/07/21/seizing-secret-sauce-how-generative-ai-is-breaking-government-contracting-and-ip-law/"
   },
   {
    "id": "5df258457f0f",
