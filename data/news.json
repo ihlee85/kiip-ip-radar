@@ -79,6 +79,28 @@
    "url": "https://www.cnipa.gov.cn/art/2025/5/7/art_90_199521.html"
   },
   {
+   "id": "f78b358f8fc0",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "반도체 기업 Delta Electronics, 경쟁사 Vicor의 영업비밀 유용 혐의로 소송 제기",
+   "summary": "반도체 기업 델타일렉트로닉스는 경쟁사 Vicor가 자사의 기밀 영업비밀을 공개하고 이를 특허 분쟁에 악용하였다며 텍사스 서부지방법원에 소를 제기하였다. 해당 소송은 특허 분쟁 과정에서의 영업비밀 보호 범위를 둘러싼 복합적 법적 쟁점을 포함하고 있다.",
+   "url": "https://www.law360.com/ip/articles/2505388?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
+   "id": "0caa8f32e29e",
+   "date": "2026-07-24",
+   "country": "CN",
+   "source": "인민망 지식재산",
+   "topic": "분쟁·소송",
+   "ai": true,
+   "title": "중국 최고인민법원, 종자 무라벨 판매·상표 부착 행위를 생산 행위로 명확화…Anthropic AI 특허 소송 등 글로벌 IP 분쟁 동향",
+   "summary": "중국 최고인민법원은 무라벨 종자를 구매 후 타사 상표를 부착해 판매하는 행위를 '생산 행위'로 간주한다는 판단을 명확히 하였다. 아울러 AI 기업 Anthropic이 저작권 분쟁 합의금 15억 달러를 지급하는 동시에 신규 AI 특허 소송에 피소되는 등 글로벌 IP 분쟁 주요 동향도 함께 보고되었다.",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE42RWxGZ3l4eGgxbjZ6WTVLNUhXbG81RjVXOG50ejFmQ3JKRnJ1aUFMbHdOaFZLaFRtYkwwSlZyaE5zQVY4N19xdTJHaXllVzF4VHdMWG80MGY?oc=5"
+  },
+  {
    "id": "88883563291a",
    "date": "2026-07-24",
    "country": "US",
@@ -134,6 +156,39 @@
    "url": "https://www.juve-patent.com/cases/interdigital-wins-another-upc-injunction-in-streaming-dispute-with-disney/"
   },
   {
+   "id": "ed8842e8e44c",
+   "date": "2026-07-23",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 연방순회항소법원, 디지털 액자 특허 일부 무효 판결 파기·환송",
+   "summary": "미국 연방순회항소법원(CAFC)은 디지털 액자 관련 특허 4건에 대한 지방법원의 특허 부적격 판결을 일부 파기하고 아마존을 상대로 한 소송을 일부 환송하였다. 해당 결정은 §101 특허 적격성 판단 기준의 적용 범위와 관련해 주목된다.",
+   "url": "https://ipwatchdog.com/2026/07/23/cafc-partially-reverses-ineligibility-ruling-on-digital-picture-frame-patents-reviving-suit-against-amazon/"
+  },
+  {
+   "id": "7868cf4614d0",
+   "date": "2026-07-23",
+   "country": "US",
+   "source": "Patent Docs",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "미국 USPTO, 외국 거주 특허 출원인·권리자에 대한 미국 등록 대리인 선임 의무 시행",
+   "summary": "미국 USPTO는 2026년 7월 20일부터 미국 외에 거주하는 특허 출원인 및 권리자가 USPTO 등록 대리인을 반드시 선임하도록 하는 규정을 시행하였다. 이는 외국 출원인의 직접 절차 참여를 제한하는 중요한 실무상 변화이다.",
+   "url": "https://patentdocs.org/2026/07/22/uspto-requires-foreign-domiciled-patent-applicants-and-owners-to-be-represented-by-uspto-registered-practitioners/"
+  },
+  {
+   "id": "41623ce297d5",
+   "date": "2026-07-23",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": true,
+   "title": "미국 법원, 전 NPR 진행자의 Google AI 음성 무단 사용 주장 소송 주법원 이송 결정",
+   "summary": "캘리포니아 연방법원은 전 NPR 'Morning Edition' 진행자 데이비드 그린이 Google의 AI 팟캐스팅 제품에 자신의 목소리가 무단 사용되었다며 제기한 소송을 주(州) 법원으로 이송하도록 결정하였다. 이 사건은 AI 생성 콘텐츠에서의 음성 권리 및 저작권 보호 범위에 관한 주요 사례로 주목된다.",
+   "url": "https://www.law360.com/ip/articles/2505264?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
    "id": "09c22012ebb2",
    "date": "2026-07-23",
    "country": "US",
@@ -176,6 +231,28 @@
    "title": "영국 지식재산청, 기술적 보호조치(TPM) 관련 저작권 예외 적용 절차 안내 갱신",
    "summary": "영국 지식재산청(UKIPO)이 기술적 보호조치(TPM)로 인해 저작권 예외 혜택을 받지 못하는 경우의 이의제기 절차 안내를 업데이트하였다. 이는 저작권 예외권과 디지털 콘텐츠 접근 간의 균형을 위한 집행 가이던스로 실무적 중요성을 가진다.",
    "url": "https://www.gov.uk/government/publications/technological-protection-measures-tpms-complaints-process"
+  },
+  {
+   "id": "99df35ceb7e8",
+   "date": "2026-07-22",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 제9순회법원, 역설계·'합리적 취득가능성' 입증책임 관련 영업비밀 판결 파기",
+   "summary": "미국 제9순회항소법원은 Comet Technologies v. XP Power 사건에서 4천만 달러 규모의 영업비밀 침해 평결을 파기하고 재심리를 명령하였다. 법원은 역설계 및 '합리적으로 취득 가능한 정보'에 대한 입증책임 기준 적용이 잘못되었다고 판단하였다.",
+   "url": "https://ipwatchdog.com/2026/07/22/reverse-engineering-readily-ascertainable-burden-proof-lessons-comet-technologies-decision/"
+  },
+  {
+   "id": "a9da25d51567",
+   "date": "2026-07-22",
+   "country": "JP",
+   "source": "일본 특허청(JPO)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "일본 특허청, 닌텐도 게임 특허 거절 과정에서 저작권 관련 의견서 교환 논란",
+   "summary": "일본 특허청이 닌텐도의 게임 관련 특허 출원을 거절하는 과정에서 특허 심사 의견서에 저작권 침해 주장이 포함되어 이례적인 논란이 발생하였다. 특허청은 해당 주장을 '상식 밖의 오해'라고 반박하며 특허·저작권 간 법적 경계에 대한 논의가 이어지고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE13aXVqWEh4ZjJ1TF8wejZwY2JBZ1ZORjV6dEtQN19LQWpQa0dsUHRKY2pUVTFoaWIxLVhJTUo0SVlrdFEzM19tT2NBMUtwMVRIY1JoZDRHUW91MjZVQ2pfTU5kSWtqd1lTdU9EeQ?oc=5"
   },
   {
    "id": "6e4024b72382",
@@ -288,6 +365,28 @@
    "url": "https://www.juve-patent.com/cases/kavo-and-mitscherlich-prevail-against-mk-dent-in-dental-turbine-dispute/"
   },
   {
+   "id": "0ee61eb373d2",
+   "date": "2026-07-20",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "미국 USPTO, 의회 반대에도 쿠바산 Havana Club 상표 등록 허용 논란",
+   "summary": "미국 의회가 도난 상표 등록을 금지하는 입법을 추진했음에도 불구하고, USPTO가 쿠바 혁명 당시 몰수된 아레차발라 가문의 Havana Club 럼 상표를 등록한 사실이 논란이 되고 있다. 이 사안은 정치적 몰수 이후의 상표권 귀속 및 미국 내 보호 범위에 관한 법적 쟁점을 부각시킨다.",
+   "url": "https://ipwatchdog.com/2026/07/20/congress-said-no-to-stolen-trademarks-uspto-said-yes/"
+  },
+  {
+   "id": "881619f2459c",
+   "date": "2026-07-20",
+   "country": "CN",
+   "source": "인민망 지식재산",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "루이비통(LV), 중국 CNIPA 상대로 사잎 꽃 상표 분쟁 소송 제기",
+   "summary": "명품 브랜드 루이비통(LV)이 중국 국가지식산권국(CNIPA)을 상대로 사잎 꽃 도형 상표 분쟁과 관련한 소송을 새로 제기하였다. LV는 과거에도 CNIPA를 상대로 5차례 소를 제기해 3승 2패를 기록한 바 있어 중국 내 상표 보호 전략이 주목된다.",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5WMjM2YW9aRnAzX250TkpqWFFZTVllX1N0TFMyX0tiQmdqZ01JQmt1c1Q4UVd4c2d2eWY1YnpVa0RDV2liRGt5bXhEN1lfRl9kTXI0Tg?oc=5"
+  },
+  {
    "id": "e961425ea858",
    "date": "2026-07-20",
    "country": "US",
@@ -308,6 +407,17 @@
    "title": "UPC 항소법원, 취소 반소 조건부 제기 관련 절차 규칙 명확화",
    "summary": "미국 의료기기 회사 Emboline과 이탈리아 경쟁사 AorticLab 간의 EP 2 129 425 특허 침해 소송에서 UPC 항소법원이 취소 반소의 조건부 제기 요건에 관한 절차적 규칙을 명확히 하였다. 이 결정은 UPC 절차 내 반소 활용 방식에 관한 중요한 선례로 작용할 전망이다.",
    "url": "https://www.juve-patent.com/cases/upc-court-of-appeal-clarifies-rules-on-conditional-counterclaims-for-revocation/"
+  },
+  {
+   "id": "b9d369770de2",
+   "date": "2026-07-18",
+   "country": "JP",
+   "source": "일본 특허청(JPO)",
+   "topic": "보호·집행",
+   "ai": false,
+   "title": "일본 특허청, '와지마 아침시장' 지역 브랜드(지리적 표시) 등록 승인",
+   "summary": "일본 특허청은 이시카와현의 전통 시장인 '와지마 아침시장'을 지역 단체 상표(지리적 브랜드)로 등록하였다. 이에 따라 향후 해당 명칭의 신규 사용에는 와지마 상공회의소의 허락이 필요하게 된다.",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ZNnBWNGN5TFNTV19EeUdZaEVWNkdjU2dYcEZDSHpkX3FWVXlkM3Q5ZXdlZjhLaHNhMkczNThrZXFnY21tN0Z1TmhGQWU5QVVZMDVxTEdmNHBsOGVCWm9MOEZRTUtmcVU?oc=5"
   },
   {
    "id": "40ce546d5238",
