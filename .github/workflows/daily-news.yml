@@ -2,8 +2,9 @@ name: Daily IP News Collection
 
 on:
   schedule:
-    - cron: "0 21 * * *"   # 매일 UTC 21:00 = 한국시간 오전 6:00
-  workflow_dispatch:        # 수동 실행 버튼
+    - cron: "21 21 * * *"   # 매일 06:21 KST (정각 회피)
+    - cron: "21 1 * * *"   # 매일 10:21 KST (1차 누락 대비 보험)
+  workflow_dispatch:
 
 permissions:
   contents: write
