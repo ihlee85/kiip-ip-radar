@@ -1,6 +1,28 @@
 {
- "updated": "2026-07-25",
+ "updated": "2026-07-26",
  "items": [
+  {
+   "id": "1fb5391a474a",
+   "date": "2026-07-26",
+   "country": "EU",
+   "source": "EPO",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "유럽특허청(EPO), 심사 품질 대시보드 분기 업데이트 공개",
+   "summary": "EPO가 특허 심사 품질 현황을 보여주는 품질 대시보드의 최신 분기 업데이트를 공개했다. 심사 절차 투명성 강화를 위한 정기 공개 자료로, 주요 품질 지표 변화를 확인할 수 있다.",
+   "url": "https://www.epo.org/en/news-events/news/quality-dashboard-quarterly-update-3"
+  },
+  {
+   "id": "6502d0b4983a",
+   "date": "2026-07-26",
+   "country": "CN",
+   "source": "인민망 지식재산",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "중국 당국, 콜게이트의 '미백' 치약 관련 다수 상표 무효 선고",
+   "summary": "중국 당국이 '미백' 효능 등록 없이 미백 기능을 표방한 콜게이트 치약 관련 복수의 상표를 무효로 선고했다. 소비자 오인을 유발하는 '꼼수 상표'에 대한 제재 사례로 주목받고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNbGpORm90ZnNqY2ZyV1dsZE92T1NZQXROY1V2OW9zY1FqdGd5Y1lkVDNnY0RYWHJvMVJMQzN6T2dmWlI5MUZLbGY4d2draDl0ZjBuYWR3elFHYkJyMkhSZWtyS1RBekIwN1B2Vkw4YUZIUWYwVXZlZVhUcVY2Wjl1VHU2eC1ObG9IMVZjWQ?oc=5"
+  },
   {
    "id": "eb0527444693",
    "date": "2026-07-25",
@@ -77,6 +99,39 @@
    "title": "CNIPA, 「2024년 세계 5대 지식재산청 주요 통계 인포그래픽」 중·영문판 공개",
    "summary": "중국 국가지식산권국이 한·중·일·미·유럽 5대 특허청의 2024년 주요 통계를 인포그래픽 형태로 정리한 자료의 중문판 및 영문판을 발표하였다. 출원·등록 건수 등 주요 지표를 국제 비교 관점에서 확인할 수 있다.",
    "url": "https://www.cnipa.gov.cn/art/2025/5/7/art_90_199521.html"
+  },
+  {
+   "id": "49f516ca31c3",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 Enanta Pharmaceuticals, 연방순회항소법원에 Paxlovid 특허 관련 전원합의체 재심 청구",
+   "summary": "Enanta Pharmaceuticals가 Pfizer의 COVID-19 치료제 Paxlovid를 대상으로 주장한 특허 소송에서 연방순회항소법원의 기각 결정에 불복해 전원합의체 재심리를 요청했다. 법원이 권한 범위를 벗어난 판단을 했다는 것이 청구의 핵심 논거다.",
+   "url": "https://www.law360.com/ip/articles/2505238?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
+   "id": "947695ed06f7",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 연방순회항소법원, Amsted Rail의 철도차량 모니터링 특허 추가 청구항 무효 인정",
+   "summary": "연방순회항소법원이 PTAB의 Amsted Rail 특허 청구항 무효 결정을 재차 인용하는 판결을 내렸다. 불과 두 달 전 같은 특허의 별도 청구항 무효를 확정한 데 이어 추가 청구항에 대해서도 같은 결론을 도출했다.",
+   "url": "https://www.law360.com/ip/articles/2505484?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
+   "id": "5cf3cf403f61",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "Sensodyne·Aquafresh 제조사, 'Sensio' 상표 혼동 가능성 주장하며 소송 제기",
+   "summary": "Sensodyne·Aquafresh 브랜드를 보유한 기업들이 뷰티·퍼스널케어 소매업체의 'Sensio' 치약 및 'Triple Protect' 구강케어 제품군이 소비자 혼동을 유발한다고 주장하며 상표 침해 소송을 제기했다.",
+   "url": "https://www.law360.com/ip/articles/2500677?utm_source=rss&utm_medium=rss&utm_campaign=section"
   },
   {
    "id": "f78b358f8fc0",
@@ -156,6 +211,28 @@
    "url": "https://www.juve-patent.com/cases/interdigital-wins-another-upc-injunction-in-streaming-dispute-with-disney/"
   },
   {
+   "id": "8f3494c0e1f6",
+   "date": "2026-07-23",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "삼성, Pictiva의 QD-OLED TV 특허 가처분 신청 대응해 10억 달러 규모 보증금 요구 반박",
+   "summary": "삼성 3개 법인이 텍사스 연방법원에 Pictiva의 예비적 판매금지 가처분 신청 기각을 촉구하며, 만일 가처분이 인용될 경우 약 10억 달러 규모의 보증금을 요구할 것을 명시했다. 해당 소송은 Pictiva의 QD-OLED 관련 특허 침해 주장에 근거한다.",
+   "url": "https://www.law360.com/ip/articles/2505156?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
+   "id": "a69d529fa03b",
+   "date": "2026-07-23",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "Lenovo, 노스캐롤라이나 법원에 Longhorn IP의 악의적 특허 주장 중단 요청",
+   "summary": "Lenovo가 Longhorn IP의 '조율된 악의적 특허 주장 캠페인'을 중단시켜 달라며 노스캐롤라이나 연방법원에 신청서를 제출했다. 노스캐롤라이나주의 남용적 특허 주장 방지법(APAA)을 근거로 제재를 요청했다.",
+   "url": "https://www.law360.com/ip/articles/2505155?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
    "id": "ed8842e8e44c",
    "date": "2026-07-23",
    "country": "US",
@@ -231,6 +308,39 @@
    "title": "영국 지식재산청, 기술적 보호조치(TPM) 관련 저작권 예외 적용 절차 안내 갱신",
    "summary": "영국 지식재산청(UKIPO)이 기술적 보호조치(TPM)로 인해 저작권 예외 혜택을 받지 못하는 경우의 이의제기 절차 안내를 업데이트하였다. 이는 저작권 예외권과 디지털 콘텐츠 접근 간의 균형을 위한 집행 가이던스로 실무적 중요성을 가진다.",
    "url": "https://www.gov.uk/government/publications/technological-protection-measures-tpms-complaints-process"
+  },
+  {
+   "id": "b192a046a1f8",
+   "date": "2026-07-22",
+   "country": "US",
+   "source": "Patent Docs",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "미국 연방순회항소법원, IPR 병행 절차 관련 Extremity Medical 판결 선고",
+   "summary": "연방순회항소법원이 Extremity Medical v. Nextremity Solutions 사건에서 PTAB IPR 절차와 법원 병행 소송 관련 쟁점에 대해 판결을 내렸다. 2012년 AIA 시행 이후 IPR 제도 운용상 주요 절차 문제를 다룬 사례로 주목된다.",
+   "url": "https://patentdocs.org/2026/07/21/extremity-medical-llc-v-nextremity-solutions-inc-fed-cir-2026/"
+  },
+  {
+   "id": "137c92b19acf",
+   "date": "2026-07-22",
+   "country": "JP",
+   "source": "일본 특허청(JPO)",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "일본 특허청 산하 INPIT, 후쿠오카 거점 10월 개설…기업 지식재산 활용 지원 확대",
+   "summary": "일본 특허청 산하 지식재산 지원기관 INPIT이 오는 10월 후쿠오카에 새 거점을 개설해 기업의 지식재산 활용을 밀착 지원할 계획이다. 지방 기업의 IP 역량 강화를 위한 전국 네트워크 확충의 일환이다.",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBtYnNJMmh4N2Z5YW5LcjJFZURwdXdSN1JKZVVQMThQcXg0VU5iaGRuZTRJSmRzR0hmSXQ3V3RGUzZWVEltendaZ05zZjdCN3ZGU2pfalpUUUJ0MkJ6Tzd4bm92VnFyU0x3SG1BZg?oc=5"
+  },
+  {
+   "id": "7dcdd4dec7b8",
+   "date": "2026-07-22",
+   "country": "CN",
+   "source": "인민망 지식재산",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "루이비통(LV), 중국 국가지식산권국 상대로 상표 분쟁 소송 제기…대중 여론 폭발",
+   "summary": "루이비통이 중국 국가지식산권국(CNIPA)을 상대로 상표 관련 행정소송을 새롭게 제기해 중국 내 대중 여론의 주목을 받고 있다. LV는 과거에도 CNIPA를 상대로 5차례 소송을 제기한 바 있으며 3승 2패의 전적을 보유하고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPcVZEUHNadEJDSVlPUktUbklwa1JpTFJWNWRRX0hxaE83TFhXUks0Y3lfdV9IYWt5eG9PakZBZUVYRGFNTVFSenZyZ3lhcGJwNXloUWwyOXQ3aFhlUDhwVE4ycmpuQmJMWk1hdlFPZno5Y1p0Sk9kRUNyVEJBNkwyaFY1MkwySkhLY1REbGVGU0Jmd3JxYS1CRHJRWE9WcWlPMUttbS1rWWNDVERWRzZLb0JJVGtJWWpmV2JnOF9KSnR4VTFHblFaOG44dmFjRVFRVm9QdXJvOTFUdmtrVFAtMllwc0t5VTJQVUVFRzcyd3VVaE9ZM0tSck9VSEx0Sk1zbFVvbzVLS3ZPbHVXcG1wV1lXSjViMkdJU1NhTGczaVBrWl9Yc2ZSb2otNE1SZDc5MHpSMUppdTVUV3hzUmxDaHlpRHpfT01ZSmhGamtTYw?oc=5"
   },
   {
    "id": "99df35ceb7e8",
