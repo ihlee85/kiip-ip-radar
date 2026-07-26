@@ -2,6 +2,50 @@
  "updated": "2026-07-26",
  "items": [
   {
+   "id": "a04ba18d8a4e",
+   "date": "2026-07-26",
+   "country": "EU",
+   "source": "EPO",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "유럽특허청(EPO), 2026년 유럽자격시험(EQE) 결과 발표…현대화된 시험 체계 성과 확인",
+   "summary": "EPO가 2026년 유럽자격시험(EQE) 결과를 공개하며 개편된 시험 체계의 성과를 강조했다. 응시자 합격률 등 주요 지표가 개선된 것으로 나타났다.",
+   "url": "https://www.epo.org/en/news-events/news/strong-eqe-2026-results-highlight-success-modernised-examination-framework"
+  },
+  {
+   "id": "4b811460588b",
+   "date": "2026-07-26",
+   "country": "EU",
+   "source": "EPO",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "유럽특허청(EPO), 디지털 농업 분야 기술 인사이트 보고서 발간",
+   "summary": "EPO가 디지털 농업 관련 특허 동향을 분석한 기술 인사이트 보고서를 공개했다. 해당 보고서는 정밀농업·농업 자동화 등 분야의 특허 출원 현황과 기술 트렌드를 다루고 있다.",
+   "url": "https://www.epo.org/en/news-events/news/digital-agriculture-technologies-grow-three-times-faster-average-global-food"
+  },
+  {
+   "id": "8671446cdd9d",
+   "date": "2026-07-26",
+   "country": "CN",
+   "source": "중국 국가지식산권국(CNIPA)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "중국 CNIPA, 2026년 4월 성(省)별 특허침해 행정재결 건수 통계 공개",
+   "summary": "CNIPA가 2026년 4월 기준 각 성·자치구·직할시별 특허침해 분쟁 행정재결 건수 통계를 발표했다. 이는 중국 내 특허 집행 현황을 파악할 수 있는 월별 정기 공개 자료다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/5/18/art_89_206397.html"
+  },
+  {
+   "id": "c36164ccf3f8",
+   "date": "2026-07-26",
+   "country": "CN",
+   "source": "중국 국가지식산권국(CNIPA)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "CNIPA, 「2023년 세계 5대 지식재산청 통계 보고서」 중문판 공개",
+   "summary": "중국 국가지식산권국(CNIPA)이 세계 5대 지식재산청(IP5)의 2023년 주요 통계를 담은 보고서 중문판을 공식 공개했다. 해당 보고서는 특허·상표·디자인 출원 및 등록 현황 등 국제 지식재산 통계를 종합 제공한다.",
+   "url": "https://www.cnipa.gov.cn/art/2025/1/14/art_90_197174.html"
+  },
+  {
    "id": "1fb5391a474a",
    "date": "2026-07-26",
    "country": "EU",
@@ -99,6 +143,39 @@
    "title": "CNIPA, 「2024년 세계 5대 지식재산청 주요 통계 인포그래픽」 중·영문판 공개",
    "summary": "중국 국가지식산권국이 한·중·일·미·유럽 5대 특허청의 2024년 주요 통계를 인포그래픽 형태로 정리한 자료의 중문판 및 영문판을 발표하였다. 출원·등록 건수 등 주요 지표를 국제 비교 관점에서 확인할 수 있다.",
    "url": "https://www.cnipa.gov.cn/art/2025/5/7/art_90_199521.html"
+  },
+  {
+   "id": "e9c279ad494f",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "비영리 저작권 단체, Spotify가 오디오북 사건 증거개시를 의도적으로 지연했다고 법원에 주장",
+   "summary": "비영리 로열티 배분 단체가 Spotify의 오디오북 로열티 산정 방식에 이의를 제기한 소송에서 Spotify가 증거개시 절차를 의도적으로 지연하고 있다고 맨해튼 연방법원에 신청했다. 이 사건은 스트리밍 플랫폼의 저작권 로열티 계산 방식을 둘러싼 분쟁이다.",
+   "url": "https://www.law360.com/ip/articles/2505384?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
+   "id": "a919a584ac96",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "사진작가, Daily Beast의 무단 이미지 사용에 저작권 침해 소송 제기",
+   "summary": "사진작가가 Daily Beast가 허가 없이 자신이 촬영한 사진을 기사에 사용했다며 뉴욕 연방법원에 저작권 침해 소송을 제기했다. 해당 이미지는 소프트웨어 기업 CEO가 등장한 바이럴 영상 관련 콘텐츠에 사용됐다.",
+   "url": "https://www.law360.com/ip/articles/2505589?utm_source=rss&utm_medium=rss&utm_campaign=section"
+  },
+  {
+   "id": "21f00ebede90",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "Law360 IP",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "Novo Nordisk, Eli Lilly의 GLP-1 의약품 광고 금지 가처분 신청",
+   "summary": "Novo Nordisk가 Eli Lilly의 GLP-1 계열 당뇨·비만 치료제 관련 광고가 구식 임상시험 데이터를 활용한 허위·기만적 비교 광고라며 뉴저지 연방법원에 광고 금지 가처분을 신청했다. 이 사건은 의약품 광고 관련 지식재산·불공정경쟁 분쟁으로 주목된다.",
+   "url": "https://www.law360.com/ip/articles/2505377?utm_source=rss&utm_medium=rss&utm_campaign=section"
   },
   {
    "id": "49f516ca31c3",
@@ -308,6 +385,17 @@
    "title": "영국 지식재산청, 기술적 보호조치(TPM) 관련 저작권 예외 적용 절차 안내 갱신",
    "summary": "영국 지식재산청(UKIPO)이 기술적 보호조치(TPM)로 인해 저작권 예외 혜택을 받지 못하는 경우의 이의제기 절차 안내를 업데이트하였다. 이는 저작권 예외권과 디지털 콘텐츠 접근 간의 균형을 위한 집행 가이던스로 실무적 중요성을 가진다.",
    "url": "https://www.gov.uk/government/publications/technological-protection-measures-tpms-complaints-process"
+  },
+  {
+   "id": "d8c5ac48465b",
+   "date": "2026-07-22",
+   "country": "JP",
+   "source": "일본 특허청(JPO)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "일본 특허청, 닌텐도 게임 특허 거절 심사에서 저작권 관련 의견 응수 논란",
+   "summary": "일본 특허청이 닌텐도의 게임 관련 특허 출원을 거절하는 과정에서 저작권 침해 주장이 오가며 논란이 발생했다. 특허청은 닌텐도 측의 의견서 내용을 '상식 밖의 오해'라고 반박하는 등 이례적인 공방이 이루어졌다.",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQWE1CWm03bnZlTFJzQ1lBQlc3Ujh5N2dkSjgwSzUxZkJ0c2QweFlaN2VoZjlOcDVSVWVNcGNaYzN1REdRVTU5OVFMWUpnUXdaTmNLMTBmeHlCc0hLWjRNVF9pMlBqYnhNRy1jUUpvSjc0UE9Pa2RhZ0hPaTBhd2RrOGVJX0Y4UXMyM24yaEV3?oc=5"
   },
   {
    "id": "b192a046a1f8",
