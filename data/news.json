@@ -2,6 +2,39 @@
  "updated": "2026-07-26",
  "items": [
   {
+   "id": "53cdd72c6582",
+   "date": "2026-07-26",
+   "country": "EU",
+   "source": "IPWatchdog",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "유럽 디지털시장법(DMA), 구글 IP를 공공재로 전환하는 '트로피 공유 카르텔' 논란",
+   "summary": "유럽 디지털시장법(DMA)이 구글 등 빅테크 기업의 지식재산을 사실상 강제 공유하도록 설계되어 있다는 비판이 제기되었다. DMA가 기술 챔피언 육성을 표방하면서도 승자의 IP를 공공재화하는 정책적 모순을 안고 있다는 분석이다.",
+   "url": "https://ipwatchdog.com/2026/07/26/trophy-sharing-cartel-europes-digital-markets-act-turns-googles-ip-into-public-utility/"
+  },
+  {
+   "id": "674d784ee8b4",
+   "date": "2026-07-26",
+   "country": "JP",
+   "source": "일본 특허청(JPO)",
+   "topic": "심사·제도",
+   "ai": true,
+   "title": "일본 특허청(JPO), AI 적극 활용으로 심사 품질 유지·신속화 추진",
+   "summary": "일본 특허청이 지식재산 행정 전반에 AI를 적극 도입하여 심사 품질을 유지하면서도 처리 속도를 높이는 방향을 추진하고 있다고 발표하였다. AI 활용이 심사 효율화의 핵심 수단으로 부상하고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9nT1ZRaWNieVdsbzdvbHppa3VKMlhzU2pjTDIyY1lUWjVtZFBIbHYwbXNxM21hS1RVSEhxWURCaXJHNGhHMzBrRkMwQ2tYS01iVGJ1cHFkUE5lVDg?oc=5"
+  },
+  {
+   "id": "97f9b930e7c4",
+   "date": "2026-07-26",
+   "country": "CN",
+   "source": "인민망 지식재산",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "루이비통(LV), 중국 샤먼 부동산 기업 상대로 상표 유사 침해 소송 추가 제기",
+   "summary": "루이비통이 중국 샤먼 소재 부동산 기업의 로고가 자사 상표와 유사하다며 소송을 새롭게 제기하였다. LV는 최근 CNIPA를 상대로 한 소송에 이어 중국 내 상표 분쟁을 잇달아 확대하고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5TOUdRSEdsZmlUaDFyVjE2cDhMMmd3SnA4bVVDaXh6c0Z5S0pteVk0R3BmV043Z251WnBJbTlVMWo0eWZsYWZ5aFdpa2tvV3llTGdlV1FSYk5rc1BVWVp0c3FOT3hPTl9oS1Z5dkdmRmFveEhkR1E?oc=5"
+  },
+  {
    "id": "a04ba18d8a4e",
    "date": "2026-07-26",
    "country": "EU",
@@ -143,6 +176,17 @@
    "title": "CNIPA, 「2024년 세계 5대 지식재산청 주요 통계 인포그래픽」 중·영문판 공개",
    "summary": "중국 국가지식산권국이 한·중·일·미·유럽 5대 특허청의 2024년 주요 통계를 인포그래픽 형태로 정리한 자료의 중문판 및 영문판을 발표하였다. 출원·등록 건수 등 주요 지표를 국제 비교 관점에서 확인할 수 있다.",
    "url": "https://www.cnipa.gov.cn/art/2025/5/7/art_90_199521.html"
+  },
+  {
+   "id": "5f3be6edfbe5",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "미국 하원, FRONTIER법 발의…PTAB, APJ 패널 배정 관련 SOP 1 개정",
+   "summary": "미국 하원에서 FRONTIER법이 발의되었으며, 구글은 DMA 위반으로 8억 9,000만 유로 벌금을 부과받았다. PTAB는 행정판사(APJ) 패널 배정 관련 표준운영절차(SOP 1)를 개정하였다.",
+   "url": "https://ipwatchdog.com/2026/07/24/bites-barks-google-hit-with-e890-million-fine-for-dma-violations-and-ptab-revises-sop-1-on-apj-panel-assignments/"
   },
   {
    "id": "e9c279ad494f",
@@ -288,6 +332,39 @@
    "url": "https://www.juve-patent.com/cases/interdigital-wins-another-upc-injunction-in-streaming-dispute-with-disney/"
   },
   {
+   "id": "f5774aa9a226",
+   "date": "2026-07-23",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 연방순회항소법원, 특허 만료로 ITC 판정 효력 소멸 판결",
+   "summary": "연방순회항소법원(CAFC)은 대상 특허가 만료됨에 따라 ITC 판정 관련 항소 2건을 무효(moot)로 각하하였다. 특허 만료가 ITC 판정의 효력을 소멸시키는 근거가 됨을 확인한 사례이다.",
+   "url": "https://ipwatchdog.com/2026/07/23/federal-circuit-says-expired-patent-warrants-vacatur-of-itc-determination/"
+  },
+  {
+   "id": "0b25c34480e7",
+   "date": "2026-07-23",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "미국, 소프트웨어 저작권과 수리권(Right to Repair) 충돌 문제 재조명",
+   "summary": "농기계·의료기기 등에 내장된 소프트웨어의 저작권이 소유자의 수리권을 제약하는 구조적 문제가 다시 주목받고 있다. 수리권 입법 논의와 DMCA 저작권 예외 적용 범위 확대 여부가 핵심 쟁점으로 부각되고 있다.",
+   "url": "https://ipwatchdog.com/2026/07/23/software-keeps-eating-the-world-but-the-right-to-repair-doesnt-have-to-go-with-it/"
+  },
+  {
+   "id": "94fe356059fc",
+   "date": "2026-07-23",
+   "country": "EU",
+   "source": "영국 지식재산청(UKIPO)",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "영국 지식재산청(UKIPO), 당사자 간 심판 미납 비용 명령 목록 공개",
+   "summary": "영국 지식재산청이 상표 관련 당사자 간 심판(inter partes hearing) 이후 미납된 비용 명령 현황을 공개하였다. 이는 상표 분쟁 절차의 투명성 제고를 위한 공식 발표이다.",
+   "url": "https://www.gov.uk/government/publications/trade-mark-disputes-unpaid-costs-orders"
+  },
+  {
    "id": "8f3494c0e1f6",
    "date": "2026-07-23",
    "country": "US",
@@ -385,6 +462,17 @@
    "title": "영국 지식재산청, 기술적 보호조치(TPM) 관련 저작권 예외 적용 절차 안내 갱신",
    "summary": "영국 지식재산청(UKIPO)이 기술적 보호조치(TPM)로 인해 저작권 예외 혜택을 받지 못하는 경우의 이의제기 절차 안내를 업데이트하였다. 이는 저작권 예외권과 디지털 콘텐츠 접근 간의 균형을 위한 집행 가이던스로 실무적 중요성을 가진다.",
    "url": "https://www.gov.uk/government/publications/technological-protection-measures-tpms-complaints-process"
+  },
+  {
+   "id": "a6ff9e8079ce",
+   "date": "2026-07-22",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 연방순회항소법원, 접이식 부채 디자인 특허 가처분 해제 인용 판결 확정",
+   "summary": "CAFC는 접이식 부채 디자인 특허 관련 사건에서 1심 법원의 가처분 해제 및 임시금지명령 기각 결정을 지지하는 분리 판결을 내렸다. 디자인 특허 가처분 요건에 관한 기준이 재확인되었다.",
+   "url": "https://ipwatchdog.com/2026/07/22/federal-circuit-affirms-dissolution-of-preliminary-injunction-in-split-decision-over-foldable-fan-design-patent/"
   },
   {
    "id": "d8c5ac48465b",
@@ -495,6 +583,28 @@
    "title": "미국 USITC, 337조 조사 내 소송 펀딩 공개 규칙 의견수렴 결과 공개 지지 우세",
    "summary": "USITC가 제안한 제3자 소송 펀딩 공개 규칙(§ 210.14a)에 대한 의견수렴에서 총 28개 의견 중 약 82%가 공개 의무화를 지지한 것으로 분석되었다. 이는 ITC 337조 조사에서 소송 자금 출처의 투명성 확보에 대한 광범위한 지지 여론을 보여준다.",
    "url": "https://www.unifiedpatents.com/insights/2026/7/22/usitc-litigation-funding-disclosure-comments-reveal-overwhelming-public-support"
+  },
+  {
+   "id": "c2acae58ee84",
+   "date": "2026-07-21",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 연방순회항소법원, PTAB의 음성인식 특허 청구항 해석 오류 인정…Apple 승소",
+   "summary": "CAFC는 PTAB가 음성인식 특허의 청구항을 잘못 해석했다고 판단하여 특허권자에게 불리한 PTAB 결정을 취소하고 환송하였다. Apple이 PTAB 절차에서 제기한 특허 무효 주장이 일부 받아들여진 사례이다.",
+   "url": "https://ipwatchdog.com/2026/07/21/apple-wins-cafc-due-ptabs-erroneous-reading-apeech-recognition-claims/"
+  },
+  {
+   "id": "561d3e07b89e",
+   "date": "2026-07-21",
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 연방순회항소법원, 트레드밀 특허 청구항 해석 과도하게 좁다고 판단…약식판결 파기",
+   "summary": "CAFC는 Woodway USA 대 LifeCore Fitness 사건에서 1심 법원이 트레드밀 특허의 청구항을 지나치게 좁게 해석해 비침해 약식판결을 내렸다고 보아 이를 파기·환송하였다. 청구항 해석의 적정 범위가 쟁점이 된 사례이다.",
+   "url": "https://ipwatchdog.com/2026/07/21/federal-circuit-vacates-summary-judgment-in-treadmill-patent-dispute-finding-claim-construction-too-narrow/"
   },
   {
    "id": "297d9edddf8d",
