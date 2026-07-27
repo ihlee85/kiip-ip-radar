@@ -2,6 +2,105 @@
  "updated": "2026-07-27",
  "items": [
   {
+   "id": "3d6326d89316",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 미디어시점",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "중국 국무원 상무회의, 「지식재산 보호·활용 '15·5' 규획」 심의·통과",
+   "summary": "중국 국무원 상무회의가 「지식재산 보호 및 운용 제15차 5개년 규획」을 심의·통과시켰다. 동 규획은 향후 5년간 중국의 지식재산 보호 및 활용 방향을 제시하는 핵심 정책 문서이다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/7/22/art_55_207319.html"
+  },
+  {
+   "id": "73af0d9cd43c",
+   "date": "2026-07-27",
+   "country": "ETC",
+   "source": "JUVE Patent",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "영국 대법원, Avanci 5G SEP 라이선스 분쟁에서 Tesla 상고 인용",
+   "summary": "영국 대법원이 Avanci 5G 표준필수특허(SEP) 풀 라이선스 조건을 둘러싼 분쟁에서 Tesla의 상고를 만장일치로 인용하였다. 이번 판결은 SEP 라이선스 관련 주요 선례로 주목된다.",
+   "url": "https://www.juve-patent.com/cases/uk-supreme-court-hands-tesla-landmark-win-in-avanci-5g-pool-licence-dispute/"
+  },
+  {
+   "id": "ea25e185349b",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 통지",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "중국 CNIPA, 2026년 전국 특허 조사 실시 공고",
+   "summary": "중국 국가지식재산국(CNIPA) 판공실이 2026년 전국 특허 조사 업무 시행에 관한 통지를 발표하였다. 동 조사는 중국 내 특허 현황과 활용 실태를 파악하기 위한 연례 전국 단위 조사이다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/7/15/art_75_207187.html"
+  },
+  {
+   "id": "1644956a4cf4",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 백서",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "중국 CNIPA, 「2024년 중국 지식재산 보호 현황」 백서 발간",
+   "summary": "중국 국가지식재산국(CNIPA)이 2024년도 중국 지식재산 보호 현황을 정리한 공식 백서를 발간하였다. 다만 최근 아카이브에 2025년판이 이미 수록되어 있으므로, 2024년판은 별도 연도 보고서로서 게재 가치가 있다.",
+   "url": "https://www.cnipa.gov.cn/art/2025/4/26/art_91_199385.html"
+  },
+  {
+   "id": "a3f54fc50399",
+   "date": "2026-07-27",
+   "country": "EU",
+   "source": "EU 지식재산네트워크(EUIPN)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "EUIPN, 2026년 2분기 유럽 협력 프로젝트 및 가상 커뮤니티 협력 성과 공개",
+   "summary": "유럽 지식재산 네트워크(EUIPN)가 2026년 2분기 동안 진행된 유럽 협력 프로젝트 및 가상 커뮤니티의 협력 활동 현황을 공개하였다. 유럽 IP 기관 간 심사·제도 협력의 분기별 성과를 정리한 보고이다.",
+   "url": "https://www.euipn.org/en/news-and-events/news/european-cooperation-projects-and-virtual-communities-advance-cooperation-in-q2-2026"
+  },
+  {
+   "id": "40a58d24ae37",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 주요뉴스",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "중국 CNIPA 국장, WIPO 회원국총회 제68차 회의 참석 및 일반 발언",
+   "summary": "선창위 중국 국가지식재산국 국장이 세계지식재산기구(WIPO) 회원국총회 제68차 시리즈 회의에 대표단을 이끌고 참석하여 일반 발언을 하였다. 이 자리에서 중국의 지식재산 정책 입장을 국제사회에 표명하였다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/7/9/art_53_207139.html"
+  },
+  {
+   "id": "496d8837b712",
+   "date": "2026-07-27",
+   "country": "JP",
+   "source": "일본 특허청(JPO)",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "일본 특허청(JPO), WIPO 회원국총회 계기 20개 이상 지식재산청과 양자 회담 진행",
+   "summary": "일본 특허청(JPO)이 WIPO 회원국총회 참석을 계기로 20개국 이상의 지식재산청과 양자 회담을 실시하였다. 이를 통해 특허·상표 등 지식재산 분야 국제협력 관계를 강화하였다.",
+   "url": "https://www.jpo.go.jp/news/ugoki/202607/2026072101.html"
+  },
+  {
+   "id": "7274779a4aa6",
+   "date": "2026-07-27",
+   "country": "ETC",
+   "source": "싱가포르 지식재산청 뉴스",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "싱가포르 지식재산청(IPOS), 지식재산 제도 개편 제안에 대한 공개 의견 수렴 실시",
+   "summary": "싱가포르 지식재산청(IPOS)이 지식재산 제도의 변경 제안에 관한 공개 의견 수렴 절차를 개시하였다. 동 의견 수렴은 싱가포르 IP 제도의 전반적인 개선 방향을 검토하기 위한 것이다.",
+   "url": "https://www.ipos.gov.sg/news/news-collection/circular--public-consultation-on-proposed-changes-to-intellectual-property-regime/"
+  },
+  {
+   "id": "530543851983",
+   "date": "2026-07-27",
+   "country": "JP",
+   "source": "日 INPIT 지원뉴스",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "일본 INPIT, 2026년도 제3회 외국 출원 보조금 공모 접수 개시",
+   "summary": "일본 발명진흥협회 산하 INPIT이 2026년도 제3회 외국 특허 출원 보조금 공모 접수를 시작하였다. 중소기업 등의 해외 IP 출원을 지원하기 위한 정부 보조금 사업의 일환이다.",
+   "url": "https://www.inpit.go.jp/shien/gaikoku/index.html"
+  },
+  {
    "id": "64ca05d8e4c7",
    "date": "2026-07-27",
    "country": "JP",
@@ -407,6 +506,28 @@
    "title": "CNIPA, 「2024년 세계 5대 지식재산청 주요 통계 인포그래픽」 중·영문판 공개",
    "summary": "중국 국가지식산권국이 한·중·일·미·유럽 5대 특허청의 2024년 주요 통계를 인포그래픽 형태로 정리한 자료의 중문판 및 영문판을 발표하였다. 출원·등록 건수 등 주요 지표를 국제 비교 관점에서 확인할 수 있다.",
    "url": "https://www.cnipa.gov.cn/art/2025/5/7/art_90_199521.html"
+  },
+  {
+   "id": "80527ed295d7",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "미국 특허상표청(USPTO)",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "미국 USPTO, 건국 250주년 기념 특허·상표 서명식 개최",
+   "summary": "미국 특허상표청(USPTO)이 미국 건국 250주년을 기념하는 역사적인 특허·상표 서명식을 개최하였다. 이 행사는 미국 지식재산 제도의 역사적 의미를 기리는 공식 행사로 진행되었다.",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbGt0X0VkTDh1Z18zM1pNZ29DbkxWa2VsVi1QRFh2TGxNeFZZUkRHZ216RWFLR3FUNzQwVWlhQ1ZaUHhZVXFSaGJBWG1KOFgyNXdrMzRpN01KVGRIbjBzZzhGeXhBZVFmdGVZTW84TnpVNjZnSDZoWGZzbnlwSGNDWVY0eWV3LUxtSFViTlhPRzBvVnZ0UzZYcXVDeEZVeDItaldRZ3lTeXByQlFjdnBCT1BvVDBXZG8?oc=5"
+  },
+  {
+   "id": "de95ab16ef12",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "미국 국제무역위원회(USITC)",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 USITC, TOPcon 태양전지·모듈 및 관련 제품 337조 조사 개시",
+   "summary": "미국 국제무역위원회(USITC)가 TOPcon 태양전지, 모듈, 패널 및 관련 제품에 대한 무역법 제337조 조사를 개시하였다. 동 조사는 해당 제품의 특허 침해 여부를 대상으로 한다.",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOOHpzdi1uVWZ2ZG92M3BYQnRMQkg2Z3JNSTV5TnVNQUszUndJV1NiZmptNWVSbW9NV0l1S2N4bmh1NTNNendFX0NfZDZXZTRDLWZydVFBSHlxSFhLTFV2WkQ5LTgtZnFQQ0dNN2FnV3duZkJMdk5QMkppV3BNU0Utb1V6U1VlcmU3OHJSRjFXZTE4TGdhWnJST2R0RTJvV1Z3TjliVjlFNHVBdUtmX0M2ZmZB?oc=5"
   },
   {
    "id": "fcffcc365bc2",
