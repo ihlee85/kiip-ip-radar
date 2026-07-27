@@ -2,6 +2,116 @@
  "updated": "2026-07-27",
  "items": [
   {
+   "id": "64ca05d8e4c7",
+   "date": "2026-07-27",
+   "country": "JP",
+   "source": "日 경제산업성(METI)",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "일본 특허청(JPO), AI 활용 기본방침 'JPO AI 비전' 수립",
+   "summary": "일본 경제산업성 산하 특허청이 심사 업무에 AI를 전략적으로 활용하기 위한 기본방침 'JPO AI 비전'을 책정하였다. 해당 비전은 AI 도입을 통한 심사 효율화·품질 향상 방향성을 제시한다.",
+   "url": "https://www.meti.go.jp/press/2026/07/20260727001.html"
+  },
+  {
+   "id": "95591697414e",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 정책해석",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "중국 CNIPA, 2025년 특허심사지침 개정 내용 해설 공개",
+   "summary": "중국 국가지식산권국이 2025년도 「특허심사지침」 개정 사항에 대한 공식 해설 자료를 공개하였다. 개정 내용의 구체적 적용 방법과 심사 실무 변경 사항을 안내한다.",
+   "url": "https://www.cnipa.gov.cn/art/2025/12/4/art_66_202935.html"
+  },
+  {
+   "id": "07984252d3c6",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 정책해석",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "중국 CNIPA, GUI(그래픽 사용자 인터페이스) 포함 제품 디자인 특허 출원 지침 공개",
+   "summary": "중국 국가지식산권국이 그래픽 사용자 인터페이스(GUI)를 포함하는 제품 외관디자인 특허 출원에 관한 실무 지침을 발표하였다. 해당 지침은 GUI 관련 디자인 특허 출원 시 유의 사항과 심사 기준을 안내한다.",
+   "url": "https://www.cnipa.gov.cn/art/2025/12/5/art_66_202950.html"
+  },
+  {
+   "id": "15ce44da8e2f",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 정책해석",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "중국 CNIPA, 산업 클러스터 브랜드·지역 브랜드 상표 출원 지침 공개",
+   "summary": "중국 국가지식산권국이 산업 집적지 브랜드 및 지역 브랜드의 상표 등록 출원 방법에 관한 실무 지침을 공개하였다. 해당 지침은 지역 특화 브랜드의 상표 보호 전략 수립을 지원하기 위해 마련되었다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/1/8/art_66_203589.html"
+  },
+  {
+   "id": "62692df0b681",
+   "date": "2026-07-27",
+   "country": "JP",
+   "source": "일본 특허청(JPO)",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "일본 특허청(JPO), 산업구조심의회 지식재산분과 제22회 디자인제도 소위원회 개최 예고",
+   "summary": "일본 특허청이 산업구조심의회 지식재산분과 내 디자인제도 소위원회 제22차 회의 개최를 공지하였다. 해당 소위원회는 일본 디자인 보호 제도의 개선 방향을 논의하는 공식 기구이다.",
+   "url": "https://www.jpo.go.jp/news/koho/info/20260716_shingikai_isho-shoi_22.html"
+  },
+  {
+   "id": "f44fe3a168c7",
+   "date": "2026-07-27",
+   "country": "EU",
+   "source": "EU 지식재산네트워크(EUIPN)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "EUIPN, 지리적 출처를 표시하는 상표에 관한 공통관행(CP18) 채택",
+   "summary": "유럽 지식재산네트워크(EUIPN)가 지리적 출처를 나타내는 표장의 상표 등록 가능성에 관한 공통관행 CP18을 공식 채택하였다. 이 공통관행은 EU 회원국 간 심사 기준의 조화를 목적으로 한다.",
+   "url": "https://www.euipn.org/en/news-and-events/news/adoption-of-cp18-common-practice-on-marks-designating-geographical-origin"
+  },
+  {
+   "id": "7c78372cfac4",
+   "date": "2026-07-27",
+   "country": "US",
+   "source": "미국 저작권청",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "미국 저작권청, 음악현대화법(MMA) 상 기계적 라이선싱 집중기구 및 디지털 라이선시 조정기구 재지정 최종 규칙 공표",
+   "summary": "미국 저작권청이 음악현대화법(MMA)에 따라 기계적 라이선싱 집중기구(MLC)와 디지털 라이선시 조정기구(DLC)를 재지정하는 최종 규칙을 발표하였다. 해당 규칙은 음악 저작권 라이선싱 체계의 지속적 운영 기반을 확립한다.",
+   "url": "https://copyright.gov/newsnet/2026/1087.html"
+  },
+  {
+   "id": "c74c54d3921e",
+   "date": "2026-07-27",
+   "country": "JP",
+   "source": "日 지식재산전략본부",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "일본 지식재산전략본부, 지식재산 투자·활용 전략의 효과적 공시 및 거버넌스 검토회 제30회 개최",
+   "summary": "일본 지식재산전략본부가 기업의 지식재산 투자·활용 전략 공시 및 거버넌스 체계에 관한 검토회 제30차 회의를 개최하였다. 동 검토회는 기업 지식재산 경영 정보의 효과적 공개 방안을 논의하는 공식 협의체이다.",
+   "url": "https://www.cas.go.jp/jp/seisakukaigi/titeki2/tyousakai/tousi_kentokai/dai30/gijishidai.html"
+  },
+  {
+   "id": "74b9da542595",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 주요뉴스",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "중국 CNIPA 국장, 다수 국가 지식재산기관 수장과 양자 회담 및 브릭스 지식재산청장 회의 참석",
+   "summary": "중국 국가지식산권국 국장이 여러 국가·지역 지식재산기관 수장들과 양자 회담을 진행하고, 브릭스(BRICS) 지식재산청장 회의에 참석하였다. 이를 통해 국제 지식재산 협력 강화 방안이 논의되었다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/7/14/art_53_207186.html"
+  },
+  {
+   "id": "aa54a24646bd",
+   "date": "2026-07-27",
+   "country": "JP",
+   "source": "日 지식재산전략본부",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "일본 지식재산전략본부, 성장전략과 국제표준화 연계 방안 조사 보고서 공개",
+   "summary": "일본 지식재산전략본부가 국가 성장전략 추진을 위한 국제표준화 전략 검토 조사 보고서를 발표하였다. 보고서는 표준화와 지식재산 전략의 연계 방안을 분석하고 정책 방향을 제시한다.",
+   "url": "https://www.cas.go.jp/jp/seisakukaigi/titeki2/kokusai_hyoujun/research_studies/report.html"
+  },
+  {
    "id": "e747841a81e6",
    "date": "2026-07-27",
    "country": "JP",
@@ -299,6 +409,17 @@
    "url": "https://www.cnipa.gov.cn/art/2025/5/7/art_90_199521.html"
   },
   {
+   "id": "fcffcc365bc2",
+   "date": "2026-07-24",
+   "country": "US",
+   "source": "미국 국제무역위원회(USITC)",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 USITC, 외국 제조 반도체 장치 및 관련 제품 관련 337조 조사 개시",
+   "summary": "미국 국제무역위원회(USITC)가 외국에서 제조된 반도체 장치 및 이를 포함하는 제품에 관한 무역법 제337조 위반 조사를 개시하였다. 해당 조사는 지식재산권 침해 여부를 포함한 불공정 무역 행위를 대상으로 한다.",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPaWxtTmtMZzlmQlZRSjd0MGwzUGxmQlhPTEtlUzUxbnpncEhwLVRvdzNsMGxJbkhMdkQ5U2xkM0dKZndCNzhnZHU5VnlRWTlSOUx1SkY3SEdFdkNkRm1hcDFzRGJ2dXQydzVBNmlDRjRmd1RVbHJEU3lMQ3dNeFMxeWVVQkhQZzdGenhyRXdENVgtdnlKNWFIQ0NsOGRlUEtTcm9oS19uUUtRaTZnUklKTjZmb3JXUHVv?oc=5"
+  },
+  {
    "id": "5f3be6edfbe5",
    "date": "2026-07-24",
    "country": "US",
@@ -594,6 +715,17 @@
    "title": "영국 지식재산청, 기술적 보호조치(TPM) 관련 저작권 예외 적용 절차 안내 갱신",
    "summary": "영국 지식재산청(UKIPO)이 기술적 보호조치(TPM)로 인해 저작권 예외 혜택을 받지 못하는 경우의 이의제기 절차 안내를 업데이트하였다. 이는 저작권 예외권과 디지털 콘텐츠 접근 간의 균형을 위한 집행 가이던스로 실무적 중요성을 가진다.",
    "url": "https://www.gov.uk/government/publications/technological-protection-measures-tpms-complaints-process"
+  },
+  {
+   "id": "ea7a77568d57",
+   "date": "2026-07-22",
+   "country": "INT",
+   "source": "세계지식재산기구(WIPO)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "WIPO, 2025년 기술혁신지원서비스센터(TISC) 보고서 발간",
+   "summary": "세계지식재산기구(WIPO)가 혁신 지원을 위한 기술혁신지원서비스센터(TISC) 현황을 분석한 2025년 보고서를 발간하였다. 보고서는 각국 TISC의 운영 체계 강화 및 혁신 지원 성과를 다룬다.",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOV1JRa3JIcmhZMGx6LU5zY0YxMGt5OENOYkgxZGxtNEhicWl6SFBkVUt0ZndkZnZKME9qLUFqZ0xjRi1PWVZINzVKM050YUNNcU9hWlVPUHhmQWJadWxjXzFVVUVqS25VU3NGa0RVLWlBdjhoZkNSaXE3UDdUVXJYZG0wN3VfTlkwZkwxRlpUckRZUUxCNkRpcGJBeGk3eG5vV0pqSm81RGZFcnItYy1STTdn?oc=5"
   },
   {
    "id": "a978f95c41c4",
