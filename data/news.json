@@ -1,6 +1,127 @@
 {
- "updated": "2026-07-26",
+ "updated": "2026-07-27",
  "items": [
+  {
+   "id": "e747841a81e6",
+   "date": "2026-07-27",
+   "country": "JP",
+   "source": "日 지식재산전략본부",
+   "topic": "정책·법제",
+   "ai": true,
+   "title": "일본 지식재산전략본부, 「지식재산추진계획 2026」 개요 공표",
+   "summary": "일본 지식재산전략본부가 「지식재산추진계획 2026」의 개요를 발표하였다. 생성형 AI 활용, 콘텐츠 전략, 스타트업 지원 등 주요 정책 방향을 담고 있다.",
+   "url": "https://www.cas.go.jp/jp/seisakukaigi/titeki2/260612/keikaku_gaiyo_all.pdf"
+  },
+  {
+   "id": "e9bbb558f086",
+   "date": "2026-07-27",
+   "country": "JP",
+   "source": "日 지식재산전략본부",
+   "topic": "정책·법제",
+   "ai": true,
+   "title": "일본 지식재산전략본부, 「지식재산추진계획 2026」 전문 공개",
+   "summary": "일본 지식재산전략본부가 2026년도 지식재산 정책의 종합 실행계획인 「지식재산추진계획 2026」 전문을 공식 발표하였다. AI·디지털 전환 대응, 지식재산 활용 촉진 등 다양한 분야의 구체적 시책이 포함되어 있다.",
+   "url": "https://www.cas.go.jp/jp/seisakukaigi/titeki2/260612/keikaku_all.pdf"
+  },
+  {
+   "id": "434bf4d80a70",
+   "date": "2026-07-27",
+   "country": "US",
+   "source": "미국 저작권청",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "미국 저작권청, 의회에 수수료 개정안 및 분석 보고서 제출",
+   "summary": "미국 저작권청이 저작권 관련 수수료 개정안과 분석 보고서를 의회에 공식 제출하였다. 이번 제출은 저작권 서비스 비용 체계 개편을 위한 법정 절차의 일환이다.",
+   "url": "https://copyright.gov/newsnet/2026/1090.html"
+  },
+  {
+   "id": "0bca00e9933b",
+   "date": "2026-07-27",
+   "country": "US",
+   "source": "미국 저작권청",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "미국 저작권청, 디지털밀레니엄저작권법(DMCA) 제1201조 제10차 3년 주기 규칙제정 절차 개시",
+   "summary": "미국 저작권청이 DMCA 제1201조에 따른 기술적 보호조치 면제 관련 제10차 3년 주기 규칙제정 절차를 공식 시작하였다. 이 절차를 통해 저작권 보호 기술 우회 행위에 대한 면제 범위가 재검토된다.",
+   "url": "https://copyright.gov/newsnet/2026/1088.html"
+  },
+  {
+   "id": "9682cbbfe947",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 백서",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "중국 CNIPA, 「2025년 중국 지식재산 보호 현황」 백서 발간",
+   "summary": "중국 국가지식산권국(CNIPA)이 2025년도 지식재산 보호 실태를 종합적으로 분석한 백서를 공개하였다. 특허·상표·저작권 등 분야별 보호 현황과 주요 성과가 수록되어 있다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/5/7/art_91_206318.html"
+  },
+  {
+   "id": "13ea56aacffd",
+   "date": "2026-07-27",
+   "country": "EU",
+   "source": "EU 지식재산네트워크(EUIPN)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "EUIPN, 2025년 유럽 IP 활동 평가한 첫 번째 트렌드 보고서 발간",
+   "summary": "유럽 지식재산네트워크(EUIPN)가 2025년 유럽 내 지식재산 활동 동향을 분석한 최초의 트렌드 보고서를 발표하였다. 회원국 간 협력 현황과 IP 출원·등록 추세 등이 포함되어 있다.",
+   "url": "https://www.euipn.org/en/news-and-events/news/euipn-trends-report-2025"
+  },
+  {
+   "id": "207b1bd331c7",
+   "date": "2026-07-27",
+   "country": "INT",
+   "source": "국제상표협회(INTA)",
+   "topic": "보호·집행",
+   "ai": false,
+   "title": "국제상표협회(INTA), 전 세계 위조품 무역 경로 분석 신규 연구 발간",
+   "summary": "국제상표협회(INTA)가 전 세계 위조품 유통 경로를 체계적으로 지도화한 신규 연구보고서를 공개하였다. 주요 위조품 생산국·경유국·소비국 및 온·오프라인 유통 채널 분석이 담겨 있다.",
+   "url": "https://www.inta.org/news-and-press/press-releases/inta-launches-new-study-mapping-global-counterfeit-trade-routes/"
+  },
+  {
+   "id": "9241496d35b1",
+   "date": "2026-07-27",
+   "country": "INT",
+   "source": "국제상표협회(INTA)",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "국제상표협회(INTA), AI·고객 압력·신사업 모델이 IP 로펌 미래를 재편한다는 싱크탱크 보고서 발간",
+   "summary": "국제상표협회(INTA)가 AI 기술 확산, 고객 요구 변화, 새로운 비즈니스 모델이 IP 법률사무소의 구조와 업무 방식을 근본적으로 변화시키고 있다는 내용의 싱크탱크 보고서를 발표하였다. 보고서는 IP 실무 분야에서의 AI 도입 현황과 미래 전략을 분석하고 있다.",
+   "url": "https://www.inta.org/news-and-press/press-releases/inta-releases-think-tank-report-finding-ai-client-pressure-and-new-business-models-are-reshaping-the-future-of-ip-law-firms/"
+  },
+  {
+   "id": "512567408159",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 정책해석",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "중국 CNIPA, 표준 관련 발명특허 출원 심사 지침 공개",
+   "summary": "중국 국가지식산권국(CNIPA)이 기술표준과 관련된 발명특허 출원 시 적용되는 심사 지침을 발표하였다. 표준 필수 특허(SEP) 출원의 명세서 작성·심사 방법 등에 관한 구체적 기준이 포함되어 있다.",
+   "url": "https://www.cnipa.gov.cn/art/2026/3/14/art_66_205332.html"
+  },
+  {
+   "id": "81495f460588",
+   "date": "2026-07-27",
+   "country": "CN",
+   "source": "中 지식산권국 정책해석",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "중국 CNIPA, 「상표 사용 관리 강화에 관한 통지」 정책 해설 공개",
+   "summary": "중국 국가지식산권국(CNIPA)이 상표 사용 관리 강화를 위한 통지의 주요 내용과 취지를 설명하는 공식 해설서를 발표하였다. 상표 등록 후 실제 사용 의무 및 관리 기준 강화 방향이 담겨 있다.",
+   "url": "https://www.cnipa.gov.cn/art/2025/12/30/art_66_203339.html"
+  },
+  {
+   "id": "5c76d612956a",
+   "date": "2026-07-27",
+   "country": "ETC",
+   "source": "캐나다 지식재산청 공지",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "캐나다 지식재산청(CIPO), 2026~2031년 중장기 비즈니스 전략 발표",
+   "summary": "캐나다 지식재산청(CIPO)이 향후 5년간의 발전 방향을 담은 「2026~2031 비즈니스 전략」을 공개하였다. 심사 효율성 제고, 디지털화, 이해관계자 서비스 강화 등이 핵심 과제로 제시되었다.",
+   "url": "https://ised-isde.canada.ca/site/canadian-intellectual-property-office/en/cipo-releases-its-2026-2031-business-strategy"
+  },
   {
    "id": "53cdd72c6582",
    "date": "2026-07-26",
@@ -332,6 +453,17 @@
    "url": "https://www.juve-patent.com/cases/interdigital-wins-another-upc-injunction-in-streaming-dispute-with-disney/"
   },
   {
+   "id": "60e5d60e435a",
+   "date": "2026-07-23",
+   "country": "INT",
+   "source": "세계지식재산기구(WIPO)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "WIPO, 사우디아라비아의 마드리드 상표 국제등록 시스템 가입 확인",
+   "summary": "세계지식재산기구(WIPO)가 사우디아라비아의 마드리드 시스템 공식 가입을 발표하였다. 이로써 사우디아라비아 기업들은 마드리드 시스템을 통한 국제 상표 출원이 가능해진다.",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQanlucHFEYmJCb0JiYzBJcm5RamQ0RWZjVExMbUJCR0VrWE1Vb3lYWTM4WlhZNGg2REI5V204Z0NxblI5bVJwaHF2SkV5OEduZG1ZQVRndHhlYVdpTkMxeXBwVTJMMG5FeVlWY2tENVZ3cHVsa3BCeEdrUzNtUTQxSWNGN1A0NW95LThJb1dsdzBUY1Flc1Bz?oc=5"
+  },
+  {
    "id": "f5774aa9a226",
    "date": "2026-07-23",
    "country": "US",
@@ -462,6 +594,17 @@
    "title": "영국 지식재산청, 기술적 보호조치(TPM) 관련 저작권 예외 적용 절차 안내 갱신",
    "summary": "영국 지식재산청(UKIPO)이 기술적 보호조치(TPM)로 인해 저작권 예외 혜택을 받지 못하는 경우의 이의제기 절차 안내를 업데이트하였다. 이는 저작권 예외권과 디지털 콘텐츠 접근 간의 균형을 위한 집행 가이던스로 실무적 중요성을 가진다.",
    "url": "https://www.gov.uk/government/publications/technological-protection-measures-tpms-complaints-process"
+  },
+  {
+   "id": "a978f95c41c4",
+   "date": "2026-07-22",
+   "country": "US",
+   "source": "미국 국제무역위원회(USITC)",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 USITC, 피부과 치료기기 관련 337조 조사(II) 개시",
+   "summary": "미국 국제무역위원회(USITC)가 특정 피부과 치료기기 및 그 구성품에 관한 337조 조사(II)를 신규로 개시하였다. 해당 조사는 수입품에 의한 특허권 침해 여부를 심리하기 위한 절차이다.",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE83STlCQ0xqQVdEUVBQLWpMU1JsQUc2NmQtWktDZnQ0c21oMlJNMzB5dUdkWGRudFd0cnp4SVpjd0RNUHBnSE9LYnhVaGE5dV9SaEhTRzZhS2dpQWdqSzRGaW1ITUtQZ3ViRXFXcHkzdHBPQVI4dlE?oc=5"
   },
   {
    "id": "a6ff9e8079ce",
@@ -671,6 +814,17 @@
    "title": "독일 뮌헨 지방법원, KaVo Dental의 MK-Dent 대상 치과용 터빈 특허 침해 소송 인용",
    "summary": "뮌헨 지방법원이 2026년 7월 17일 KaVo Dental이 MK-Dent를 상대로 제기한 치과용 터빈 특허 침해 소송에서 KaVo 및 대리인 Mitscherlich의 손을 들어주는 판결을 내렸다. 이 판결은 유럽 치과 의료기기 분야의 특허 분쟁에서 주목받는 사례이다.",
    "url": "https://www.juve-patent.com/cases/kavo-and-mitscherlich-prevail-against-mk-dent-in-dental-turbine-dispute/"
+  },
+  {
+   "id": "cea1b813e1f7",
+   "date": "2026-07-20",
+   "country": "US",
+   "source": "미국 특허상표청(USPTO)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "미국 USPTO PTAB, 판사 패널 배정 관련 표준운영절차(SOP 1) 개정 공표",
+   "summary": "미국 특허심판원(PTAB)이 심판관 패널 배정 방식을 규정한 표준운영절차 1(SOP 1)을 공식 개정하였다. 이번 개정은 패널 배정의 투명성과 일관성을 높이기 위한 조치로 주목된다.",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNMEc2ZDhNcUE0bERGLW9RLWpNY2djMGxUM2Y0alUweUl0Y0RTX1NoNUZPVldLakFSbWlBbFRUTWhBYno2Q2xZR2R6Sm9VUnhGTHlueFlWbTVnT3hVcGRMbnhnVG90d1h4SE10MS14Mnp4d0JDZmhfRjBVYnZNWmlzOW9zQ3N0aFVrR1pHNG13T3BmczhtQm5XUjN1Z1JTSzBQLVpscXFnTlZnZ0RIekw1Sg?oc=5"
   },
   {
    "id": "0ee61eb373d2",
