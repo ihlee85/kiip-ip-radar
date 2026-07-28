@@ -19,7 +19,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install requests feedparser anthropic
+        run: pip install requests feedparser anthropic googlenewsdecoder
 
       - name: Collect & classify news
         env:
