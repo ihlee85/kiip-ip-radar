@@ -119,6 +119,35 @@ main{padding:22px 0 50px}
 footer{background:var(--navy);color:#9FB0C6;font-size:.76rem;padding:22px 0;line-height:1.8;text-align:center}
 footer b{color:#fff}
 
+
+/* ═══ 기사 팝업(모달) ═══ */
+.news{cursor:pointer}
+.modal-bg{position:fixed;inset:0;background:rgba(15,25,45,.55);z-index:100;
+  display:none;align-items:flex-start;justify-content:center;padding:6vh 16px;overflow-y:auto}
+.modal-bg.open{display:flex}
+.modal{background:#fff;border-radius:16px;max-width:640px;width:100%;
+  box-shadow:0 24px 60px rgba(10,20,40,.35);overflow:hidden;animation:pop .18s ease}
+@keyframes pop{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.modal-head{padding:20px 24px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.modal-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.78rem;color:var(--muted)}
+.modal-meta .topic{color:var(--blue);background:var(--blue-soft);border-radius:5px;padding:1px 8px;font-weight:700}
+.modal-close{border:none;background:var(--bg);border-radius:50%;width:34px;height:34px;
+  font-size:1.05rem;color:var(--muted);flex-shrink:0;line-height:1}
+.modal-close:hover{background:var(--line);color:var(--ink)}
+.modal h2{font-size:1.18rem;line-height:1.45;letter-spacing:-.01em;padding:8px 24px 0}
+.modal .headline{margin:14px 24px 0;padding:10px 14px;background:var(--blue-soft);
+  border-left:4px solid var(--blue);border-radius:0 8px 8px 0;
+  font-size:.92rem;font-weight:700;color:var(--blue-dk,#0A4685)}
+.modal .detail{padding:6px 24px 4px;font-size:.9rem;color:#3A4657;line-height:1.75}
+.modal .detail p{margin:12px 0}
+.modal .src-line{padding:0 24px;font-size:.76rem;color:var(--muted)}
+.modal-foot{display:flex;gap:10px;justify-content:flex-end;padding:16px 24px 20px;margin-top:8px;border-top:1px solid var(--line)}
+.modal-foot .btn{border-radius:99px;padding:11px 26px;font-size:.9rem;font-weight:700}
+.modal-foot .btn.ghost{border:1px solid var(--line);color:var(--muted);background:#fff}
+.modal-foot .btn.ghost:hover{color:var(--ink)}
+.modal-foot .btn.go{background:var(--blue);color:#fff}
+.modal-foot .btn.go:hover{filter:brightness(1.08)}
+
 @media(max-width:720px){
   .intro .nums{margin-left:0;width:100%;justify-content:space-between}
   .news{padding:13px 14px}
@@ -185,6 +214,24 @@ footer b{color:#fff}
   <b>KIIP Global IP Radar (시범)</b> — 한국지식재산연구원 공식 누리집이 아닌 AI 활용 업무혁신 시범 프로젝트입니다.<br>
   뉴스 본문을 재게시하지 않으며 AI 요약과 원문 링크만 제공합니다 · Generated with Claude
 </div></footer>
+
+<div class="modal-bg" id="modalBg" role="dialog" aria-modal="true">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="modal-meta" id="mMeta"></div>
+      <button class="modal-close" id="mClose" aria-label="닫기">✕</button>
+    </div>
+    <h2 id="mTitle"></h2>
+    <div class="headline" id="mHeadline" hidden></div>
+    <div class="detail" id="mDetail"></div>
+    <div class="src-line" id="mSrc"></div>
+    <div class="modal-foot">
+      <button class="btn ghost" id="mClose2">닫기</button>
+      <a class="btn go" id="mGo" href="#" target="_blank" rel="noopener">원문 보기 ↗</a>
+    </div>
+  </div>
+</div>
+
 
 <script>
 /* 배포 후에는 GitHub Actions가 data/news.json 을 매일 갱신합니다. 아래는 시연용 예시 데이터입니다. */
@@ -360,19 +407,45 @@ function render(){
     return `<div class="dgroup">
       <div class="dhead"><span class="d">${label}</span><span class="line"></span><span class="dn">${groups[date].length}건</span></div>
       ${groups[date].map(d=>`
-        <a class="news" href="${d.url}" target="_blank" rel="noopener">
+        <div class="news" data-v="${slice.indexOf(d)}">
           <span class="flagcol">${FLAGS[d.country]||""}</span>
           <span class="body">
-            <span class="meta">${CNAME[d.country]||d.country} · ${d.office} · ${d.source}<span class="topic">${d.topic}</span>${d.ai?'<span class="aibadge">AI</span>':""}</span>
+            <span class="meta">${CNAME[d.country]||d.country} · ${d.source}<span class="topic">${d.topic}</span>${d.ai?'<span class="aibadge">AI</span>':""}</span>
             <h3>${d.title}</h3>
             <p class="sum">${d.summary}</p>
           </span>
-          <span class="arrow">↗</span>
-        </a>`).join("")}
+          <a class="arrow" href="${d.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗</a>
+        </div>`).join("")}
     </div>`;
   }).join("");
   document.getElementById("moreBtn").hidden=r.length<=state.shown;
+  VIEW=slice;
+  document.querySelectorAll("#board .news").forEach(el=>
+    el.addEventListener("click",()=>openModal(VIEW[+el.dataset.v])));
 }
+
+/* ═══ 기사 팝업 ═══ */
+let VIEW=[];
+const bg=document.getElementById("modalBg");
+function openModal(d){
+  if(!d)return;
+  document.getElementById("mMeta").innerHTML=
+    `${FLAGS[d.country]||""} ${CNAME[d.country]||d.country} · ${d.date}<span class="topic">${d.topic}</span>${d.ai?'<span class="aibadge">AI</span>':""}`;
+  document.getElementById("mTitle").textContent=d.title;
+  const hl=document.getElementById("mHeadline");
+  hl.hidden=!d.headline; hl.textContent=d.headline||"";
+  const det=document.getElementById("mDetail");
+  const paras=(d.detail||d.summary||"").split(/\n\n+/).filter(Boolean);
+  det.innerHTML=paras.map(p=>`<p>${p}</p>`).join("");
+  document.getElementById("mSrc").textContent=`출처: ${d.source}`;
+  document.getElementById("mGo").href=d.url;
+  bg.classList.add("open");document.body.style.overflow="hidden";
+}
+function closeModal(){bg.classList.remove("open");document.body.style.overflow="";}
+document.getElementById("mClose").addEventListener("click",closeModal);
+document.getElementById("mClose2").addEventListener("click",closeModal);
+bg.addEventListener("click",e=>{if(e.target===bg)closeModal();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
 </script>
 </body>
 </html>
