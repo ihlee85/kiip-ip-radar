@@ -386,14 +386,15 @@ def fetch_kiip_published():
 # ══════════ 상세요약 생성 (팝업용) ══════════
 DETAIL_PROMPT = """아래는 선별된 IP 뉴스들의 원문 본문(발췌)입니다. 각 기사에 대해 한국어로 작성하세요:
 - headline: 핵심을 담은 한 줄 요약 (40자 이내)
-- detail: 반드시 3개 문단으로 구성된 상세 요약. 각 문단은 3~4문장으로 충실하게 작성.
+- detail: 반드시 4개 문단, 전체 12~15문장(약 10줄 이상)의 충실한 상세 요약. 각 문단 3~4문장.
   · 1문단: 무슨 일이 있었는지(주체·행위·시점)와 그 배경·경위
-  · 2문단: 핵심 내용의 구체적 설명(주요 조치·수치·대상·절차 등)
-  · 3문단: 이 소식의 의미·영향·향후 일정(본문에서 확인되는 사실 기반, 과도한 해석·추측 금지)
-  원문 문장을 그대로 옮기지 말고 완전히 새로 서술하되, 전체 분량은 원문보다 훨씬 짧게.
-  본문 정보가 부족한 문단은 억지로 채우지 말고 확인된 사실만 서술.
+  · 2문단: 핵심 내용의 구체적 설명(주요 조치·수치·대상·적용 범위·절차 등)
+  · 3문단: 세부 사항과 맥락(관련 제도·기존 경과·이해관계자 입장·비교 정보 등 본문에서 확인되는 내용)
+  · 4문단: 이 소식의 의미·영향·향후 일정(본문 사실 기반, 과도한 해석·추측 금지)
+  원문 문장을 그대로 옮기지 말고 완전히 새로 서술하되, 전체 분량은 원문보다 훨씬 짧게 유지.
+  본문 정보가 부족한 문단은 억지로 채우지 말고 확인된 사실만 서술(그 경우 3문단까지 허용).
 
-JSON 배열로만 응답(설명·마크다운 금지): [{{"idx": 번호, "headline": "...", "detail": "문단1\n\n문단2\n\n문단3"}}]
+JSON 배열로만 응답(설명·마크다운 금지): [{{"idx": 번호, "headline": "...", "detail": "문단1\n\n문단2\n\n문단3\n\n문단4"}}]
 
 [기사 목록]
 {articles}
@@ -412,7 +413,7 @@ def resolve_gnews(url):
         pass
     return url
 
-def _fetch_body(url, limit=3500):
+def _fetch_body(url, limit=5000):
     """기사 본문 텍스트 추출(간이). 실패 시 빈 문자열"""
     if "news.google.com" in url:
         return ""  # 중계 페이지는 본문이 아님 (사전에 resolve 필요)
@@ -451,7 +452,7 @@ def enrich_details(items):
         articles = "\n\n".join(f"[{i}] {items[i]['title']}\n{bodies[i]}" for i in chunk)
         try:
             msg = client.messages.create(
-                model="claude-sonnet-4-6", max_tokens=8000,
+                model="claude-sonnet-4-6", max_tokens=16000,
                 messages=[{"role": "user",
                            "content": DETAIL_PROMPT.format(articles=articles)}])
             text = "".join(b.text for b in msg.content if b.type == "text")
@@ -530,7 +531,9 @@ def main():
     new_items = classify(candidates, archive, kiip_titles)
     print(f"선별 {len(new_items)}건 (기본 상한 {DAILY_CAP}건 + 국가별 보장분)")
     backlog = [i for i in archive["items"]
-               if not i.get("detail") or i["detail"].count("\n\n") < 2][:12]
+               if not i.get("detail")
+               or i["detail"].count("\n\n") < 3
+               or len(i["detail"]) < 500][:12]
     if backlog:
         print(f"소급 대상(상세요약 없는 기존 기사): {len(backlog)}건 함께 처리")
     enrich_details(new_items + backlog)
