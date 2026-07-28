@@ -11,7 +11,7 @@ v4 변경: 연구원 공식 '해외 IP 동향 수집 자료원 목록' 87개 출
 
 운영 구상: 원출처 자동수집·AI선별 → 담당자 검수 → KIIP 게재 → (향후) DB 자동화
 필요 환경변수: ANTHROPIC_API_KEY (GitHub Secrets) / DRY=1 이면 AI선별 없이 수집만 테스트
-의존성: pip install requests feedparser anthropic
+의존성: pip install requests feedparser anthropic googlenewsdecoder
 """
 import json, os, re, hashlib, datetime, pathlib, urllib.parse
 import requests, feedparser
@@ -39,6 +39,11 @@ def S(country, source, url, typ="html", pat=None, q=None, enabled=True, note="")
             "pat": pat, "q": q, "enabled": enabled, "note": note}
 
 SOURCES = [
+  # ─── 한국 (4) ───
+  S("KR","지식재산처(언론보도)","",typ="gnews",q='"지식재산처"',note="구글뉴스 한국판"),
+  S("KR","대한민국 정책브리핑","",typ="gnews",q='site:korea.kr 지식재산 OR 특허 OR 상표 OR 저작권'),
+  S("KR","저작권 정책(문체부·위원회)","",typ="gnews",q='"한국저작권위원회" OR (문체부 저작권)'),
+  S("KR","특허법원·심판 동향","",typ="gnews",q='특허법원 OR 특허심판원 OR 특허소송'),
   # ─── 미국 (13) ───
   S("US","미국 특허상표청(USPTO)","https://www.uspto.gov/about-us/news-updates",pat=r'/about-us/news-updates/'),
   S("US","미국 무역대표부(USTR)","https://ustr.gov/about/policy-offices/press-office/news",pat=r'/about/policy-offices/press-office/'),
@@ -158,7 +163,8 @@ CLASSIFY_PROMPT = """당신은 한국지식재산연구원 'IP 동향 News' 담�
 2. [KIIP 기게재 목록] 또는 [최근 아카이브]와 사실상 같은 사건은 제외 (이미 다룬 소식)
 3. 같은 사건의 후보가 여럿이면 가장 원출처에 가까운 것 1건만 선택
 4. 기본 상한 {cap}건, 정책적 중요도가 높은 순
-5. 국가 다양성 보장: 관련성 있는 후보가 존재하는 국가(US/CN/JP/EU/KR/INT/ETC)가 선별 결과에서 빠져 있으면, 그 국가에서 가장 중요한 1건을 추가로 선별하세요. 이 추가분은 상한 {cap}건을 초과해도 됩니다. 단, 지식재산 관련성이 없는 기사를 다양성 명목으로 억지로 포함하지는 마세요.
+5. 국가별 상한: 같은 국가(country 기준) 기사는 하루 최대 3건까지만 선별하여 특정국 편중을 방지하세요.
+6. 국가 다양성 보장: 관련성 있는 후보가 존재하는 국가(US/CN/JP/EU/KR/INT/ETC)가 선별 결과에서 빠져 있으면, 그 국가에서 가장 중요한 1건을 추가로 선별하세요. 이 추가분은 상한 {cap}건을 초과해도 됩니다. 단, 지식재산 관련성이 없는 기사를 다양성 명목으로 억지로 포함하지는 마세요.
 
 각 선별 항목을 JSON 배열로만 응답하세요(설명·마크다운 금지). 각 원소:
 {{"idx": 후보번호,
@@ -351,6 +357,87 @@ def fetch_kiip_published():
     except Exception:
         return []
 
+
+# ══════════ 상세요약 생성 (팝업용) ══════════
+DETAIL_PROMPT = """아래는 선별된 IP 뉴스들의 원문 본문(발췌)입니다. 각 기사에 대해 한국어로 작성하세요:
+- headline: 핵심을 담은 한 줄 요약 (40자 이내)
+- detail: 2~3개 문단의 상세 요약. 각 문단 2~3문장. 원문 문장을 그대로 옮기지 말고 완전히 새로 서술하며, 전체 분량은 원문보다 훨씬 짧게. 본문이 부실하면 확인된 사실만 쓰고 추측 금지.
+
+JSON 배열로만 응답(설명·마크다운 금지): [{{"idx": 번호, "headline": "...", "detail": "문단1\n\n문단2\n\n문단3"}}]
+
+[기사 목록]
+{articles}
+"""
+
+def resolve_gnews(url):
+    """구글뉴스 중계 URL → 실제 언론사 원문 URL 복원"""
+    if "news.google.com" not in url:
+        return url
+    try:
+        from googlenewsdecoder import gnewsdecoder
+        r = gnewsdecoder(url, interval=1)
+        if r.get("status") and r.get("decoded_url"):
+            return r["decoded_url"]
+    except Exception:
+        pass
+    return url
+
+def _fetch_body(url, limit=2200):
+    """기사 본문 텍스트 추출(간이). 실패 시 빈 문자열"""
+    if "news.google.com" in url:
+        return ""  # 중계 페이지는 본문이 아님 (사전에 resolve 필요)
+    try:
+        resp = requests.get(url, timeout=15, headers=UA, allow_redirects=True)
+        resp.encoding = resp.apparent_encoding
+        html = re.sub(r"<(script|style|nav|header|footer)[^>]*>.*?</\1>", " ",
+                      resp.text, flags=re.S | re.I)
+        text = re.sub(r"<[^>]+>", " ", html)
+        text = re.sub(r"\s+", " ", text).strip()
+        return text[:limit] if len(text) > 400 else ""
+    except Exception:
+        return ""
+
+def enrich_details(items):
+    """선별 기사 원문을 가져와 한줄요약·상세요약 생성"""
+    from anthropic import Anthropic
+    bodies = {}
+    resolved = 0
+    for i, it in enumerate(items):
+        real = resolve_gnews(it["url"])
+        if real != it["url"]:
+            it["url"] = real  # 원문보기 버튼도 실제 주소로 교체
+            resolved += 1
+        body = _fetch_body(it["url"])
+        if body:
+            bodies[i] = body
+    print(f"상세요약: 구글뉴스 원문복원 {resolved}건, 본문 확보 {len(bodies)}/{len(items)}건")
+    if not bodies:
+        return items
+    articles = "\n\n".join(
+        f"[{i}] {items[i]['title']}\n{body}" for i, body in bodies.items())
+    try:
+        client = Anthropic()
+        msg = client.messages.create(
+            model="claude-sonnet-4-6", max_tokens=6000,
+            messages=[{"role": "user",
+                       "content": DETAIL_PROMPT.format(articles=articles)}])
+        text = "".join(b.text for b in msg.content if b.type == "text")
+        text = re.sub(r"```(json)?", "", text).strip()
+        for p in json.loads(text):
+            try:
+                it = items[int(p["idx"])]
+                if p.get("headline"):
+                    it["headline"] = p["headline"].strip()
+                if p.get("detail"):
+                    it["detail"] = p["detail"].strip()
+            except (KeyError, ValueError, IndexError):
+                continue
+        done = sum(1 for it in items if it.get("detail"))
+        print(f"상세요약 생성 {done}건")
+    except Exception as ex:
+        print(f"[warn] 상세요약 실패(요약 없이 진행): {ex}")
+    return items
+
 # ══════════ AI 선별 ══════════
 def classify(candidates, archive, kiip_titles):
     if not candidates:
@@ -409,6 +496,10 @@ def main():
         return
     new_items = classify(candidates, archive, kiip_titles)
     print(f"선별 {len(new_items)}건 (기본 상한 {DAILY_CAP}건 + 국가별 보장분)")
+    backlog = [i for i in archive["items"] if not i.get("detail")][:12]
+    if backlog:
+        print(f"소급 대상(상세요약 없는 기존 기사): {len(backlog)}건 함께 처리")
+    enrich_details(new_items + backlog)
     archive["items"] = sorted(new_items + archive["items"],
                               key=lambda x: x["date"], reverse=True)
     archive["updated"] = TODAY
