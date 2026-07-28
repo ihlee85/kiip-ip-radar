@@ -2,6 +2,50 @@
  "updated": "2026-07-28",
  "items": [
   {
+   "id": "e3ce64cc57d1",
+   "date": "2026-07-28",
+   "country": "KR",
+   "source": "대한민국 정책브리핑",
+   "topic": "보호·집행",
+   "ai": false,
+   "title": "한국 지식재산처, 해외 기술유출 대응체계 확대개편 추진 방침 발표",
+   "summary": "지식재산처는 지능화되고 있는 해외 기술유출에 대응하기 위해 기술유출·탈취 대응체계를 대폭 확대·개편하겠다는 방침을 공식 발표했다. 이는 관련 보도에 대한 설명자료 형식으로 정책브리핑을 통해 공개되었다.",
+   "url": "https://www.korea.kr/briefing/actuallyView.do?newsId=148968922"
+  },
+  {
+   "id": "bae43305b41c",
+   "date": "2026-07-28",
+   "country": "ETC",
+   "source": "영국 지식재산청(UKIPO)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "영국 지식재산청(UKIPO), 특허 서비스 개선 및 업데이트 사항 공개",
+   "summary": "영국 지식재산청이 특허 서비스 관련 최신 개선 사항 및 향후 예정된 업데이트 내용을 공개했다. 디지털 특허 서비스의 현대화를 위한 지속적인 개선 작업이 진행 중이다.",
+   "url": "https://www.gov.uk/guidance/patents-service-updates-and-improvements"
+  },
+  {
+   "id": "3f79200b88d8",
+   "date": "2026-07-28",
+   "country": "EU",
+   "source": "EU 지식재산네트워크(EUIPN)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "EUIPN, 스페인 특허청 디자인 및 e-서비스 Front Office 3 도입 시행",
+   "summary": "유럽 지식재산네트워크(EUIPN)는 스페인 특허청이 디자인 분야 및 전자 서비스에 대한 Front Office 3 시스템을 도입·시행했다고 발표했다. 이는 유럽 지식재산 시스템의 디지털 통합 협력의 일환이다.",
+   "url": "https://www.euipn.org/en/news-and-events/news/spain-implements-front-office-3-for-designs-and-e-services"
+  },
+  {
+   "id": "32d339658cc0",
+   "date": "2026-07-28",
+   "country": "EU",
+   "source": "유럽 특허기구(EPO)",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "유럽특허청(EPO), 레오나르도社와 협력 회의 개최",
+   "summary": "유럽특허청(EPO)이 이탈리아 방산·항공우주 기업 레오나르도(Leonardo)와 회동을 가졌다. 기업과의 지식재산 관련 협력 강화 차원에서 진행된 것으로 파악된다.",
+   "url": "https://www.epo.org/en/news-events/news/epo-meets-leonardo"
+  },
+  {
    "id": "384925f68a77",
    "date": "2026-07-28",
    "country": "CN",
@@ -563,6 +607,28 @@
    "url": "https://ised-isde.canada.ca/site/canadian-intellectual-property-office/en/cipo-releases-its-2026-2031-business-strategy"
   },
   {
+   "id": "170a87a9991d",
+   "date": "2026-07-26",
+   "country": "US",
+   "source": "특허법원·심판 동향",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 특허 소송 18% 감소에도 NPE 소송 비중은 절반 수준 유지",
+   "summary": "미국 내 특허 소송 건수가 전년 대비 18% 감소했음에도 불구하고, 비실시 특허권자(NPE)에 의한 소송이 전체의 절반 가량을 차지하는 것으로 나타났다. 미국 특허분쟁 시장의 구조적 변화를 분석한 보고 내용이다.",
+   "url": "http://www.e-patentnews.com/15095"
+  },
+  {
+   "id": "8855edbd2575",
+   "date": "2026-07-26",
+   "country": "KR",
+   "source": "특허법원·심판 동향",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "코쿠사이, 유진테크와의 특허분쟁에서 특허 1건 유효 판단 받아…권리범위는 축소",
+   "summary": "유진테크와 특허 분쟁 중인 코쿠사이 일렉트릭의 특허 1건이 유효하다는 판단을 받았으나, 4차례에 걸친 정정 청구로 권리범위가 대폭 줄어들었다. 해당 분쟁에서 특허의 유효성과 권리범위 해석이 핵심 쟁점으로 부각되었다.",
+   "url": "https://v.daum.net/v/20260726182937988"
+  },
+  {
    "id": "53cdd72c6582",
    "date": "2026-07-26",
    "country": "EU",
@@ -737,6 +803,17 @@
    "title": "CNIPA, 「2024년 세계 5대 지식재산청 주요 통계 인포그래픽」 중·영문판 공개",
    "summary": "중국 국가지식산권국이 한·중·일·미·유럽 5대 특허청의 2024년 주요 통계를 인포그래픽 형태로 정리한 자료의 중문판 및 영문판을 발표하였다. 출원·등록 건수 등 주요 지표를 국제 비교 관점에서 확인할 수 있다.",
    "url": "https://www.cnipa.gov.cn/art/2025/5/7/art_90_199521.html"
+  },
+  {
+   "id": "022835339cb6",
+   "date": "2026-07-24",
+   "country": "KR",
+   "source": "특허법원·심판 동향",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "한국 특허법원, 최신 판결 속보 공개",
+   "summary": "특허법원의 최근 주요 판결 내용이 법률신문을 통해 속보로 공개되었다. 특허 관련 사건의 법원 판단 동향을 파악할 수 있는 자료이다.",
+   "url": "https://www.lawtimes.co.kr/news/articleViewAmp.html?idxno=223972"
   },
   {
    "id": "2806d5fcfacd",
@@ -937,6 +1014,17 @@
    "url": "https://www.juve-patent.com/cases/interdigital-wins-another-upc-injunction-in-streaming-dispute-with-disney/"
   },
   {
+   "id": "2a0869bdaa99",
+   "date": "2026-07-23",
+   "country": "US",
+   "source": "특허법원·심판 동향",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "LG에너지솔루션, 중국 EVE에너지 상대로 미국 원통형 배터리 특허소송 제기",
+   "summary": "LG에너지솔루션이 중국 배터리 제조사 EVE에너지를 상대로 원통형 배터리 관련 특허 침해 소송을 미국 법원에 제기했다. 이번 소송으로 LG에너지솔루션의 대중국 특허 분쟁이 새로운 전선으로 확대되었다.",
+   "url": "https://www.khan.co.kr/article/202607230930001"
+  },
+  {
    "id": "60e5d60e435a",
    "date": "2026-07-23",
    "country": "INT",
@@ -1080,6 +1168,28 @@
    "url": "https://www.gov.uk/government/publications/technological-protection-measures-tpms-complaints-process"
   },
   {
+   "id": "fcecadb13dd3",
+   "date": "2026-07-22",
+   "country": "KR",
+   "source": "지식재산처(언론보도)",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "한국 지식재산처, 자체 개발 AI 에이전트 활용 행정혁신 추진",
+   "summary": "지식재산처가 자체 개발한 AI 에이전트를 도입해 정책 입안 등 공무원의 업무 방식 혁신을 본격 추진한다. AI가 정책 초안 작성 등 행정 전반을 지원하는 방식으로 활용될 예정이다.",
+   "url": "https://www.etnews.com/20260722000001"
+  },
+  {
+   "id": "2b205be79521",
+   "date": "2026-07-22",
+   "country": "KR",
+   "source": "특허법원·심판 동향",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "SFC, LG화학과의 특허소송 패소…코스피 상장 예비심사 변수로 작용",
+   "summary": "SFC가 LG화학을 상대로 한 특허소송에서 패소하면서 코스피 상장 예비심사에 영향을 줄 수 있다는 우려가 제기되었다. 특허 분쟁 결과가 기업 상장 심사의 질적 평가 항목으로 작용할 수 있다는 점에서 주목받고 있다.",
+   "url": "https://www.investchosun.com/site/data/html_dir/2026/07/22/2026072280117.html"
+  },
+  {
    "id": "ea7a77568d57",
    "date": "2026-07-22",
    "country": "INT",
@@ -1221,6 +1331,17 @@
    "title": "미국 USITC, 337조 조사 내 소송 펀딩 공개 규칙 의견수렴 결과 공개 지지 우세",
    "summary": "USITC가 제안한 제3자 소송 펀딩 공개 규칙(§ 210.14a)에 대한 의견수렴에서 총 28개 의견 중 약 82%가 공개 의무화를 지지한 것으로 분석되었다. 이는 ITC 337조 조사에서 소송 자금 출처의 투명성 확보에 대한 광범위한 지지 여론을 보여준다.",
    "url": "https://www.unifiedpatents.com/insights/2026/7/22/usitc-litigation-funding-disclosure-comments-reveal-overwhelming-public-support"
+  },
+  {
+   "id": "662d2838712e",
+   "date": "2026-07-21",
+   "country": "KR",
+   "source": "지식재산처(언론보도)",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "한국 지식재산처, '꼼수 특허' 행위 대응 방안 추진",
+   "summary": "한국 지식재산처가 이른바 '꼼수 특허' 행위에 대한 제도적 대응에 나섰다. 특허 제도의 악용을 방지하기 위한 구체적인 조치가 검토·추진되고 있다.",
+   "url": "https://v.daum.net/v/20260722060520001?f=p"
   },
   {
    "id": "2271452ccf18",
