@@ -394,7 +394,19 @@ DETAIL_PROMPT = """아래는 선별된 IP 뉴스들의 원문 본문(발췌)입�
   원문 문장을 그대로 옮기지 말고 완전히 새로 서술하되, 전체 분량은 원문보다 훨씬 짧게 유지.
   본문 정보가 부족한 문단은 억지로 채우지 말고 확인된 사실만 서술(그 경우 3문단까지 허용).
 
-JSON 배열로만 응답(설명·마크다운 금지): [{{"idx": 번호, "headline": "...", "detail": "문단1\n\n문단2\n\n문단3\n\n문단4"}}]
+응답은 아래 블록 형식만 사용하세요(설명·JSON·마크다운 금지). 기사마다 하나의 블록:
+
+===ITEM 번호===
+HEADLINE: 한 줄 요약
+DETAIL:
+문단1 내용
+
+문단2 내용
+
+문단3 내용
+
+문단4 내용
+===END===
 
 [기사 목록]
 {articles}
@@ -456,15 +468,17 @@ def enrich_details(items):
                 messages=[{"role": "user",
                            "content": DETAIL_PROMPT.format(articles=articles)}])
             text = "".join(b.text for b in msg.content if b.type == "text")
-            text = re.sub(r"```(json)?", "", text).strip()
-            for p in json.loads(text):
+            for m in re.finditer(
+                    r"===ITEM\s*(\d+)\s*===\s*HEADLINE:\s*(.*?)\s*DETAIL:\s*(.*?)\s*===END===",
+                    text, re.S):
                 try:
-                    it = items[int(p["idx"])]
-                    if p.get("headline"):
-                        it["headline"] = p["headline"].strip()
-                    if p.get("detail"):
-                        it["detail"] = p["detail"].strip()
-                except (KeyError, ValueError, IndexError):
+                    it = items[int(m.group(1))]
+                    hl, dt = m.group(2).strip(), m.group(3).strip()
+                    if hl:
+                        it["headline"] = hl
+                    if dt:
+                        it["detail"] = re.sub(r"\n{3,}", "\n\n", dt)
+                except (ValueError, IndexError):
                     continue
         except Exception as ex:
             print(f"[warn] 상세요약 배치 실패({s}~): {ex}")
@@ -496,7 +510,7 @@ def classify(candidates, archive, kiip_titles):
     text = "".join(b.text for b in msg.content if b.type == "text")
     text = re.sub(r"```(json)?", "", text).strip()
     try:
-        picks = json.loads(text)
+        picks = json.loads(text, strict=False)
     except json.JSONDecodeError:
         print("[warn] 분류 응답 파싱 실패:", text[:300]); return []
     results = []
