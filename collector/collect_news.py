@@ -35,9 +35,9 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 #   pat: html일 때 기사링크 경로 필터(정규식, 없으면 범용 추출)
 #   q  : gnews 검색어(없으면 site:도메인)
 # ══════════════════════════════════════════════════════════════════
-def S(country, source, url, typ="html", pat=None, q=None, enabled=True, note=""):
+def S(country, source, url, typ="html", pat=None, q=None, enabled=True, note="", ed=None):
     return {"country": country, "source": source, "url": url, "typ": typ,
-            "pat": pat, "q": q, "enabled": enabled, "note": note}
+            "pat": pat, "q": q, "enabled": enabled, "note": note, "ed": ed}
 
 SOURCES = [
   # ─── 한국 (4) ───
@@ -56,6 +56,7 @@ SOURCES = [
   S("US","IPWatchdog","https://ipwatchdog.com/feed/",typ="rss"),
   S("US","Patently-O","https://patentlyo.com/feed",typ="rss"),
   S("US","Patent Docs","https://www.patentdocs.org/atom.xml",typ="rss"),
+  S("US","연방순회항소법원(CAFC)","",typ="gnews",q='"Federal Circuit" patent decision OR ruling',note="판례에 의한 제도변화"),
   S("US","Law360 IP","https://www.law360.com/ip/rss",typ="rss"),
   S("US","Unified Patents","https://www.unifiedpatents.com/insights?format=rss",typ="rss"),
   # 유료 매체: 제목 참고용 → 구글뉴스 검색 수집
@@ -63,6 +64,8 @@ SOURCES = [
   S("US","IAM(유료)","",typ="gnews",q='site:iam-media.com',note="유료, 제목 참고용"),
   S("US","Thomson Reuters","",typ="gnews",q='site:reuters.com "intellectual property" OR patent OR trademark OR copyright',note="키워드 검색"),
   S("US","Bloomberg","",typ="gnews",q='site:bloomberg.com "intellectual property" OR patent OR trademark OR copyright',note="유료, 키워드 검색"),
+  S("US","연방관보(Federal Register)·USPTO","https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=patent-and-trademark-office",typ="rss",q='site:federalregister.gov patent OR trademark OR USPTO',note="미국 규칙 제·개정 원천"),
+  S("US","USPTO 규칙제정 동향","",typ="gnews",q='USPTO "final rule" OR "proposed rule" OR "notice of proposed rulemaking"'),
   # ─── 중국 (26) ───
   S("CN","中 지식산권국 공고","https://www.cnipa.gov.cn/col/col74/index.html",pat=r'/art/'),
   S("CN","中 지식산권국 통지","https://www.cnipa.gov.cn/col/col75/index.html",pat=r'/art/'),
@@ -104,6 +107,10 @@ SOURCES = [
   S("JP","日 지적재산고등재판소","https://www.courts.go.jp/news/index.html",pat=r'/news/'),
   S("JP","일본경제신문","",typ="gnews",q='site:nikkei.com 知的財産 OR 特許 OR 商標 OR 著作権',note="키워드 검색"),
   S("JP","요미우리신문","",typ="gnews",q='site:yomiuri.co.jp 知的財産 OR 特許 OR 商標 OR 著作権',note="키워드 검색"),
+  S("JP","日 문부과학성(MEXT)","https://www.mext.go.jp/b_menu/houdou/index.htm",pat=r'/b_menu/houdou/',note="IP R&D·대학연구"),
+  S("JP","日 디지털청","https://www.digital.go.jp/en/news",pat=r'/en/news',note="AI 정책"),
+  S("JP","日 세관(침해물품 단속)","https://www.customs.go.jp/index.htm",pat=r'/(news|mizugiwa|shiryo)/',note="지재 침해물품 단속"),
+  S("JP","RIETI","https://www.rieti.go.jp/jp/index.html",pat=r'/jp/(publications|columns|special|press)',note="경제안보·혁신정책 연구"),
   S("JP","patentsalon","https://www.patentsalon.com/",pat=r'patentsalon'),
   S("JP","patentresult","https://www.patentresult.co.jp/",pat=r'patentresult'),
   # ─── 유럽 (6) ───
@@ -113,7 +120,13 @@ SOURCES = [
   S("EU","EU 집행위원회","https://commission.europa.eu/news-and-media/news_en",pat=r'/news'),
   S("EU","유럽 통합특허법원(UPC)","https://www.unifiedpatentcourt.org/en/news",pat=r'/en/news/'),
   S("EU","EU 지식재산네트워크(EUIPN)","https://www.euipn.org/en/news-and-events",pat=r'/news'),
+  S("EU","독일 특허상표청(DPMA)","",typ="gnews",q='site:dpma.de',ed="de"),
   S("EU","JUVE Patent","https://www.juve-patent.com/feed/",typ="rss"),
+  S("EU","Kluwer Patent Blog","https://legalblogs.wolterskluwer.com/patent-blog/feed/",typ="rss",
+    q='site:legalblogs.wolterskluwer.com patent'),
+  S("EU","IPKat","https://ipkitten.blogspot.com/feeds/posts/default?alt=rss",typ="rss"),
+  S("EU","통합특허법원(UPC) 동향","",typ="gnews",q='"Unified Patent Court" OR "unitary patent"'),
+  S("EU","EPO 확대심판부 동향","",typ="gnews",q='EPO "Enlarged Board of Appeal"'),
   # ─── 국제기구 (8) ───
   S("INT","세계지식재산기구(WIPO)","https://www.wipo.int/pressroom/en/rss.xml",typ="rss"),
   S("INT","ID5","https://id-five.org/about/id5-news/",pat=r'id-five'),
@@ -172,6 +185,9 @@ CLASSIFY_PROMPT = """당신은 한국지식재산연구원 'IP 동향 News' 담�
   "topic": {topics} 중 하나 (핵심 주제 1개),
   "ai": AI·데이터 관련 여부 true/false,
   "country": {countries} 중 하나. 판별 기준은 '행위 주체 기관의 소속 국가'입니다. 예: CNIPA 발표는 국제협력 내용이라도 CN, JPO 발표는 JP, 영국 지식재산청은 EU. WIPO·WTO 등 국제기구가 행위 주체일 때만 INT.
+  "reg": 규정·법령·심사기준·수수료 등 '제도'의 신설·개정에 관한 소식인지 true/false,
+  "stage": reg가 true일 때만, ["발의·제안","의견수렴","확정·공포","시행"] 중 현재 단계 1개 (판단 불가 시 null),
+  "deadline": 의견수렴(퍼블릭코멘트·consultation) 마감일이 제목·요약에 명시된 경우만 "YYYY-MM-DD" (없으면 null),
   "title_ko": "한국어 제목 (KIIP 동향뉴스 문체: '주체, 행위' 형식. 예: '미국 백악관, ○○ 행정명령 발표')",
   "summary_ko": "2문장 이내 한국어 요약 (사실 위주, 원문 문장 복제 금지)"}}
 
@@ -225,7 +241,8 @@ def fetch_rss_url(url, limit=8):
     return rows, diag
 
 GNEWS_ED = {"en": ("en-US", "US", "US:en"), "ko": ("ko", "KR", "KR:ko"),
-            "cn": ("zh-CN", "CN", "CN:zh-Hans"), "jp": ("ja", "JP", "JP:ja")}
+            "cn": ("zh-CN", "CN", "CN:zh-Hans"), "jp": ("ja", "JP", "JP:ja"),
+            "de": ("de", "DE", "DE:de")}
 
 def fetch_gnews(query, limit=PER_SOURCE, ed="en"):
     lang = GNEWS_ED.get(ed, GNEWS_ED["en"])
@@ -289,7 +306,7 @@ def gnews_site_query(src):
 def fetch_source(src):
     """소스 1곳 수집 (실패·0건 시 gnews 폴백). 반환: rows, diag"""
     if src["typ"] == "gnews":
-        rows, d = fetch_gnews(src["q"], ed=_ed_for(src))
+        rows, d = fetch_gnews(src["q"], ed=src.get("ed") or _ed_for(src))
         return rows, f"구글뉴스({d})"
     try:
         if src["typ"] == "rss":
@@ -524,7 +541,14 @@ def classify(candidates, archive, kiip_titles):
         for pre, cc in FIXED_COUNTRY_PREFIX.items():  # 관청 소스 국가 고정
             if c["source"].startswith(pre):
                 country = cc
+        stage = p.get("stage")
+        deadline = p.get("deadline")
+        if not isinstance(deadline, str) or not re.match(r"^20\d{2}-\d{2}-\d{2}$", deadline or ""):
+            deadline = None
         results.append({"id": c["id"], "date": c["date"],
+                        "reg": bool(p.get("reg", False)),
+                        "stage": stage if stage in ("발의·제안","의견수렴","확정·공포","시행") else None,
+                        "deadline": deadline,
                         "country": country if country in COUNTRIES else "ETC",
                         "source": c["source"],
                         "topic": topic if topic in TOPICS else "정책·법제",
