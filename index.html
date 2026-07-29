@@ -140,6 +140,11 @@ footer b{color:#fff}
 .modal .detail{padding:6px 24px 4px;font-size:.9rem;color:#3A4657;line-height:1.75}
 .modal .detail p{margin:12px 0}
 .modal .src-line{padding:0 24px;font-size:.76rem;color:var(--muted)}
+.related{margin:14px 24px 0;padding:12px 14px;background:var(--bg);border-radius:10px}
+.related h4{font-size:.8rem;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.related a{display:flex;align-items:baseline;gap:8px;padding:5px 2px;font-size:.86rem;color:var(--ink);line-height:1.5}
+.related a:hover{color:var(--blue);text-decoration:underline}
+.related .cat{flex-shrink:0;font-size:.68rem;font-weight:700;color:var(--blue);background:var(--blue-soft);border-radius:4px;padding:1px 6px}
 .modal-foot{display:flex;gap:10px;justify-content:flex-end;padding:16px 24px 20px;margin-top:8px;border-top:1px solid var(--line)}
 .modal-foot .btn{border-radius:99px;padding:11px 26px;font-size:.9rem;font-weight:700}
 .modal-foot .btn.ghost{border:1px solid var(--line);color:var(--muted);background:#fff}
@@ -225,6 +230,10 @@ footer b{color:#fff}
     <div class="headline" id="mHeadline" hidden></div>
     <div class="detail" id="mDetail"></div>
     <div class="src-line" id="mSrc"></div>
+    <div class="related" id="mRel" hidden>
+      <h4>📚 관련 연구보기</h4>
+      <div id="mRelList"></div>
+    </div>
     <div class="modal-foot">
       <button class="btn ghost" id="mClose2">닫기</button>
       <a class="btn go" id="mGo" href="#" target="_blank" rel="noopener">원문 보기 ↗</a>
@@ -427,6 +436,20 @@ function render(){
 }
 
 
+/* ═══ 관련 연구 매칭 (2025 기본·정책연구) ═══ */
+const RESEARCH=[{"t":"인공지능(AI) 기여사항의 법적 지위에 관한 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10865","c":"정책연구","k":["AI","기여사항","법적","인공지능","지위에"]},{"t":"기업R&D 활성화를 위한 세제지원 혁신방안","u":"https://www.kiip.re.kr/synapView.do?afno=10860","c":"정책연구","k":["기업","세제지원","혁신방안","활성화"]},{"t":"첨단산업 등 산업별 특허빅데이터 분석 결과에 대한 시사점 및 경제성 측면 제언 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10820","c":"정책연구","k":["결과에","경제성","산업별","제언","첨단산업","측면","특허빅데이터"]},{"t":"2025년 지식재산권 국제거래정보 조사ㆍ분석","u":"https://www.kiip.re.kr/synapView.do?afno=10819","c":"정책연구","k":["국제거래정보","지식재산권"]},{"t":"영업비밀 침해 사건 손해･침해액 산정제도 개선 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10816","c":"정책연구","k":["사건","산정제도","손해","영업비밀","침해","침해액"]},{"t":"2025년 산업재산 정보 활용 실태조사 보고서","u":"https://www.kiip.re.kr/synapView.do?afno=10814","c":"정책연구","k":["보고서","산업재산","실태조사","정보"]},{"t":"국가안보 목적의 미공개 출원정보 제공에 관한 행정규칙 제정 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10861","c":"정책연구","k":["국가안보","목적","미공개","제공에","제정","출원정보","행정규칙"]},{"t":"2025년도 지식재산활동조사","u":"https://www.kiip.re.kr/synapView.do?afno=11286","c":"정책연구","k":["년도","지식재산활동조사"]},{"t":"2025년 국내외 지식재산 정책 동향 조사·분석 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10918","c":"정책연구","k":["국내외","정책","지식재산"]},{"t":"상표 심사의 효율화를 위한 국가 간 법제 및 조직 등 비교 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10864","c":"정책연구","k":["법제","비교","상표","심사","조직","효율화"]},{"t":"IP 가치평가 모델 방향성 연구 - 해외 사례조사 중심으로","u":"https://www.kiip.re.kr/synapView.do?afno=10862","c":"정책연구","k":["IP","가치평","모델","방향성","사례조사","중심","해외"]},{"t":"특허고객의 경제적 부담완화를 위한 특허연차료 개선방안에 관한 정책연구","u":"https://www.kiip.re.kr/synapView.do?afno=10678","c":"정책연구","k":["개선방안에","경제적","부담완화","정책연구","특허고객","특허연차료"]},{"t":"기술유출범죄 판례 분석을 통한 기술유출수사 역량 강화 방안 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10617","c":"정책연구","k":["강화","기술유출범죄","기술유출수사","역량","판례"]},{"t":"직무발명규정 도입기업 등의 성과 분석","u":"https://www.kiip.re.kr/synapView.do?afno=10863","c":"정책연구","k":["도입기업","성과","직무발명규정"]},{"t":"부정경쟁방지법 중 부정경쟁행위 분야 판결문 분석 연구('14~'24)","u":"https://www.kiip.re.kr/synapView.do?afno=10821","c":"정책연구","k":["부정경쟁방지법","부정경쟁행위","분야","판결문"]},{"t":"지식재산권 수출의 경제적 파급효과와 산업화 방안","u":"https://www.kiip.re.kr/synapView.do?afno=10866","c":"정책연구","k":["경제적","산업화","수출","지식재산권","파급효과와"]},{"t":"지식재산과 경제성장(Ⅱ)_스타트업 자금조달과 특허·상표의 중요성","u":"https://www.kiip.re.kr/synapView.do?afno=10524","c":"정책연구","k":["경제성장","상표","스타트업","자금조달과","중요성","지식재산과","특허"]},{"t":"지식재산과 경제성장(Ⅰ)_지식재산권 보유에 따른 기업 매출성과 분석","u":"https://www.kiip.re.kr/synapView.do?afno=10303","c":"정책연구","k":["경제성장","기업","매출성과","보유에","지식재산과","지식재산권"]},{"t":"디지털 염기서열 정보(DSI) 기반 유전자원의 지식재산 활용 방안 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10713","c":"기본연구","k":["DSI","디지털","염기서열","유전자원","정보","지식재산"]},{"t":"국가별 법령 비교 분석","u":"https://www.kiip.re.kr/synapView.do?afno=10712","c":"기본연구","k":["국가별","법령","비교"]},{"t":"한-인도 IP협력 강화 방안, 인도-태평양에서 IP실용외교 방안을 중심으로","u":"https://www.kiip.re.kr/synapView.do?afno=10711","c":"기본연구","k":["IP","강화","실용외교","인도","중심","태평양","협력"]},{"t":"특허심사제도 혁신을 위한 IP5 특허심사제도 및 실무 비교 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10710","c":"기본연구","k":["IP","비교","실무","특허심사제도","혁신"]},{"t":"제약바이오산업과 특허제도 - 산업의 성과 및 AI시대 대응 방안을 중심으로","u":"https://www.kiip.re.kr/synapView.do?afno=10709","c":"기본연구","k":["AI","대응","산업","성과","시대","제약바이오산업과","중심","특허제도"]},{"t":"기업경영 측면에서 분석한 디자인권의 의미와 가치","u":"https://www.kiip.re.kr/synapView.do?afno=10716","c":"기본연구","k":["가치","기업경영","디자인권","분석한","의미와","측면"]},{"t":"2025년도 기본연구 연구성과보고서","u":"https://www.kiip.re.kr/synapView.do?afno=10720","c":"기본연구","k":["기본연구","년도","연구성과보고서"]},{"t":"지식재산법 조문해설서","u":"https://www.kiip.re.kr/synapView.do?afno=10719","c":"기본연구","k":["조문해설서","지식재산법"]},{"t":"지식재산권 포트폴리오가 기업의 시장가치에 미치는 영향","u":"https://www.kiip.re.kr/synapView.do?afno=10718","c":"기본연구","k":["기업","미치","시장가치에","영향","지식재산권","포트폴리오"]},{"t":"중국 상표법.특허법 변화의 주요 법적 쟁점과 한국의 대응 방안","u":"https://www.kiip.re.kr/synapView.do?afno=10696","c":"기본연구","k":["대응","법적","변화","상표법","쟁점과","주요","중국","특허법","한국"]},{"t":"주요국의 반도체 산업 관련 법제도에 대한 비교법적 분석","u":"https://www.kiip.re.kr/synapView.do?afno=10717","c":"기본연구","k":["관련","반도체","법제도에","비교법적","산업","주요국"]},{"t":"국제기구 IP 연계사안 논의 동향 분석","u":"https://www.kiip.re.kr/synapView.do?afno=10694","c":"기본연구","k":["IP","국제기구","연계사안"]},{"t":"국가주도산업의 글로벌 주도권 확보를 위한 지식재산 쟁점 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10693","c":"기본연구","k":["국가주도산업","글로벌","쟁점","주도권","지식재산","확보"]},{"t":"AI 모델을 활용한 지식재산 데이터 분석 방법 고도화 연구","u":"https://www.kiip.re.kr/synapView.do?afno=10715","c":"기본연구","k":["AI","고도화","데이터","모델","방법","지식재산","활용한"]}];
+const GENERIC=new Set(["지식재산","지식재산권","특허","상표","저작권","산업","정책","글로벌","주요국"]);
+function relStudies(d){
+  const hay=[d.title,d.headline||"",d.summary||"",d.detail||""].join(" ");
+  return RESEARCH.map(r=>{
+    let s=0;
+    for(const k of r.k){
+      if(hay.includes(k)) s+=GENERIC.has(k)?1:(k.length>=4?3:(k.length===3?2:1));
+    }
+    return [s,r];
+  }).filter(x=>x[0]>=3).sort((a,b)=>b[0]-a[0]).slice(0,3).map(x=>x[1]);
+}
+
 /* ═══ 기사 팝업 ═══ */
 let VIEW=[];
 const bg=document.getElementById("modalBg");
@@ -442,6 +465,10 @@ function openModal(d){
   det.innerHTML=paras.map(p=>`<p>${p}</p>`).join("");
   document.getElementById("mSrc").textContent=`출처: ${d.source}`;
   document.getElementById("mGo").href=d.url;
+  const rel=relStudies(d), relBox=document.getElementById("mRel");
+  relBox.hidden=!rel.length;
+  document.getElementById("mRelList").innerHTML=rel.map(r=>
+    `<a href="${r.u}" target="_blank" rel="noopener"><span class="cat">${r.c}</span><span>${r.t}</span></a>`).join("");
   bg.classList.add("open");document.body.style.overflow="hidden";
 }
 function closeModal(){bg.classList.remove("open");document.body.style.overflow="";}
