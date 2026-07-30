@@ -47,7 +47,7 @@ SOURCES = [
   S("KR","특허법원·심판 동향","",typ="gnews",q='특허법원 OR 특허심판원 OR 특허소송'),
   # ─── 미국 (13) ───
   S("US","미국 특허상표청(USPTO)","https://www.uspto.gov/about-us/news-updates",pat=r'/about-us/news-updates/'),
-  S("US","미국 무역대표부(USTR)","https://ustr.gov/about/policy-offices/press-office/news",pat=r'/about/policy-offices/press-office/'),
+  S("US","미국 무역대표부(USTR)","https://www.ustr.gov/about-us/policy-offices/press-office/press-releases",pat=r'/press-office/press-releases/'),
   S("US","미국 백악관","https://www.whitehouse.gov/presidential-actions/feed/",typ="rss"),
   S("US","미국 저작권청","https://copyright.gov/newsnet/archive/",pat=r'/newsnet/'),
   S("US","미국 국제무역위원회(USITC)","https://www.usitc.gov/news_releases",pat=r'/press_room/news_release/'),
@@ -56,7 +56,7 @@ SOURCES = [
   S("US","IPWatchdog","https://ipwatchdog.com/feed/",typ="rss"),
   S("US","Patently-O","https://patentlyo.com/feed",typ="rss"),
   S("US","Patent Docs","https://www.patentdocs.org/atom.xml",typ="rss"),
-  S("US","연방순회항소법원(CAFC)","",typ="gnews",q='"Federal Circuit" patent decision OR ruling',note="판례에 의한 제도변화"),
+  S("US","연방순회항소법원(CAFC)","https://www.cafc.uscourts.gov/category/opinion-order/",pat=r'/(article|opinion-order)/',q='"Federal Circuit" patent decision OR ruling',note="공식 판결목록, 폴백=키워드검색"),
   S("US","Law360 IP","https://www.law360.com/ip/rss",typ="rss"),
   S("US","Unified Patents","https://www.unifiedpatents.com/insights?format=rss",typ="rss"),
   # 유료 매체: 제목 참고용 → 구글뉴스 검색 수집
@@ -66,6 +66,10 @@ SOURCES = [
   S("US","Bloomberg","",typ="gnews",q='site:bloomberg.com "intellectual property" OR patent OR trademark OR copyright',note="유료, 키워드 검색"),
   S("US","연방관보(Federal Register)·USPTO","https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=patent-and-trademark-office",typ="rss",q='site:federalregister.gov patent OR trademark OR USPTO',note="미국 규칙 제·개정 원천"),
   S("US","USPTO 규칙제정 동향","",typ="gnews",q='USPTO "final rule" OR "proposed rule" OR "notice of proposed rulemaking"'),
+  S("US","Bloomberg Law(기술·통신법)","https://news.bloomberglaw.com/tech-and-telecom-law",pat=r'/tech-and-telecom-law/'),
+  S("US","Supply Chain Dive","https://www.supplychaindive.com/",pat=r'/news/'),
+  S("US","9to5Mac(테크산업)","https://9to5mac.com/guides/tech-industry/",pat=r'/20\d{2}/\d{2}/\d{2}/'),
+  S("US","미 의회 입법(키워드)","https://www.congress.gov/browse/119th-congress",typ="gnews",q='Congress bill patent OR trademark OR copyright OR "intellectual property"',note="의회 IP 입법 동향"),
   # ─── 중국 (26) ───
   S("CN","中 지식산권국 공고","https://www.cnipa.gov.cn/col/col74/index.html",pat=r'/art/'),
   S("CN","中 지식산권국 통지","https://www.cnipa.gov.cn/col/col75/index.html",pat=r'/art/'),
@@ -128,6 +132,9 @@ SOURCES = [
   S("EU","통합특허법원(UPC) 동향","",typ="gnews",q='"Unified Patent Court" OR "unitary patent"'),
   S("EU","EPO 확대심판부 동향","",typ="gnews",q='EPO "Enlarged Board of Appeal"'),
   # ─── 국제기구 (8) ───
+  S("INT","생물다양성협약(CBD) 회의","https://www.cbd.int/meetings",pat=r'/meetings?/',note="유전자원·DSI 논의"),
+  S("INT","국제사법재판소(ICJ)","https://www.icj-cij.org/cases",pat=r'/case'),
+  S("INT","Global Trade Alert","https://globaltradealert.org/analysis",pat=r'/(analysis|report)'),
   S("INT","세계지식재산기구(WIPO)","https://www.wipo.int/pressroom/en/rss.xml",typ="rss"),
   S("INT","ID5","https://id-five.org/about/id5-news/",pat=r'id-five'),
   S("INT","TM5","https://tmfive.org/news-and-events/",pat=r'tmfive'),
@@ -136,6 +143,9 @@ SOURCES = [
   S("INT","세계무역기구(WTO)","https://www.wto.org/english/news_e/news_e.htm",pat=r'/english/news_e/',note="목록 URL 오류 정정"),
   S("INT","APEC","https://www.apec.org/what-we-achieved/newsroom",pat=r'/press-releases|/news'),
   S("INT","유엔산업개발기구(UNIDO)","https://www.unido.org/news",pat=r'/news/'),
+  S("CN","China Briefing","https://www.china-briefing.com/news/",pat=r'/news/[a-z0-9]'),
+  S("EU","Life Sciences IP Review","https://www.lifesciencesipreview.com/latest?articleType.name=News",pat=r'/(news|article)'),
+  S("ETC","Al Jazeera(IP·기술 키워드)","",typ="gnews",q='site:aljazeera.com "intellectual property" OR patent OR semiconductor OR copyright'),
   # ─── 기타 (아세안·기타국) ───
   S("ETC","베트남 지식재산청 공지","https://www.ipvietnam.gov.vn/web/english/announcement",pat=r'ipvietnam'),
   S("ETC","베트남 지식재산청 연차보고","https://www.ipvietnam.gov.vn/en_US/web/english/annual-report",pat=r'ipvietnam'),
