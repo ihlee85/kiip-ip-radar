@@ -490,10 +490,11 @@ def enrich_details(items):
         chunk = idxs[s:s + BATCH]
         articles = "\n\n".join(f"[{i}] {items[i]['title']}\n{bodies[i]}" for i in chunk)
         try:
-            msg = client.messages.create(
+            with client.messages.stream(
                 model="claude-fable-5", max_tokens=32000,
                 messages=[{"role": "user",
-                           "content": DETAIL_PROMPT.format(articles=articles)}])
+                           "content": DETAIL_PROMPT.format(articles=articles)}]) as stream:
+                msg = stream.get_final_message()
             text = "".join(b.text for b in msg.content if b.type == "text")
             for m in re.finditer(
                     r"===ITEM\s*(\d+)\s*===\s*HEADLINE:\s*(.*?)\s*DETAIL:\s*(.*?)\s*===END===",
@@ -525,7 +526,7 @@ def classify(candidates, archive, kiip_titles):
                          for n, c in enumerate(candidates))
     msg = client.messages.create(
         model="claude-fable-5",
-        max_tokens=32000,
+        max_tokens=20000,
         messages=[{"role": "user", "content": CLASSIFY_PROMPT.format(
             cap=DAILY_CAP,
             topics=json.dumps(TOPICS, ensure_ascii=False),
