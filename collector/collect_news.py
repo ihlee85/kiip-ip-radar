@@ -491,7 +491,7 @@ def enrich_details(items):
         articles = "\n\n".join(f"[{i}] {items[i]['title']}\n{bodies[i]}" for i in chunk)
         try:
             msg = client.messages.create(
-                model="claude-sonnet-5", max_tokens=16000,
+                model="claude-fable-5", max_tokens=16000,
                 messages=[{"role": "user",
                            "content": DETAIL_PROMPT.format(articles=articles)}])
             text = "".join(b.text for b in msg.content if b.type == "text")
@@ -524,7 +524,7 @@ def classify(candidates, archive, kiip_titles):
     cand_txt = "\n".join(f"[{n}] ({c['source']}) {c['title']} :: {c['desc'][:160]}"
                          for n, c in enumerate(candidates))
     msg = client.messages.create(
-        model="claude-sonnet-5",
+        model="claude-fable-5",
         max_tokens=4000,
         messages=[{"role": "user", "content": CLASSIFY_PROMPT.format(
             cap=DAILY_CAP,
