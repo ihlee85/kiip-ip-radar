@@ -491,7 +491,7 @@ def enrich_details(items):
         articles = "\n\n".join(f"[{i}] {items[i]['title']}\n{bodies[i]}" for i in chunk)
         try:
             msg = client.messages.create(
-                model="claude-fable-5", max_tokens=16000,
+                model="claude-fable-5", max_tokens=32000,
                 messages=[{"role": "user",
                            "content": DETAIL_PROMPT.format(articles=articles)}])
             text = "".join(b.text for b in msg.content if b.type == "text")
@@ -525,7 +525,7 @@ def classify(candidates, archive, kiip_titles):
                          for n, c in enumerate(candidates))
     msg = client.messages.create(
         model="claude-fable-5",
-        max_tokens=4000,
+        max_tokens=32000,
         messages=[{"role": "user", "content": CLASSIFY_PROMPT.format(
             cap=DAILY_CAP,
             topics=json.dumps(TOPICS, ensure_ascii=False),
@@ -539,7 +539,7 @@ def classify(candidates, archive, kiip_titles):
     try:
         picks = json.loads(text, strict=False)
     except json.JSONDecodeError:
-        print("[warn] 분류 응답 파싱 실패:", text[:300]); return []
+        print(f"[warn] 분류 응답 파싱 실패 (stop_reason={msg.stop_reason}, 길이={len(text)}):", text[:300]); return []
     results = []
     for p in picks[:DAILY_CAP + len(COUNTRIES)]:  # 국가 다양성 추가분 허용
         try:
