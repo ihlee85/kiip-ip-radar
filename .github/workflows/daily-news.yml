@@ -1,18 +1,28 @@
-name: Daily IP News Collection
+name: Daily IP News
 
 on:
-  workflow_dispatch:        # 수동 실행 버튼
+  workflow_dispatch:   # cron-job.org 외부 트리거 + 수동 실행 버튼
+
+# ── 시간대 고정: 러너(UTC)의 date·datetime이 모두 한국시간으로 동작 ──
+env:
+  TZ: Asia/Seoul
 
 permissions:
   contents: write
+
+concurrency:
+  group: daily-news
+  cancel-in-progress: false
 
 jobs:
   collect:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
@@ -24,10 +34,14 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python collector/collect_news.py
 
-      - name: Commit updated archive
+      - name: Commit & push
         run: |
-          git config user.name "kiip-radar-bot"
+          git config user.name "actions-user"
           git config user.email "actions@github.com"
           git add data/news.json
-          git diff --cached --quiet || git commit -m "chore: daily news update $(date +'%Y-%m-%d')"
-          git push
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "chore: daily news update $(date +%F)"
+            git push
+          fi
