@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-KIIP Global IP Radar — 일일 뉴스 수집 에이전트 (v4)
+KIIP Global IP Radar — 일일 뉴스 수집 에이전트 (v4.1)
 ====================================================
+v4.1 변경: 시간대(KST) 고정 — GitHub Actions 러너(UTC)에서 새벽 실행 시
+  날짜가 하루 밀리던 문제 해결
+  - KST 타임존 상수 및 _today_kst() 도입, TODAY·_recent() 모두 KST 기준
+  - RSS 발행시각(UTC struct_time)을 KST로 변환 후 날짜 판정
 v4 변경: 연구원 공식 '해외 IP 동향 수집 자료원 목록' 87개 출처 전면 반영
   - 수집 방식 3종: RSS / HTML 목록 크롤(범용 파서) / 구글뉴스 검색(gnews)
   - 직접 접속 실패·0건 시 구글뉴스 site: 검색으로 자동 폴백
@@ -13,12 +17,18 @@ v4 변경: 연구원 공식 '해외 IP 동향 수집 자료원 목록' 87개 출
 필요 환경변수: ANTHROPIC_API_KEY (GitHub Secrets) / DRY=1 이면 AI선별 없이 수집만 테스트
 의존성: pip install requests feedparser anthropic googlenewsdecoder
 """
-import json, os, re, hashlib, datetime, pathlib, urllib.parse
+import json, os, re, hashlib, datetime, pathlib, urllib.parse, calendar
 import requests, feedparser
+
+# ── 시간대 고정: 러너(UTC)·로컬 어디서 실행해도 한국시간 기준 ──
+KST = datetime.timezone(datetime.timedelta(hours=9))
+
+def _today_kst():
+    return datetime.datetime.now(KST).date()
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data" / "news.json"
-TODAY = datetime.date.today().isoformat()
+TODAY = _today_kst().isoformat()
 DAILY_CAP = 10          # AI 선별 기본 상한
 PURGE_BEFORE = "2026-07-25"  # 서비스 개시일 이전 날짜의 잔재 항목 제거
 RECENT_DAYS = 3         # 최신 72시간 이내 기사만 수집
@@ -226,7 +236,7 @@ def item_id(url, title):
     return hashlib.md5((url + title).encode()).hexdigest()[:12]
 
 def _recent(date_str):
-    return (datetime.date.today() - datetime.date.fromisoformat(date_str)).days <= RECENT_DAYS
+    return (_today_kst() - datetime.date.fromisoformat(date_str)).days <= RECENT_DAYS
 
 def fetch_rss_url(url, limit=8):
     resp = requests.get(url, timeout=25, headers=UA)
@@ -238,7 +248,11 @@ def fetch_rss_url(url, limit=8):
         if not title or not link:
             continue
         pub = e.get("published_parsed") or e.get("updated_parsed")
-        date = datetime.date(*pub[:3]).isoformat() if pub else TODAY
+        if pub:  # feedparser의 struct_time은 UTC → KST로 변환 후 날짜 판정
+            date = datetime.datetime.fromtimestamp(
+                calendar.timegm(pub), KST).date().isoformat()
+        else:
+            date = TODAY
         if not _recent(date):
             continue
         rows.append({"date": date, "title": title, "url": link,
