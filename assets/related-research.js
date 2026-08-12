@@ -138,37 +138,14 @@ const RR = {
       .map(r => ({ r, score: 0, pct: null, why: [], tier: 2, topicHit: true, geoHit: true }));
   },
 
-  /* ── 렌더링 ───────────────────────────────────────────── */
-  //  reportBase: 성과보고서 PDF를 리포에 올린 경우 경로 (예: 'reports/')
-  render(list, reportBase) {
+  /* ── 렌더링: [연도 구분] 과제 제목 — 기존 .related a / .cat 스타일과 동일 구조 ── */
+  render(list) {
     if (!list.length) return '';
     return list.map(s => {
       const r = s.r;
-      const chips = s.why.slice(0, 3)
-        .map(t => `<em class="rr-chip">${t}</em>`).join('');
-      const sig = [];
-      if (s.topicHit) sig.push(`주제 일치`);
-      if (s.geoHit) sig.push(`국가 일치`);
-      const pdf = (reportBase && r.pg)
-        ? ` · <a class="rr-pdf" href="${reportBase}${r.y}.pdf#page=${r.pg}" target="_blank" rel="noopener">개요 1쪽</a>`
-        : '';
-      const gauge = s.tier === 2
-        ? `<span class="rr-pct weak">같은 영역 참고</span>`
-        : `<span class="rr-score" title="관련도 ${s.pct}%"><i style="width:${s.pct}%"></i></span>
-           <span class="rr-pct">${s.pct}%</span>`;
-      return `
-<a class="rr-card${s.tier === 2 ? ' tier2' : ''}" href="${r.u}" target="_blank" rel="noopener">
-  <div class="rr-top">
-    <span class="rr-cat">${r.y} ${r.c}</span>
-    ${gauge}
-  </div>
-  <div class="rr-title">${r.t}${r.s ? `<span class="rr-sub"> — ${r.s}</span>` : ''}</div>
-  <div class="rr-desc">${r.d || ''}</div>
-  <div class="rr-foot">
-    <span class="rr-why">${chips}${sig.length ? `<em class="rr-chip sig">${sig.join(' · ')}</em>` : ''}</span>
-    <span class="rr-meta">${r.a ? r.a + ' 연구책임' : ''}${pdf}</span>
-  </div>
-</a>`;
+      return `<a href="${r.u}" target="_blank" rel="noopener">` +
+             `<span class="cat">${r.y} ${r.c}</span>` +
+             `<span>${r.t}</span></a>`;
     }).join('');
   }
 };
