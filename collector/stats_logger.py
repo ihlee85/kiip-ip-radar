@@ -21,8 +21,8 @@ from collections import Counter
 
 STATS_PATH = "data/stats.json"
 KEEP_DAYS = 365          # 이보다 오래된 기록은 자동 정리
-COUNTRY_KEY = "country"  # ⚠️ 후보 dict의 국가 필드명이 다르면 수정 (예: "cc", "nation")
-TEXT_KEYS = ("title", "summary", "desc")  # 키워드 매칭에 사용할 텍스트 필드들
+COUNTRY_KEY = "chint"    # collect_news.py 후보 dict의 국가 필드(소스 국가 힌트)
+TEXT_KEYS = ("title", "desc")  # collect_news.py 후보 dict의 텍스트 필드
 
 # ──────────────────────────────────────────────────────────────
 # 추적 키워드 사전 — {한국어 표시명: [다국어 동의어(영·중·일 등)]}
@@ -134,10 +134,10 @@ def log_candidate_stats(candidates):
 if __name__ == "__main__":
     # 간단 자가 테스트
     demo = [
-        {"title": "USPTO issues new guidance on standard essential patent licensing and FRAND", "country": "US"},
-        {"title": "生成AIと著作権に関する報告書を公表", "country": "JP"},
-        {"title": "国家知识产权局公布打击恶意商标注册与假冒行动", "country": "CN"},
-        {"title": "EPO decision on patent eligibility of AI inventions (DABUS follow-up)", "country": "EU"},
+        {"title": "USPTO issues new guidance on standard essential patent licensing and FRAND", "chint": "US"},
+        {"title": "生成AIと著作権に関する報告書を公表", "chint": "JP"},
+        {"title": "国家知识产权局公布打击恶意商标注册与假冒行动", "chint": "CN"},
+        {"title": "EPO decision on patent eligibility of AI inventions (DABUS follow-up)", "chint": "EU"},
     ]
     cnt, pair = keyword_mentions(demo)
     print("언급:", cnt)
