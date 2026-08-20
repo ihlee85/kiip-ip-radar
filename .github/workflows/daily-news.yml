@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name "actions-user"
           git config user.email "actions@github.com"
-          git add data/news.json
+          git add data/
           if git diff --cached --quiet; then
             echo "변경 없음 — 커밋 생략"
           else
