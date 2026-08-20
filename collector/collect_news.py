@@ -19,6 +19,7 @@ v4 변경: 연구원 공식 '해외 IP 동향 수집 자료원 목록' 87개 출
 """
 import json, os, re, hashlib, datetime, pathlib, urllib.parse, calendar
 import requests, feedparser
+from stats_logger import log_candidate_stats   # 수집 시점 통계 기록(대시보드용)
 
 # ── 시간대 고정: 러너(UTC)·로컬 어디서 실행해도 한국시간 기준 ──
 KST = datetime.timezone(datetime.timedelta(hours=9))
@@ -591,6 +592,7 @@ def main():
     if os.environ.get("DRY"):
         print("[DRY] AI 선별 생략, 수집 테스트만 수행")
         return
+    log_candidate_stats(candidates)   # 선별 전 후보 통계 → data/stats.json (본문 미저장)
     new_items = classify(candidates, archive, kiip_titles)
     print(f"선별 {len(new_items)}건 (기본 상한 {DAILY_CAP}건 + 국가별 보장분)")
     backlog = [i for i in archive["items"]
