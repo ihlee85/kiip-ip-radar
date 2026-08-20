@@ -46,6 +46,15 @@ header .wrap{display:flex;align-items:center;gap:12px;padding:14px 20px}
 .intro p b{color:#fff}
 .intro .nums{margin-left:auto;display:flex;gap:18px;font-size:.78rem;color:#CDE3F8}
 .intro .nums b{display:block;font-size:1.05rem;color:#fff;font-variant-numeric:tabular-nums;line-height:1.2}
+.dash-btn{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--blue);
+  font-size:.85rem;font-weight:800;letter-spacing:-.01em;padding:8px 17px;border-radius:99px;text-decoration:none;
+  box-shadow:0 3px 10px rgba(6,28,60,.24), inset 0 -2px 0 rgba(22,104,196,.16), inset 0 1px 0 #fff;
+  transition:transform .15s ease, box-shadow .15s ease;white-space:nowrap}
+.dash-btn:hover{transform:translateY(-1.5px);box-shadow:0 6px 15px rgba(6,28,60,.32), inset 0 -2px 0 rgba(22,104,196,.16)}
+.dash-btn .pie{flex-shrink:0}
+.dash-btn .arr{font-weight:900;transition:transform .15s}
+.dash-btn:hover .arr{transform:translateX(3px)}
+@media(max-width:720px){.dash-btn{width:100%;justify-content:center;padding:10px 16px}}
 
 /* ═══ 스티키 필터 툴바 ═══ */
 .toolbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
@@ -180,7 +189,7 @@ footer b{color:#fff}
   <div class="nums">
     <span><b id="numTotal">—</b>누적 뉴스</span>
     <span><b id="numToday">—</b>일일 누적건수</span>
-    <a href="dashboard.html" style="display:inline-flex;align-items:center;gap:5px;background:#fff;color:#1668C4;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:99px;text-decoration:none;box-shadow:0 2px 6px rgba(10,30,60,.2)">📊 동향 통계 대시보드</a>
+    <a href="dashboard.html" class="dash-btn"><svg class="pie" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="10" r="7.4" fill="none" stroke="currentColor" stroke-width="2.8" opacity=".3"/><path d="M10 2.6 A7.4 7.4 0 0 1 17.4 10 L10 10 Z" fill="currentColor"/><path d="M10 10 L4.8 15.2 A7.4 7.4 0 0 0 10 17.4 Z" fill="currentColor" opacity=".55"/></svg>동향 통계 대시보드<span class="arr">→</span></a>
   </div>
 </div></div>
 
@@ -319,12 +328,14 @@ let DATA=[...SEED];
 let state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12};
 
 let UPDATED=null;   /* data/news.json의 updated(수집 실행일) */
-fetch("data/news.json").then(r=>r.ok?r.json():null).then(j=>{
+fetch("data/news.json").then(r=>r.ok?r.json():null).catch(()=>null).then(j=>{
   if(j&&Array.isArray(j.items)&&j.items.length){DATA=j.items;UPDATED=j.updated||null;}
   init();
-}).catch(init);
+});
 
+let INIT_DONE=false;
 function init(){
+  if(INIT_DONE)return; INIT_DONE=true;
   DATA.sort((a,b)=>b.date.localeCompare(a.date));
   document.getElementById("lastUpdated").textContent="기준일 "+(UPDATED||DATA[0]?.date||"—");
   document.getElementById("numTotal").textContent=DATA.length;
@@ -336,6 +347,7 @@ function init(){
 /* 다중선택 칩: 국가·주제 */
 function buildChips(){
   const cRow=document.getElementById("countryRow");
+  document.querySelectorAll("#countryRow .chip, #topicRow .chip").forEach(c=>c.remove());
   CORDER.filter(c=>DATA.some(d=>d.country===c)).forEach(c=>{
     const n=DATA.filter(d=>d.country===c).length;
     cRow.insertAdjacentHTML("beforeend",
