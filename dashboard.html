@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KIIP Global IP Radar — 동향 통계 대시보드</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.3/chart.umd.min.js"></script>
 <style>
 :root{
   --kiip:#1668C4; --kiip-dark:#0E4A8F; --navy:#1B2A4A;
@@ -130,7 +129,7 @@ footer .wrap{padding:16px 20px;line-height:1.7}
   <section>
     <div class="stitle">언급량 추이</div>
     <div style="font-size:12.5px;color:var(--sub);margin-bottom:6px">대상: <b id="trendKw" style="color:var(--kiip-dark)">전체</b></div>
-    <div class="chartbox"><canvas id="trend"></canvas></div>
+    <div class="chartbox" id="trend"></div>
     <div class="rangewrap">
       <div class="track"></div><div class="fill" id="rfill"></div>
       <input type="range" id="rgA" aria-label="기간 시작"><input type="range" id="rgB" aria-label="기간 끝">
@@ -175,7 +174,27 @@ const CONF = {
   },
   CLABEL: { KR:'한국', US:'미국', EU:'유럽', JP:'일본', CN:'중국', INT:'국제기구' }
 };
-const STOP = ['및','등','관련','대한','위한','통해','발표','공개','개시','제시','확대','도입','추진','강화','전망','논의','검토','계획','정책','제도','지식재산','특허청'];
+const STOP = new Set([
+  // 일반어
+  '및','등','관련','대한','위한','통해','대해','따른','위해','발표','공개','개시','제시','확대','도입','추진','강화',
+  '전망','논의','검토','계획','정책','제도','개최','예정','실시','공표','발간','발행','게재','회의','결과','조사',
+  '연구','보고서','자료','동향','뉴스','안내','모집','신규','최초','최대','최소','상반기','하반기','분기','연례',
+  '특허','상표','디자인','지식재산','지재권','산업재산권','승소','패소','기각','인용','선고','판결','소송','출원','등록',
+  // 국가·지역
+  '한국','미국','중국','일본','유럽','영국','독일','프랑스','호주','인도','캐나다','브라질','러시아','대만',
+  '싱가포르','베트남','인도네시아','사우디아라비아','유럽연합','국제기구','국제','세계','글로벌','EU','미','중','일',
+  // 기관(행위 주체는 키워드가 아님)
+  '특허청','지식재산처','국가지식산권국','문화청','문부과학성','디지털청','저작권위원회','한국저작권위원회',
+  '법원','대법원','특허법원','고등법원','지방법원','연방순회항소법원','최고인민법원','일반법원','항소법원','재판소',
+  '집행위원회','위원회','의회','국회','정부','상무부','법무부','세관','감사원',
+  'USPTO','CNIPA','JPO','EPO','EUIPO','KIPO','WIPO','WTO','OECD','USTR','CAFC','ANAO','JETRO','RIETI',
+  'UKIPO','USITC','DPMA','INPI','IPOS','MyIPO','FTC','DOJ','SEC',
+  // 매체명·관보성 잡음·범용어(2차 보강)
+  'IPKat','Law360','MLEX','IAM','Kluwer','로이터','블룸버그','인민망','신화통신','언론','매체','공식','공식적',
+  '공고','공지','정정','오류','등록부','특허공보','관보','고시','게시','소식','기업','업체','회사','단체',
+  '보호','분쟁','침해','대응','현황','사례','방안','개선','활용','활성화','지원','협력','교류','의견교환','간담회','세미나','포럼','토론회','설명회',
+  '답변','기술','분석','대상','통계','서비스','IP','절차','방법','사업','산업','시장','규모','증가','감소','상승','하락','발의','제안','도구'
+]);
 const BUBBLE = ['#7C9FE8','#5FB0DE','#5ECFCB','#63BD8D','#9CCB6B','#EFC94C'];
 const CLOUDC = ['#1668C4','#0E7C66','#C2410C','#7C6BC9','#E0A100','#DB2777','#64748B'];
 
@@ -194,14 +213,19 @@ function kwOf(it){
   if (it.__kw) return it.__kw;
   let ks = CONF.get.keywords(it);
   if (!ks || !ks.length){
-    ks = String(CONF.get.title(it)).replace(/[\[\]().,'"“”‘’…]/g,' ').split(/\s+/)
-      .map(w => w.replace(/(을|를|이|가|은|는|의|에|에서|으로|로|과|와|도)$/,''))
-      .filter(w => w.length >= 2 && !STOP.includes(w) && !/^\d+$/.test(w)).slice(0,4);
+    ks = String(CONF.get.title(it))
+      .replace(/[\[\]().,'"“”‘’…·:—-]/g,' ').split(/\s+/)
+      .map(w => w.replace(/(에서|으로부터|로부터|에게|와의|과의|을|를|이|가|은|는|의|에|으로|로|과|와|도|용)$/,''))
+      .filter(w => w.length >= 2 && w.length <= 14
+        && !STOP.has(w) && !STOP.has(w.toUpperCase())
+        && !/^제?\d/.test(w) && !/^\d+$/.test(w)
+        && !/(청|처|법원|재판소|위원회|의회|정부)$/.test(w))
+      .slice(0,5);
   }
   return (it.__kw = ks.map(k => String(k).trim()).filter(Boolean));
 }
 
-const APP = { items:[], dated:[], stats:[], tab:7, selKw:null, chart:null, weeks:[],
+const APP = { items:[], dated:[], stats:[], tab:7, selKw:null, weeks:[],
               rangeA:0, rangeB:0, rank:[], flows:[], cloud:[], collect:false };
 
 /* ── 데이터 적재 (실데이터 → 실패 시 예시 생성) ─────────── */
@@ -380,21 +404,39 @@ function weekCounts(kw){
   return APP.weeks.map(w => APP.dated.filter(x =>
     +x.d >= +w.s && +x.d < +w.s + 7*DAY && (!kw || kwOf(x.it).includes(kw))).length);
 }
+function drawTrend(labels, data){
+  const W = 640, H = 290, P = { l: 46, r: 16, t: 14, b: 32 };
+  const mx = Math.max(1, ...data);
+  const n = data.length;
+  const X = i => P.l + (W - P.l - P.r) * (n > 1 ? i / (n - 1) : 0.5);
+  const Y = v => H - P.b - (H - P.t - P.b) * v / mx;
+  let s = '';
+  for (let t = 0; t <= 4; t++){
+    const v = Math.round(mx * t / 4), y = Y(v);
+    s += '<line x1="' + P.l + '" y1="' + y + '" x2="' + (W - P.r) + '" y2="' + y + '" stroke="#eef1f6"/>' +
+         '<text x="' + (P.l - 8) + '" y="' + (y + 3.5) + '" text-anchor="end" font-size="10.5" fill="#8b95a5">' + v.toLocaleString() + '</text>';
+  }
+  const pts = data.map((v, i) => [X(i), Y(v)]);
+  const line = pts.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+  if (n > 1) s += '<path d="' + line + ' L' + pts[n-1][0].toFixed(1) + ' ' + Y(0) + ' L' + pts[0][0].toFixed(1) + ' ' + Y(0) + ' Z" fill="rgba(109,95,224,.13)"/>';
+  s += '<path d="' + line + '" fill="none" stroke="#6D5FE0" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>';
+  pts.forEach((p, i) => {
+    s += '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="4.5" fill="#6D5FE0" stroke="#fff" stroke-width="1.6" data-i="' + i + '" style="cursor:pointer"><title>' + esc(labels[i]) + ' · ' + data[i].toLocaleString() + '건</title></circle>';
+  });
+  const step = Math.max(1, Math.ceil(n / 7));
+  labels.forEach((lab, i) => {
+    if (i % step === 0 || i === n - 1)
+      s += '<text x="' + X(i).toFixed(1) + '" y="' + (H - P.b + 18) + '" text-anchor="middle" font-size="10" fill="#8b95a5">' + esc(String(lab).split('~')[0]) + '</text>';
+  });
+  $('trend').innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" height="100%" role="img" aria-label="언급량 추이 차트">' + s + '</svg>';
+}
 function renderTrend(){
   if (!APP.weeks.length) return;
   $('trendKw').textContent = APP.selKw ? '『' + APP.selKw + '』' : '전체';
   setBasis('trendBasis', APP.collect);
   const all = weekCounts(APP.selKw);
   const a = APP.rangeA, b = APP.rangeB;
-  const labels = APP.weeks.slice(a, b+1).map(w=>w.lab);
-  const data = all.slice(a, b+1);
-  if (APP.chart){ APP.chart.data.labels = labels; APP.chart.data.datasets[0].data = data; APP.chart.update(); }
-  else APP.chart = new Chart($('trend'), { type:'line',
-    data:{ labels, datasets:[{ data, borderColor:'#6D5FE0', backgroundColor:'rgba(109,95,224,.12)', fill:true, tension:.4, pointRadius:4, pointBackgroundColor:'#6D5FE0', borderWidth:2.5 }] },
-    options:{ maintainAspectRatio:false, responsive:true, plugins:{ legend:{display:false} },
-      onClick:(e,els)=>{ if(els.length) clickTrendPoint(els[0].index); },
-      scales:{ x:{ grid:{display:false}, ticks:{font:{size:10.5}, maxRotation:0} },
-               y:{ beginAtZero:true, grid:{color:'#eef1f6'}, ticks:{font:{size:11}} } } } });
+  drawTrend(APP.weeks.slice(a, b+1).map(w=>w.lab), all.slice(a, b+1));
   const n = APP.weeks.length - 1 || 1;
   $('rfill').style.left = (100*a/n) + '%';
   $('rfill').style.width = (100*(b-a)/n) + '%';
@@ -437,7 +479,10 @@ function renderCloud(){
 }
 
 /* ── 선택/팝업 ──────────────────────────────────────────── */
-function selectKw(k){ APP.selKw = k; renderRank(); renderTrend(); renderCloud(); }
+function selectKw(k){ APP.selKw = k;
+  try{renderRank();}catch(e){console.error(e);}
+  try{renderTrend();}catch(e){console.error(e);}
+  try{renderCloud();}catch(e){console.error(e);} }
 function openPop(title, list){
   $('ptitle').textContent = title + ' · ' + list.length + '건';
   list = [...list].sort((a,b)=>+b.d - +a.d).slice(0,40);
@@ -468,6 +513,10 @@ function bindEvents(){
     openPop(fl.key.slice(5).replace('-','/') + ' 『' + fl.kw + '』 관련 뉴스',
       articlesWith(fl.kw, APP.dated.filter(x => dayKey(x.d) === fl.key)));
   });
+  $('trend').addEventListener('click', e => {
+    const c = e.target.closest('circle[data-i]'); if (!c) return;
+    clickTrendPoint(+c.dataset.i);
+  });
   $('cloud').addEventListener('click', e => {
     const s = e.target.closest('span[data-i]'); if (!s) return;
     const k = APP.cloud[+s.dataset.i][0];
@@ -487,9 +536,10 @@ function bindEvents(){
   APP.collect = APP.stats.some(e => e.byKeyword && Object.keys(e.byKeyword).length);
   APP.dated = items.map(it => ({ it, d: parseDate(CONF.get.date(it)) })).filter(x => x.d);
   $('anaDate').textContent = dayKey(new Date()).replace(/-/g,'/');
-  bindEvents();
-  renderTabs(); renderRank(); renderFlow();
-  buildWeeks(); renderTrend(); renderCloud();
+  const safe = (fn, name) => { try { fn(); } catch(e){ console.error('[dashboard] ' + name, e); } };
+  safe(bindEvents,'bind');
+  safe(renderTabs,'tabs'); safe(renderRank,'rank'); safe(renderFlow,'flow');
+  safe(buildWeeks,'weeks'); safe(renderTrend,'trend'); safe(renderCloud,'cloud');
 })();
 </script>
 </body>
