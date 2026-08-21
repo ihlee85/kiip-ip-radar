@@ -60,6 +60,17 @@ header .wrap{display:flex;align-items:center;gap:12px;padding:14px 20px}
 .toolbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
   border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(22,41,94,.04)}
 .toolbar .wrap{display:flex;flex-direction:column;gap:10px;padding:12px 20px}
+#chipArea{display:flex;flex-direction:column;gap:10px;max-height:400px;opacity:1;overflow:hidden;
+  transition:max-height .28s ease,opacity .2s ease,margin .2s ease}
+.filterToggle{display:none;align-items:center;gap:5px;font-size:.8rem;font-weight:700;color:var(--blue);
+  background:var(--bg);border:1.5px solid var(--line);border-radius:99px;padding:8px 14px;white-space:nowrap;cursor:pointer}
+.filterToggle b{background:var(--blue);color:#fff;border-radius:99px;font-size:.68rem;padding:1px 7px;font-variant-numeric:tabular-nums}
+.filterToggle .fa{transition:transform .2s}
+@media(max-width:640px){
+  .filterToggle{display:inline-flex}
+  .toolbar.slim #chipArea{max-height:0;opacity:0;margin-top:-10px}
+  .toolbar.slim .filterToggle .fa{transform:rotate(-180deg)}
+}
 .tb-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .searchbox{display:flex;align-items:center;flex:1;min-width:230px;background:var(--bg);
   border:1.5px solid var(--line);border-radius:99px;padding:0 6px 0 16px;transition:border-color .15s}
@@ -200,10 +211,13 @@ footer b{color:#fff}
       <input type="search" id="q" placeholder="검색어 입력 (예: AI 발명, 상표, 심사)" aria-label="키워드 검색">
       <button class="clear" id="qClear" hidden>지우기</button>
     </div>
+    <button class="filterToggle" id="filterToggle" aria-expanded="true" aria-controls="chipArea">필터 <b id="filterCnt" hidden></b><span class="fa" aria-hidden="true">▾</span></button>
     <span class="resetAll" id="resetBtn" role="button" tabindex="0">전체 초기화</span>
   </div>
-  <div class="tb-row" id="countryRow"><span class="tb-label">국가</span></div>
-  <div class="tb-row" id="topicRow"><span class="tb-label">주제</span></div>
+  <div id="chipArea">
+    <div class="tb-row" id="countryRow"><span class="tb-label">국가</span></div>
+    <div class="tb-row" id="topicRow"><span class="tb-label">주제</span></div>
+  </div>
 </div></div>
 
 <main class="wrap">
@@ -341,7 +355,7 @@ function init(){
   document.getElementById("numTotal").textContent=DATA.length;
   const _n=new Date(), TODAY_L=`${_n.getFullYear()}-${String(_n.getMonth()+1).padStart(2,"0")}-${String(_n.getDate()).padStart(2,"0")}`;
   document.getElementById("numToday").textContent=DATA.filter(d=>d.date===TODAY_L).length;
-  buildChips();bind();render();
+  buildChips();bind();render();updateFilterBadge();
 }
 
 /* 다중선택 칩: 국가·주제 */
@@ -367,7 +381,30 @@ function buildChips(){
   }));
 }
 function toggle(set,v){set.has(v)?set.delete(v):set.add(v);}
-function refresh(){state.shown=12;render();}
+function refresh(){state.shown=12;render();updateFilterBadge();}
+function updateFilterBadge(){
+  const n=state.countries.size+state.topics.size;
+  const b=document.getElementById("filterCnt");
+  if(b){b.hidden=!n;b.textContent=n;}
+}
+/* 모바일: 아래 스크롤 시 칩 영역 자동 접힘, 위로 살짝 올리면 펼침 */
+(function(){
+  const bar=document.querySelector(".toolbar");
+  const btn=document.getElementById("filterToggle");
+  if(!bar)return;
+  let lastY=window.scrollY,acc=0,pin=false;   // pin: 수동으로 연 상태 잠시 유지
+  function setSlim(on){bar.classList.toggle("slim",on);if(btn)btn.setAttribute("aria-expanded",String(!on));}
+  if(btn)btn.addEventListener("click",()=>{const now=bar.classList.contains("slim");setSlim(!now);pin=now;acc=0;});
+  window.addEventListener("scroll",()=>{
+    if(window.innerWidth>640){setSlim(false);return;}      // PC는 항상 표시
+    const y=window.scrollY,dy=y-lastY;lastY=y;
+    if(y<80){setSlim(false);pin=false;acc=0;return;}       // 최상단 근처는 항상 펼침
+    acc=((dy>0)===(acc>0))?acc+dy:dy;                       // 같은 방향만 누적
+    if(acc>24&&!pin)setSlim(true);
+    else if(acc<-24){setSlim(false);pin=false;}
+    if(Math.abs(acc)>160)pin=false;                         // 수동 고정은 큰 스크롤에서 해제
+  },{passive:true});
+})();
 
 function bind(){
   const q=document.getElementById("q"),clear=document.getElementById("qClear");
