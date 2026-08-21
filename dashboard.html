@@ -151,7 +151,7 @@ footer .wrap{padding:16px 20px;line-height:1.7}
   <div id="pop">
     <div class="phead"><b id="ptitle">관련 뉴스</b><button class="x" id="popX" aria-label="닫기">✕</button></div>
     <div class="plist" id="plist"></div>
-    <div class="pfoot">제목을 누르면 원문 기사로 이동합니다 (새 창) · 목록은 사이트에 게재된 기사 기준</div>
+    <div class="pfoot">제목을 누르면 원문 기사로 이동합니다 (새 창) · 언급 건수는 수집 후보(선별 전) 기준이며, 목록은 게재된 기사에서 동의어 검색한 결과라 건수와 다를 수 있습니다</div>
   </div>
 </div>
 
@@ -225,7 +225,7 @@ function kwOf(it){
   return (it.__kw = ks.map(k => String(k).trim()).filter(Boolean));
 }
 
-const APP = { items:[], dated:[], stats:[], tab:7, selKw:null, weeks:[],
+const APP = { items:[], dated:[], stats:[], tab:7, selKw:null, weeks:[], kwSyn:{},
               rangeA:0, rangeB:0, rank:[], flows:[], cloud:[], collect:false };
 
 /* ── 데이터 적재 (실데이터 → 실패 시 예시 생성) ─────────── */
@@ -237,11 +237,11 @@ async function load(){
   const newsRaw = await loadJSON(CONF.NEWS_URL);
   const items = newsRaw ? CONF.get.items(newsRaw) : [];
   if (items.length){
-    const stats = await loadJSON(CONF.STATS_URL);
-    return { items, stats: Array.isArray(stats) ? stats : [] };
+    const [stats, kwDict] = await Promise.all([loadJSON(CONF.STATS_URL), loadJSON('data/kw_dict.json')]);
+    return { items, stats: Array.isArray(stats) ? stats : [], kwSyn: kwDict || {} };
   }
   $('demoBanner').style.display = 'block';
-  return makeDemo();
+  const d = makeDemo(); d.kwSyn = {}; return d;
 }
 /* 예시: 일별 후보 기사(선별 전)를 실제로 생성해 언급·동시언급을 집계하고, 그중 일부만 게재 */
 function makeDemo(){
@@ -313,7 +313,20 @@ const hasCo = () => APP.stats.some(e => e.coKw && Object.keys(e.coKw).length);
 /* 게재 기준(대체) 유틸 */
 function inWin(x, days){ return Date.now() - x.d <= days*DAY; }
 function countKw(list){ const m = {}; list.forEach(x => kwOf(x.it).forEach(k => m[k] = (m[k]||0)+1)); return m; }
-function articlesWith(kw, list){ return list.filter(x => kwOf(x.it).includes(kw)); }
+function synMatch(text, syn){
+  const s = String(syn).toLowerCase();
+  if (/^[a-z0-9]{2,6}$/.test(s)) return new RegExp('\\b' + s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\b').test(text);
+  return text.includes(s);
+}
+function itemText(x){
+  if (!x.__txt) x.__txt = [CONF.get.title(x.it), x.it.headline, x.it.summary, x.it.detail]
+    .filter(Boolean).join(' ').toLowerCase();
+  return x.__txt;
+}
+function articlesWith(kw, list){
+  const syns = [kw].concat(APP.kwSyn[kw] || []);
+  return list.filter(x => kwOf(x.it).includes(kw) || syns.some(s => synMatch(itemText(x), s)));
+}
 function setBasis(id, collect){
   const el = $(id);
   if (collect){ el.textContent = '수집 기준'; el.className = 'basis b1'; }
@@ -531,8 +544,8 @@ function bindEvents(){
 
 /* ── 부트스트랩 ─────────────────────────────────────────── */
 (async () => {
-  const { items, stats } = await load();
-  APP.items = items; APP.stats = stats || [];
+  const { items, stats, kwSyn } = await load();
+  APP.items = items; APP.stats = stats || []; APP.kwSyn = kwSyn || {};
   APP.collect = APP.stats.some(e => e.byKeyword && Object.keys(e.byKeyword).length);
   APP.dated = items.map(it => ({ it, d: parseDate(CONF.get.date(it)) })).filter(x => x.d);
   $('anaDate').textContent = dayKey(new Date()).replace(/-/g,'/');
