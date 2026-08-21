@@ -1,0 +1,289 @@
+{
+ "표준필수특허": [
+  "standard essential patent",
+  "standard-essential patent",
+  "SEP",
+  "FRAND",
+  "标准必要专利",
+  "標準必須特許",
+  "표준필수특허"
+ ],
+ "특허침해": [
+  "patent infringement",
+  "infringed patent",
+  "infringing patent",
+  "专利侵权",
+  "特許侵害",
+  "특허침해",
+  "특허 침해"
+ ],
+ "특허소송": [
+  "patent litigation",
+  "patent lawsuit",
+  "patent suit",
+  "patent case",
+  "patent dispute",
+  "专利诉讼",
+  "特許訴訟",
+  "특허소송",
+  "특허 소송"
+ ],
+ "특허 무효": [
+  "patent invalid",
+  "invalidation",
+  "revocation",
+  "inter partes review",
+  "PTAB",
+  "无效宣告",
+  "特許無効",
+  "무효심판",
+  "특허 무효"
+ ],
+ "금지명령": [
+  "injunction",
+  "injunctive relief",
+  "禁令",
+  "差止",
+  "가처분",
+  "금지명령"
+ ],
+ "영업비밀": [
+  "trade secret",
+  "economic espionage",
+  "商业秘密",
+  "営業秘密",
+  "영업비밀"
+ ],
+ "상표 위조": [
+  "counterfeit",
+  "counterfeiting",
+  "fake goods",
+  "knockoff",
+  "假冒",
+  "模倣品",
+  "위조상품",
+  "짝퉁"
+ ],
+ "상표 분쟁": [
+  "trademark infringement",
+  "trademark dispute",
+  "trademark lawsuit",
+  "商标侵权",
+  "商標侵害",
+  "상표권 침해",
+  "상표 분쟁"
+ ],
+ "악의적 상표출원": [
+  "bad faith trademark",
+  "trademark squatting",
+  "恶意注册",
+  "恶意商标",
+  "冒認出願",
+  "악의적 출원"
+ ],
+ "저작권 침해": [
+  "copyright infringement",
+  "piracy",
+  "pirated",
+  "版权侵权",
+  "著作権侵害",
+  "저작권 침해",
+  "불법복제"
+ ],
+ "AI 생성물 저작권": [
+  "AI-generated",
+  "AI generated",
+  "generative AI",
+  "AI copyright",
+  "生成AI",
+  "AI生成",
+  "人工智能生成",
+  "생성형 AI",
+  "AI 생성물"
+ ],
+ "AI 학습데이터": [
+  "training data",
+  "text and data mining",
+  "TDM",
+  "data mining exception",
+  "学習データ",
+  "训练数据",
+  "학습데이터",
+  "학습 데이터"
+ ],
+ "AI 발명자": [
+  "AI inventor",
+  "inventorship",
+  "DABUS",
+  "AI発明",
+  "AI 발명"
+ ],
+ "특허적격성": [
+  "patent eligibility",
+  "patentable subject matter",
+  "section 101",
+  "subject matter eligibility",
+  "专利适格",
+  "特許適格",
+  "특허적격"
+ ],
+ "심사 지연": [
+  "backlog",
+  "pendency",
+  "examination delay",
+  "审查周期",
+  "審査遅延",
+  "심사 지연",
+  "심사지연"
+ ],
+ "심사기준": [
+  "examination guideline",
+  "examination guidance",
+  "examination standard",
+  "审查指南",
+  "審査基準",
+  "심사기준",
+  "심사 기준"
+ ],
+ "특허 수수료": [
+  "patent fee",
+  "fee schedule",
+  "official fee",
+  "fee increase",
+  "专利费",
+  "特許料",
+  "수수료"
+ ],
+ "UPC": [
+  "unified patent court",
+  "UPC",
+  "统一专利法院",
+  "統一特許裁判所"
+ ],
+ "단일특허": [
+  "unitary patent",
+  "单一专利",
+  "単一特許",
+  "단일특허"
+ ],
+ "반도체 특허": [
+  "semiconductor patent",
+  "chip patent",
+  "semiconductor IP",
+  "芯片专利",
+  "半導体特許",
+  "반도체 특허"
+ ],
+ "의약품 특허": [
+  "pharmaceutical patent",
+  "drug patent",
+  "patent linkage",
+  "biosimilar",
+  "patent term extension",
+  "药品专利",
+  "医薬品特許",
+  "의약품 특허",
+  "바이오시밀러"
+ ],
+ "지리적 표시": [
+  "geographical indication",
+  "地理标志",
+  "地理的表示",
+  "지리적 표시"
+ ],
+ "디자인 보호": [
+  "design patent",
+  "industrial design",
+  "registered design",
+  "design right",
+  "外观设计",
+  "意匠",
+  "디자인권",
+  "디자인 보호"
+ ],
+ "특허 라이선스": [
+  "patent license",
+  "patent licensing",
+  "royalty",
+  "licensing deal",
+  "专利许可",
+  "ライセンス契約",
+  "라이선스",
+  "실시권"
+ ],
+ "기술유출": [
+  "technology theft",
+  "technology leakage",
+  "tech transfer restriction",
+  "技术泄露",
+  "技術流出",
+  "기술유출",
+  "국가핵심기술"
+ ],
+ "직무발명": [
+  "employee invention",
+  "职务发明",
+  "職務発明",
+  "직무발명"
+ ],
+ "IP 금융": [
+  "IP finance",
+  "IP financing",
+  "patent-backed",
+  "IP-backed",
+  "知识产权质押",
+  "知財金融",
+  "IP 금융",
+  "특허 담보"
+ ],
+ "강제실시": [
+  "compulsory license",
+  "compulsory licensing",
+  "强制许可",
+  "強制実施",
+  "강제실시"
+ ],
+ "병행수입": [
+  "parallel import",
+  "平行进口",
+  "並行輸入",
+  "병행수입"
+ ],
+ "오픈소스": [
+  "open source license",
+  "open-source license",
+  "OSS",
+  "开源",
+  "オープンソース",
+  "오픈소스"
+ ],
+ "데이터 권리": [
+  "data rights",
+  "database right",
+  "data ownership",
+  "data act",
+  "数据产权",
+  "データ権利",
+  "데이터 권리"
+ ],
+ "국제출원": [
+  "PCT",
+  "Madrid system",
+  "Hague system",
+  "international application",
+  "国际申请",
+  "国際出願",
+  "마드리드",
+  "헤이그",
+  "국제출원"
+ ],
+ "특허 통계": [
+  "patent filings",
+  "patent statistics",
+  "filing statistics",
+  "申请量",
+  "出願件数",
+  "출원 통계",
+  "특허 통계"
+ ]
+}
