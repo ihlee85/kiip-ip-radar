@@ -572,6 +572,7 @@ def classify(candidates, archive, kiip_titles):
         if not isinstance(deadline, str) or not re.match(r"^20\d{2}-\d{2}-\d{2}$", deadline or ""):
             deadline = None
         results.append({"id": c["id"], "date": c["date"],
+                        "added": TODAY,  # 반영일(수집·게재일) — 사이트 '오늘 반영' 지표용
                         "reg": bool(p.get("reg", False)),
                         "stage": stage if stage in ("발의·제안","의견수렴","확정·공포","시행") else None,
                         "deadline": deadline,
