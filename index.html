@@ -342,7 +342,7 @@ let DATA=[...SEED];
 let state={topics:new Set(),countries:new Set(),q:"",sort:"new",shown:12};
 
 let UPDATED=null;   /* data/news.json의 updated(수집 실행일) */
-fetch("data/news.json").then(r=>r.ok?r.json():null).catch(()=>null).then(j=>{
+fetch("data/news.json?v="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null).then(j=>{
   if(j&&Array.isArray(j.items)&&j.items.length){DATA=j.items;UPDATED=j.updated||null;}
   init();
 });
