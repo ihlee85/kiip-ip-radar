@@ -2,6 +2,36 @@
  "updated": "2026-09-24",
  "items": [
   {
+   "id": "8e3a116c5fe6",
+   "date": "2026-09-24",
+   "added": "2026-09-24",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "US",
+   "source": "특허법원·심판 동향",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 사렙타 테라퓨틱스, 리젠엑스바이오와의 특허소송 3,900만 달러 지급으로 합의",
+   "summary": "미국 바이오기업 사렙타 테라퓨틱스가 리젠엑스바이오 등과의 특허 분쟁을 합의로 종결하고 3,900만 달러를 지급하기로 하였다. 유전자치료제 분야 특허를 둘러싼 소송이 화해로 마무리된 사례이다.",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ETDZYV3FfbDZaYkpESTNuVnJvV1FNY2Zoa0VoU25BYVpLaEhsczgtTVE2c1I4Q25FQmhxRDNTd1FlZVdsNVBUcWN2YlZBUzZ4WG1McnhwRU5CR1BDelFxSHhpaHpVNXdSNlpjNmRHZ3ZOQzA?oc=5"
+  },
+  {
+   "id": "52e07785e606",
+   "date": "2026-09-24",
+   "added": "2026-09-24",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "EU",
+   "source": "통합특허법원(UPC) 동향",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "유럽 통합특허법원(UPC), 특허 등록 전 비침해확인 청구의 심리 가능 판단",
+   "summary": "유럽 통합특허법원이 특허가 정식 등록되기 전이라도 비침해확인 청구를 심리할 수 있다고 판단하였다. UPC의 관할 범위를 넓게 해석한 것으로 향후 소송 전략에 영향을 미칠 수 있는 판단이다.",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMUU0em9lcVFtYnNnNlFHWlFTZzlQbWpZQ3JHQU1xMmZWY1BpeDZmMWhnUEtXdzlOUldTSVI1UU9uSmdLd0t5V2JrTEMtMEZUZEs4ZUxKYmtzRktrZ3laVVM1VUhVT2hKZXYzS25reEwtNXZSNEZKV2N2Z3pJa19oRXYxaHdtV1pQRGpFaEsxdG1tTzQxVWNLaVUtTXbSAVZBVV95cUxON0h6VTZfeVZLV0U5TTBYNnlfOWtia2o4Z3h1LVFxQ0I2YjBDbzNCRkN6Z0VGX2dDX2hUc2lWYVI5eW01NUk1MnJPdlhIM1BwaVpzM1NRUQ?oc=5"
+  },
+  {
    "id": "a38cb91cba12",
    "date": "2026-09-24",
    "added": "2026-09-24",
@@ -30,6 +60,36 @@
    "title": "미국 국제무역위원회(USITC), 전동 리클라이너 메커니즘 및 시팅 유닛 대상 337조 조사 개시",
    "summary": "USITC가 전동 로커·글라이더 리클라이너 메커니즘과 이를 포함한 좌석 제품에 대한 337조 조사를 개시했다. 관련 수입품의 지식재산권 침해 여부를 심리할 예정이다.",
    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE80LXQtZnp6cC1DLVFWWC16U1pORDhHVkVHVWRzbG43TGk5TXlQSHJvVVV4eEllRnJjUVppdjlDTWw5cU5IcThIQTV1bGNsR2JNajRzcklCTmgwQ0w2UHhmVExJVl9OQzNJRWczM3R1bjZsaVBINkE?oc=5"
+  },
+  {
+   "id": "40f8d82bc9d1",
+   "date": "2026-09-23",
+   "added": "2026-09-24",
+   "reg": true,
+   "stage": "시행",
+   "deadline": null,
+   "country": "KR",
+   "source": "대한민국 정책브리핑",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "한국 정부, 저작권 전문기관 통합 '한국저작권위원회' 출범",
+   "summary": "저작권 관련 전문기관들을 통합한 새로운 한국저작권위원회가 공식 출범하였다. 저작권 정책 지원과 분쟁 조정 등 기능을 일원화하여 저작권 보호 체계의 효율성을 높이려는 조치이다.",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rbXhtdE80MFdvT1Z0bWE5ZE9fRnMwNVlqUGNuekdlalpBVTlDYlVPS3hZSm9zY0p1Smc3Q0JtbFRMQk5Ib21XaDJveEhJeDZ1aXJBUkZSWk9MOV9KNF9XQ1MzRmRLNFlPZjZ5Uw?oc=5"
+  },
+  {
+   "id": "8cb60a786b47",
+   "date": "2026-09-23",
+   "added": "2026-09-24",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "대한민국 정책브리핑",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "한국 지식재산처, 출원인 맞춤형 특허심사 지원 서비스 안내",
+   "summary": "지식재산처가 출원인이 연락만 하면 이용할 수 있는 특허심사 관련 지원 서비스를 소개하였다. 출원인 편의 중심의 심사 서비스 확대를 통해 권리화 과정의 접근성을 높이려는 취지이다.",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9TanhaeTh5NU1PNlFhSVEzR1hfOEw4RldXTXJGdjZyY0RYcERGQUZ6Z1lBSjljeWhTNElMb3BlVEJRTFFoU3FDYkFvYUpXazBEajBCSzNFdWlFUEloc3M5QUZHZEdFNmlDNWVXTg?oc=5"
   },
   {
    "id": "980550edd859",
