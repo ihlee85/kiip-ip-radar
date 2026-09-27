@@ -1,6 +1,36 @@
 {
- "updated": "2026-09-27",
+ "updated": "2026-09-28",
  "items": [
+  {
+   "id": "b79643ac09b5",
+   "date": "2026-09-28",
+   "added": "2026-09-28",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "저작권 정책(문체부·위원회)",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "한국 언론, AI 생성 음악의 저작권 등록 공백과 편법 등록 실태 보도",
+   "summary": "AI로 생성된 음악이 유튜브·멜론 등 차트 상위권에 오르고 있으나 현행 제도상 저작권 등록이 불가능해 인간 창작물로 편법 등록되는 사례가 지적됐다. AI 생성물의 권리 인정 기준을 둘러싼 제도적 공백이 부각되고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPb3hmZThEVzV3SFh4bzYzRmFXSDY4ZWhuLUk5ZEdtd1hrNUxvaWw4UW1DTDI4VFJZd3ZNdVdWTlJwVEdyNExsWGJtSGswYUhIbWRJQjlQX2xaQmdFUURJQ09yTEM2b1F2MzlORkd3QzZYbUZzMlpGaWFxM3BHd2ZUY1BybUVvSWRiVnJCYkM0Y3RyaFFG?oc=5"
+  },
+  {
+   "id": "b4e54bbaed87",
+   "date": "2026-09-27",
+   "added": "2026-09-28",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "지식재산처(언론보도)",
+   "topic": "보호·집행",
+   "ai": false,
+   "title": "한국 지식재산처, 온라인 위조상품 판매글 151만건 차단",
+   "summary": "지식재산처가 온라인상 위조상품 판매 게시글 약 151만 건을 국내에서 차단했다고 밝혔다. 온라인 유통 위조상품에 대한 단속·집행 성과를 보여주는 발표이다.",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE40WEx2bUljaEx2bkFJTk5qOVcwU09hbDBRNjNiX3d0QUtWUG9RWkFmc2txMnNpWlc2UktXMG91YzllcjJ3Vl9zYW5leEZlU1h1LW5TUmlJMGNhcFJ2VTlpUTJ1emJsUWZEOFE?oc=5"
+  },
   {
    "id": "16d75dd31a22",
    "date": "2026-09-27",
@@ -45,6 +75,21 @@
    "title": "미국 배심원단, 애플 햅틱 특허침해에 사상 최대 57억 달러 배상 평결",
    "summary": "미국 배심원단이 애플이 아이폰 진동(햅틱) 기술 특허를 침해했다고 판단하고 약 57억 달러(약 7.7조 원)의 배상을 평결했다. 이는 미국 특허소송 사상 최대 규모의 배상 평결로 알려졌다.",
    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5zS2I2RS1BV3h5NnNvY1gtdUtUY0I0dldJVUtXX0ExM0NnOHp3NzB0V0ZXLW14WGRhcDZyR05KMWZYMU5ZbzFCN0lGdTY1X1doVGdoT0hFQzZuRXdjN1ZDRWhLRmI2TWV50gFuQVVfeXFMTXFmZV9fYl9SYThScEhRTXVHZ3dQckRjNWxkdGF0ZGlJZmt3dmkyWG9DOXRnWjRKeVBZRDczOVNnQ0tZdWVTaUNhQ2VnU1J3bVBoMElhNTdpVWZqRDI5QmlCa1RuNDZHcmphZ0VyMkE?oc=5"
+  },
+  {
+   "id": "e85aad3c54a2",
+   "date": "2026-09-26",
+   "added": "2026-09-28",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "대한민국 정책브리핑",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "한국 지식재산처, 「2025 지식재산 통계연보」 발간",
+   "summary": "지식재산처가 지난해 지식재산권 출원·등록 등 주요 통계를 집계한 2025년 지식재산 통계연보를 발간했다. 국내 지식재산 활동 전반의 동향을 파악할 수 있는 공식 통계자료이다.",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQNmR5ekJ2eUdIc3p6Q0FzUEhlNkxaNXcwTFBqd0ZpRGRITkh4U3FpdzZPRFQxdTk3Y3pxSnhnSUU1cG5lUDFkTnl6eFFEUGNnVm5xWWROQTRRNm4tY0JOeU04cXpEc1NxcXVXUjFpSmFHblctaFB3aWxfQXZNLUVLZU81SEVVdy1YWXUw?oc=5"
   },
   {
    "id": "2fcf4e89c166",
@@ -220,6 +265,21 @@
    "url": "https://www.epo.org/en/news-events/news/epo-and-orde-continue-dialogue-patent-quality",
    "headline": "EPO, 네덜란드 변리사회와 특허 품질 연례 대화",
    "detail": "유럽특허청(EPO)은 9월 24일 네덜란드 레이스베이크에서 네덜란드 변리사협회(ORDE)와 연례 양자 회의를 개최했다. 회의는 스티브 로언 부청장이 주재했으며, 품질·일관성·투명성을 중심으로 네덜란드 변리사들과의 건설적 대화를 이어가겠다는 EPO의 의지를 재확인하는 자리였다. 이는 2025년 회의에서의 논의를 이어받은 후속 성격의 만남이다.\n\n회의에서 EPO는 이용자 피드백에 따른 후속 품질 개선 조치를 발표하고 ORDE가 제기한 사례들을 함께 검토했다. 구체적으로 검색 실무, 제3자 의견 제출, 유럽특허등록부의 문서 열람 가능성, 문서 작성 및 검색 수수료 환급 등이 논의됐다. 양측은 지속적인 이용자 피드백이 특허 부여 절차 개선의 핵심 요소라는 점을 확인했다.\n\nEPO는 2027년 4월 1일부터 특허 부여 절차를 완전 디지털화하는 계획의 진행 상황도 공유했다. 이용자가 절차를 온라인으로 관리하는 보안 플랫폼인 MyEPO 서비스가 이 전환에서 중심 역할을 하게 되며, 이를 뒷받침할 법적·절차적 변경 사항도 소개됐다. 아울러 검색·분류·기계번역·법률정보 등 심사관 업무에 AI 활용이 확대되고 있으나 최종 판단과 책임은 EPO 직원에게 있다는 점이 강조됐고, 데이터 데스크·딥테크 파인더·특허표준 익스플로러 등 EPO 특허기술 관측소의 최신 동향도 공유됐다.\n\n이번 회의는 EPO가 이용자 단체와의 정례적 소통을 통해 특허 품질을 관리하고 개선하는 체계를 보여주는 사례다. 특히 2027년 4월 완전 디지털 특허 부여 절차 시행을 앞두고 실무자 커뮤니티와의 사전 협의가 이뤄지고 있다는 점에서 의미가 있다. EPO는 앞으로도 이용자 피드백을 반영한 품질 개선과 디지털 전환 준비를 지속할 것으로 보인다."
+  },
+  {
+   "id": "babec9d826e5",
+   "date": "2026-09-25",
+   "added": "2026-09-28",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "미국 IPWatchdog, USPTO 스콰이어스 청장 취임 1주년 행사 관련 윤리·법적 쟁점 제기",
+   "summary": "미국 특허상표청(USPTO) 스콰이어스 청장의 취임 1주년 기념행사를 둘러싸고 윤리적·법적 문제가 제기됐다는 분석이 나왔다. 특허행정 수장의 거버넌스와 관련한 논란으로 주목된다.",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQcTdkQzJZRWhnU3RaQWV2RWp3MERmMmI2Yy1ydUQ0M1pzQ29TZlVvSUJFZnBvTktiTU4xTDcwMVhtektncmFwUTZ2aTc5ZzhNaTREV09VbmZydEpUM3NmemYwZ1VrczNhUm4zVU53MHRFSVVfWVVhRlkxbU9UNV9JUE9VbTdaZkFiejRMdW9EaDlYSld2c3hvZlpNRmhYOEVtNFJpeU9sR2E?oc=5"
   },
   {
    "id": "d052bf14848c",
