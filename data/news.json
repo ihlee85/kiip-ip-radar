@@ -2,6 +2,36 @@
  "updated": "2026-09-27",
  "items": [
   {
+   "id": "16d75dd31a22",
+   "date": "2026-09-27",
+   "added": "2026-09-27",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "지식재산처(언론보도)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "한국 지식재산처, 전력망용 ESS 특허 세계 1위 달성 발표",
+   "summary": "한국이 전력망용 에너지저장장치(ESS) 분야 특허출원에서 세계 1위를 기록한 것으로 나타났다. 기업별로는 LG에너지솔루션이 최다 출원인으로 집계됐다.",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1mSWJ2OFYtcE5kY0V5LW5QNmd2UHRwY0ZOTldueFV3Rk5mUFB3c01pQXc1c1pSM3FOUUZieUF4QVdRSGNmRHBMb2p1SXZmVy1KQlJVX21Vbk5Ea1huRDU3LUJ6a3VrNXVM?oc=5"
+  },
+  {
+   "id": "7e4bf3d2d33d",
+   "date": "2026-09-27",
+   "added": "2026-09-27",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "저작권 정책(문체부·위원회)",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "한국 언론, AI 활용 문화콘텐츠의 저작권 쟁점 조명",
+   "summary": "'AI 3대 강국'을 표방하는 한국에서 AI를 활용해 제작된 문화콘텐츠의 저작권 인정 및 보호 문제가 제기되고 있다. AI 시대에 부합하는 저작권 제도 정비 필요성이 논의되고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5seGxNMGhmUUxaU3JwbVF4M2NtWUZFeGhGUkhyZlQ2WXUzcHUwYmRTMXhOZVBqdlZVcjNDeUFDVGpXX0pmOXRtZWd5STlUS0piLUE?oc=5"
+  },
+  {
    "id": "c2b4a66eff50",
    "date": "2026-09-27",
    "added": "2026-09-27",
@@ -45,8 +75,8 @@
    "title": "유럽 법률블로그 IPKat, 증명표장 제도의 법적 쟁점 분석",
    "summary": "유럽 법률블로그 IPKat이 상표제도 내에서 드물게 활용되는 증명표장(certification mark)의 성립 요건과 관련 쟁점을 분석했다. 증명표장을 둘러싼 다수의 법적 문제가 아직 법원 판단에 이르지 않은 점을 지적했다.",
    "url": "http://ipkitten.blogspot.com/2026/09/when-is-certification-mark.html",
-   "headline": "IPKat, 증명표장 관련 법적 쟁점 다룬 글 게재",
-   "detail": "유럽의 지식재산 전문 법률블로그 IPKat이 2026년 9월경 증명표장(certification mark) 제도와 관련한 법적 쟁점을 분석하는 글을 게재한 것으로 파악된다. 게시물의 제목은 \"언제 증명표장이 되는가(When is a certification mark)\"라는 취지의 물음을 담고 있어, 증명표장의 성립 요건이나 판단 기준을 다룬 것으로 보인다.\n\n다만 제공된 원문은 기사 본문이 아니라 구글 시스템의 비정상 트래픽 감지 안내 페이지로, 자동화된 요청으로 판단되어 접근이 차단된 상태의 화면 정보만 포함되어 있다. 이 때문에 해당 게시물이 다룬 구체적 사건, 판례, 법 조항, 분석 내용 등 핵심 정보는 원문에서 확인할 수 없다.\n\n현재 확인 가능한 사실은 IPKat 블로그(ipkitten.blogspot.com)에 증명표장을 주제로 한 글이 존재한다는 점과 그 게시 시점이 2026년 9월로 추정된다는 점에 한정된다. 본문 접근이 가능해질 경우 증명표장의 정의, 일반 상표와의 구별 기준, 관련 분쟁 사례 등에 대한 구체적 논의 내용을 추가로 파악할 수 있을 것으로 보이며, 그 전까지는 제목 수준의 정보만 확인된다."
+   "headline": "독일 특허법원, 증명표장 식별성 요건 엄격 해석",
+   "detail": "유럽의 대표적 지식재산 법률 블로그 IPKat이 증명표장이 표장 자체로 증명표장임을 드러내야 하는지에 관한 독일 특허법원의 최근 결정(사건번호 26 W (pat) 579/20)을 분석했다. 사안의 출원인은 제1, 5, 18, 29~32류 상품·서비스에 대해 독일 증명표장 \"GGN\"의 등록을 신청했고, 사용규약에는 개별 식별번호 및 \"인증된 농업\"이라는 문구와 함께만 사용할 수 있다고 규정했다. 그러나 독일 특허상표청 심사관은 독일 상표법 제106a조 제1항의 식별력 결여를 이유로 출원을 거절했고, 출원인이 이에 불복해 특허법원에 항소한 것이 이번 결정의 배경이다.\n\n독일 특허법원은 항소를 기각하면서, 관련 수요자가 표장 자체로부터 그것이 증명표장임을 인식할 수 있어야 등록이 가능하다고 판시했다. 법원은 제106a조 제1항의 문언 자체는 그러한 표시를 명시적으로 요구하지 않지만, 이 조항이 일반 상표의 추상적 식별력을 규정한 제3조 제1항과 사실상 같은 문언이라는 점에 주목했다. 만약 증명표장 조항이 단순히 추상적 식별력 요건을 반복한 것에 불과하다면 별도 규정의 의미가 없으므로, 제106a조 제1항은 표장 스스로 증명표장 기능을 드러내야 한다는 '증명표장 고유의 식별력'을 요구하는 것으로 해석해야 한다고 보았다.\n\n법원은 논거로 유럽연합지식재산청(EUIPO) 항고심판부의 선례도 인용했다. 해당 사건에서는 음료에 대한 증명표장 \"Bio-Mineralwasser(유기농 미네랄워터)\"가 상품의 특성을 증명한다는 점을 소비자가 알 수 없다는 이유로 등록이 거절된 바 있다. 이를 토대로 법원은 제106a조 제1항을 증명표장 특유의 거절이유로 해석하고, 증명표장은 그 자체로 증명표장임이 인식 가능해야 한다고 결론지었다. 또한 증명표장의 취지상 표장 소유자가 상품·서비스를 직접 제조·제공하는 것이 아니라 인증기관으로서 특성을 증명한다는 점을 수요자가 인식할 수 있어야 하므로, 증명표장과 개별상표는 명확히 구분되어야 한다고 설명했다.\n\n이번 결정은 증명표장 제도가 상대적으로 드물게 활용되어 관련 법적 쟁점이 아직 법원에서 충분히 다뤄지지 않은 상황에서 나온 것으로, 증명표장 등록 요건에 관한 중요한 해석 기준을 제시한 사례로 평가된다. 증명표장 출원을 고려하는 기관들은 표장 자체에서 인증 기능이 드러나도록 설계할 필요성이 커졌으며, 독일과 EU 차원의 실무에 참고가 될 것으로 보인다."
   },
   {
    "id": "214e54757d2a",
@@ -192,6 +222,36 @@
    "detail": "유럽특허청(EPO)은 9월 24일 네덜란드 레이스베이크에서 네덜란드 변리사협회(ORDE)와 연례 양자 회의를 개최했다. 회의는 스티브 로언 부청장이 주재했으며, 품질·일관성·투명성을 중심으로 네덜란드 변리사들과의 건설적 대화를 이어가겠다는 EPO의 의지를 재확인하는 자리였다. 이는 2025년 회의에서의 논의를 이어받은 후속 성격의 만남이다.\n\n회의에서 EPO는 이용자 피드백에 따른 후속 품질 개선 조치를 발표하고 ORDE가 제기한 사례들을 함께 검토했다. 구체적으로 검색 실무, 제3자 의견 제출, 유럽특허등록부의 문서 열람 가능성, 문서 작성 및 검색 수수료 환급 등이 논의됐다. 양측은 지속적인 이용자 피드백이 특허 부여 절차 개선의 핵심 요소라는 점을 확인했다.\n\nEPO는 2027년 4월 1일부터 특허 부여 절차를 완전 디지털화하는 계획의 진행 상황도 공유했다. 이용자가 절차를 온라인으로 관리하는 보안 플랫폼인 MyEPO 서비스가 이 전환에서 중심 역할을 하게 되며, 이를 뒷받침할 법적·절차적 변경 사항도 소개됐다. 아울러 검색·분류·기계번역·법률정보 등 심사관 업무에 AI 활용이 확대되고 있으나 최종 판단과 책임은 EPO 직원에게 있다는 점이 강조됐고, 데이터 데스크·딥테크 파인더·특허표준 익스플로러 등 EPO 특허기술 관측소의 최신 동향도 공유됐다.\n\n이번 회의는 EPO가 이용자 단체와의 정례적 소통을 통해 특허 품질을 관리하고 개선하는 체계를 보여주는 사례다. 특히 2027년 4월 완전 디지털 특허 부여 절차 시행을 앞두고 실무자 커뮤니티와의 사전 협의가 이뤄지고 있다는 점에서 의미가 있다. EPO는 앞으로도 이용자 피드백을 반영한 품질 개선과 디지털 전환 준비를 지속할 것으로 보인다."
   },
   {
+   "id": "d052bf14848c",
+   "date": "2026-09-25",
+   "added": "2026-09-27",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "대한민국 정책브리핑",
+   "topic": "보호·집행",
+   "ai": false,
+   "title": "한국 정부, 서울·대전에 위조상품 전시공간 운영",
+   "summary": "정부가 서울과 대전에 위조상품을 직접 비교·체험할 수 있는 전시공간을 마련했다. 진품과 위조상품의 구별 정보를 제공해 소비자 인식 제고와 위조상품 유통 방지를 도모한다.",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxObWYwRFNGY1pRYUF3SWpSOWxNZDV1ZDlyNjFLdjVlZlZqUE9mVXFzNDlOUzRXWnlNcE9odmdrWUNLSTBGRE5NLUF5dWVjYmRlYmxnWlRSQkJWemNIM3JFZTdmdDk2cUJDUnJPVDBXaklaLWRzRy03bV9VRUNic0lIMTB6cnJEQ1B1cW9iQzFmMy1MQQ?oc=5"
+  },
+  {
+   "id": "f0e9a7b286f9",
+   "date": "2026-09-25",
+   "added": "2026-09-27",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "EU",
+   "source": "통합특허법원(UPC) 동향",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "유럽 통합특허법원(UPC), 9월 18~24일 주요 사건 심리 진행",
+   "summary": "유럽 통합특허법원에서 9월 18일부터 24일까지 진행되는 주요 특허분쟁 사건 일정과 동향이 정리·보도됐다. 유럽 내 특허소송 흐름을 파악할 수 있는 주간 동향 자료다.",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1IVUtvbmliMVhSZEFtWmJzX2JOVXRQM0tBdkNrM1pmWmZUNjlQbHlBUVdhNGQ1LXlFVG8zMk1UTVh0U3lZa2tMS1ljNFB2LWFCbkxDZGdOdXQ1bVZMbkpsekI4cHFEWXZ6SndHLUpQZk5aVXhyc2l1Ym1felpYTVnSAVpBVV95cUxNQjhBSHB1cTZySmJycVVWbEtMc0J6Y3U1Q05tVWk3NUtlc0s3c2RmRlhZN19iV0E5QV9RZ0NGbGFIWG5EV1R5UnNQTHpMUHdFcVFWaGF1aDV3Wmc?oc=5"
+  },
+  {
    "id": "9fbb6ad29f2e",
    "date": "2026-09-25",
    "added": "2026-09-26",
@@ -254,6 +314,21 @@
    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/09/ftc-seeks-public-comment-whether-update-rule-impersonation-government-businesses-address-platforms",
    "headline": "FTC, 사칭 사기 방지 규칙 개정 검토 의견수렴",
    "detail": "미국 연방거래위원회(FTC)가 2026년 9월 24일, 정부·기업 사칭 규칙(Impersonation Rule)의 개정 여부를 검토하기 위한 규칙제정 사전공고(ANPRM)를 발표하고 공개 의견수렴에 착수했다. 이번 조치는 소셜미디어, 검색엔진 등 온라인 플랫폼이 제공하는 광고 최적화 도구가 정부기관이나 합법 기업을 사칭하는 사기 광고 확산에 기여하고 있다는 문제의식에서 비롯됐다. FTC는 플랫폼의 관련 관행을 규제할 필요가 있는지 여부를 판단하기 위해 광범위한 의견을 구하고 있다.\n\nFTC에 따르면 사칭 사기는 최근 수년간 소비자 사기 신고 1위를 차지해 왔으며, 2025년에는 100만 건 이상의 신고와 함께 약 35억 달러의 피해액이 보고됐다. 특히 사기 피해자의 약 30%가 소셜미디어에서 처음 접촉됐다고 답했고, 이 경로의 피해액만 21억 달러에 달했다. ANPRM은 플랫폼이 광고주의 적법성과 무관하게 제3자 광고를 최적화해 수익을 얻는 구조가 사칭 사기를 증폭시키고 있다고 지적한다.\n\n의견수렴 대상에는 플랫폼이 광고 최적화 도구를 제공하는 재정적 유인, 각 도구의 작동 방식, 기만 광고 방지를 위한 현행 조치 등이 포함된다. 또한 이러한 관행이 불공정·기만행위에 해당하는지, 기존 사칭 규칙 개정·신규 규칙 제정·비규제적 조치 중 어떤 대응이 적절한지도 묻고 있다. 광고주 검증, 게재 광고 모니터링, 사칭 의심 광고 조사·삭제 등 구체적 규제 방안도 검토 항목에 올랐다. 소비자보호국의 크리스토퍼 무파리지 국장은 플랫폼이 사기 광고로부터 이익을 얻는 구조가 시장 신뢰의 기반을 훼손한다고 강조했다.\n\n이번 사전공고는 플랫폼에 사칭 광고가 소비자에게 도달하기 전에 차단할 구체적 의무를 부과할지 여부를 검토하는 첫 단계로, 향후 연방관보 게재 후 의견수렴 절차가 진행된다. 규칙 개정이 실현될 경우 사칭 규제의 초점이 사기범 개인에서 광고 유통 플랫폼으로 확대되는 의미가 있다. 실제 규제 도입 여부는 수렴된 의견과 후속 규칙제정 절차를 거쳐 결정될 예정이다."
+  },
+  {
+   "id": "79ac1792c0a2",
+   "date": "2026-09-24",
+   "added": "2026-09-27",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "US",
+   "source": "미국 국제무역위원회(USITC)",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 국제무역위원회(USITC), 차량용 인포테인먼트 시스템 및 관련 제품 대상 사건 공고",
+   "summary": "미국 국제무역위원회가 특정 차량용 인포테인먼트 시스템과 그 부품 및 관련 제품에 대한 사건을 공고했다. 해당 절차는 지식재산권 침해 여부에 대한 337조 조사와 관련된 것으로 보인다.",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOERSSmFwaGVCQVNVWmhZS3lQT0VBNkZWd3dNejQ3aHIteWdJTHlJTjlVYUpXanVhSlo3a1JtSXdsXzZVYmNnUW1fUnlqbUV3ZDVDZUxiY04xX3VJeUlNVkhCaDdWSjBEM0dKWGVodDZHYXFBSmVPX3F5a01TcjJNY2NwYVJvVmdSdXliVmpaQ1dRUmNHZWFPN2V5YXIyR04yOVBvM1Rpcw?oc=5"
   },
   {
    "id": "0c1e9deed1c0",
