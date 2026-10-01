@@ -1,6 +1,53 @@
 {
- "updated": "2026-10-01",
+ "updated": "2026-10-02",
  "items": [
+  {
+   "id": "711d15421d0b",
+   "date": "2026-10-01",
+   "added": "2026-10-02",
+   "reg": true,
+   "stage": "시행",
+   "deadline": null,
+   "country": "EU",
+   "source": "영국 지식재산청(UKIPO)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "영국 지식재산청(UKIPO), 특허 실무 매뉴얼(Manual of Patent Practice) 다수 조항 개정판 공개",
+   "summary": "영국 지식재산청이 특허법 제99조, 제106~107조, 제117조, 제123조, 제125A조 등 특허 실무 매뉴얼의 여러 조항을 2026년 10월 기준으로 갱신하였다. 이번 개정은 법원 권한, 비용·경비, 오류 정정, 생물학적 재료 시료 제공 등 심사·절차 전반의 실무 지침에 반영된다.",
+   "url": "https://www.gov.uk/guidance/manual-of-patent-practice-mopp/section-123-rules",
+   "headline": "영국 특허청, 특허 실무 매뉴얼 제123조 해설 개정판 공개",
+   "detail": "영국 지식재산청(UKIPO)이 특허 심사·행정 실무의 공식 지침서인 특허 실무 매뉴얼(Manual of Patent Practice)의 개정판을 공개했다. 이번에 공개된 내용 가운데 제123조(Rules) 관련 해설 부분은 2026년 10월자로 최신화된 것으로 표시돼 있다. 해당 조항은 1977년 특허법상 규칙 제정 권한을 다루는 핵심 조문으로, 특허청 실무 전반의 법적 근거를 설명한다.\n\n제123조 제1항은 국무장관이 특허청의 특허 관련 업무를 규율하기 위해 필요하다고 판단되는 규칙을 제정할 수 있는 일반적 권한을 부여하며, 이는 유럽특허와 유럽특허출원, 국제특허출원에 관한 업무까지 포괄한다. 매뉴얼은 규칙이 법률과 같은 효력을 가지므로 출원인이 이를 준수하지 않으면 청장이 특허 부여를 거절할 수 있다고 설명한다. 다만 규칙은 모법인 특허법에 종속되는 하위 규범이므로 법률의 명시적 규정을 무효화할 수 없으며, 항상 법과 함께 해석되어야 한다는 점도 명확히 하고 있다.\n\n매뉴얼은 의약품 추가보호증명서(SPC) 관련 규정도 다루는데, 관련 시행령에 따라 SPC에 관한 사항이 특허청 업무에 포함되고 국무장관의 규칙 제정 권한이 SPC 및 그 출원에도 미친다고 설명한다. 또한 제123조는 규칙 제정을 가능하게 하는 수권 조항일 뿐 특정 상황에 대한 규칙이 반드시 제정되어야 하는 것은 아니라는 점을 Tokan Kogyo 판례(1985)를 들어 명시한다. 이 밖에 출원서류의 형식과 내용은 규칙 제12조, 제14조, 제15조 등이 규율하며, 유럽특허(UK) 번역문 요건은 규칙 제56조와 제57조에 규정돼 있다는 세부 안내도 포함됐다.\n\n이번 개정판 공개는 실무자들이 규칙 제정 권한의 범위와 한계, 관련 판례 및 세부 절차 규정을 최신 기준에 따라 확인할 수 있게 한다는 점에서 의미가 있다. 특허 출원인과 대리인은 서류 형식, 번역문 제출, SPC 절차 등에서 이 매뉴얼을 참고 지침으로 활용하게 된다. UKIPO는 매뉴얼의 각 섹션을 수시로 갱신하고 있어 실무자들의 지속적인 확인이 필요하다."
+  },
+  {
+   "id": "da6e680a04c7",
+   "date": "2026-10-01",
+   "added": "2026-10-02",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "CN",
+   "source": "中 지식산권국 통지",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "중국 국가지식산권국(CNIPA), 스페인 특허상표청과 '중·서 연락관 메커니즘' 시범사업 개시",
+   "summary": "중국 국가지식산권국이 스페인 특허상표청과 함께 양국 간 지식재산 협력을 위한 '중·서 연락관 메커니즘' 시범 프로젝트를 공식 가동하였다. 이를 통해 양 기관 간 소통 채널을 상설화하고 기업의 해외 지식재산 보호 지원을 강화할 전망이다.",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1oZ0ZhbUtpX2NOOWdHYU1xWmI0NmtzQk1FZEMxY240QnpNTDBJYzE5RHc2UnMzM2NaaWFuUUwxRXhDWlRqejE5MERUdkZnSXpZQS1ZM1RubnBiaTJxMnNCSmtzU2JRQmdQ?oc=5"
+  },
+  {
+   "id": "1d42b8bd3abe",
+   "date": "2026-10-01",
+   "added": "2026-10-02",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "저작권 정책(문체부·위원회)",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "한국 언론, AI 학습 과정의 저작물 무단 이용 둘러싼 저작권 쟁점 분석",
+   "summary": "국내 언론이 생성형 AI가 글·그림 등 창작물을 저작권자 동의 없이 학습 데이터로 활용하는 행위의 저작권 쟁점을 분석하였다. AI 저작권 논의의 핵심이 산출물보다 '학습' 단계의 적법성에 있다는 점이 부각되고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1wMmVVNHlBMXNFR2tzdVlZWE91Y2VjazR4TWlITFVqWEtaQVM4T0k5V1dkcFVnMExfWkxQQVc5RnpvSnZJRzd2M01pV1JINF9RdTJMVGRxUmdEQ3oweUduVVRYZFQ?oc=5"
+  },
   {
    "id": "414c2706ed86",
    "date": "2026-10-01",
@@ -113,6 +160,36 @@
    "detail": "유럽특허청(EPO)은 2026년 9월 30일 MyEPO 온라인 서비스의 개선사항을 발표했다. 10월 1일부터 이용자는 새로운 타임라인 패널을 통해 출원의 주요 절차 진행 상황을 확인할 수 있고, 유럽특허 조기심사 프로그램(PACE) 신청을 여러 출원에 대해 일괄 제출할 수 있게 됐다. 이는 특허 부여 절차 전반에서 출원 관리를 간소화하려는 EPO의 지속적 서비스 개선 노력의 일환이다.\n\n타임라인 패널은 완료된 절차 단계, 현재 단계, 다음 예상 단계를 한눈에 보여주며, 조사(서치) 단계에 도달했거나 심사청구가 제출된 유럽특허출원에 대해 제공된다. 현재는 심사 절차 종료 시점까지의 주요 절차 이벤트를 표시하며, 향후 절차 단계와 일정 정보는 해당 기술분야의 평균적 진행 속도에 기반한 일반 참고용이다. 이용자는 패널에서 직접 PACE 조기심사 신청과 진행 상황 문의를 수행할 수 있다. PACE 일괄 신청 기능은 추가 수수료 없이 다수 출원을 하나의 요청에 포함할 수 있어 대규모 포트폴리오 관리자에게 유용하다.\n\n아울러 EPO는 2026년 4월 1일부터 허용된 DOCX 형식 제출과 관련해 이용자 피드백을 반영, 접근성을 개선한 DOCX 정의(버전 4)를 공개했다. 기존 제출 관행을 변경할 필요는 없으며 관련 공지는 계속 유효하다. 이 밖에 불필요한 어소시에이션 삭제, 초안 등 상태의 대기 작업 삭제, 일괄 요청 처리 방식 표준화, MyEPO '회사'와 Online Filing 2.0 '조직' 연계를 통한 사용자 관리 간소화 등도 이뤄졌다.\n\nEPO는 2027년 4월 특허 부여 절차의 완전 디지털화를 앞두고 이용자 커뮤니티와 협력해 온라인 서비스를 계속 발전시킬 계획이다. 향후 개발 항목으로는 AI 기반 출원 업무 지원, 일괄 요청 기능 확대, EPO가 처리하는 진행 중 PCT 출원의 목록 포함, 현대화된 홈페이지에 맞춘 MyEPO 인터페이스 개편 등이 예고됐다. 관련 세부 사항은 EPO 공보(OJ EPO 2026, A44~A47)와 안내 가이드에서 확인할 수 있다."
   },
   {
+   "id": "8cbf90e214dd",
+   "date": "2026-09-30",
+   "added": "2026-10-02",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "CN",
+   "source": "中 지식산권국 통지",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "중국 국가지식산권국(CNIPA), 기관 권한·책임 목록(권책청단) 공표",
+   "summary": "중국 국가지식산권국이 자국 지식재산 행정기관의 권한과 책임 사항을 정리한 '권책청단(权责清单)'을 공표하였다. 이는 특허·상표 등 지식재산 행정의 권한 범위와 집행 근거를 투명하게 공개하기 위한 조치이다.",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9ZVWlsbzJvbkQzbnp0UW13UWRyb3NUWlctOE5WNzhGTFNGTUY5MjlUcHZVTWstZ1pwWGpJeEQ5RUJrLWtVZlJXSUgybURZN0RFd2dDMVN4QzJ2SXktdHYxS1V2VjNSenpXUjdZaTZmVGJad0wzVFdCTw?oc=5"
+  },
+  {
+   "id": "c54b867a2a56",
+   "date": "2026-09-30",
+   "added": "2026-10-02",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "US",
+   "source": "미국 국제무역위원회(USITC)",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 국제무역위원회(USITC), 변압기 및 그 부품 관련 조사 공고",
+   "summary": "미국 국제무역위원회가 특정 변압기 및 그 부품을 대상으로 한 조사를 공고하였다. 해당 조사는 관세법 제337조에 따른 지식재산권 침해 수입품 규제 절차의 일환으로 진행된다.",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQlVzM2JzRGVJN1hwTV85ZzY0WmJ5R2FCZkxHUkliT2RwTGtLcklteEx6bE55X0IzaVR5Skk5SncwMVU0dXlVRmNGZm01bXdBX0hvRGlSRzdPUkIyOUdPZnlKS1hrLVotR3B5YXZGTTFpcmoxU0NmSTVkS1hSX0FPMzRnVkpsenI3SkpXeU1hQkozYlhQd0E0?oc=5"
+  },
+  {
    "id": "a157e3dbdd65",
    "date": "2026-09-30",
    "added": "2026-10-01",
@@ -190,8 +267,8 @@
    "title": "일본 특허청(JPO), JFE스틸과 지식재산 의견교환 실시",
    "summary": "일본 특허청이 철강기업 JFE스틸과 지식재산 관련 의견교환을 실시했다고 발표했다. 산업계 수요를 특허행정에 반영하기 위한 이용자 소통 활동의 일환이다.",
    "url": "https://www.jpo.go.jp/news/ugoki/202609/2026093001.html",
-   "headline": "JPO, JFE스틸과 지재전략 의견교환 실시",
-   "detail": "일본 특허청(JPO)은 2026년 9월 30일 JFE스틸의 히로세 대표이사 사장을 비롯한 경영진과 의견교환을 실시했다고 밝혔다. 이번 만남에서는 경영전략과 연동된 지식재산 전략 등이 주요 의제로 다뤄졌으며, JPO 측에서는 가와니시 장관이 참석했다.\n\nJFE스틸은 지식재산 전략을 사업·연구개발과 일체화된 경영 기반으로 자리매김하고 있으며, 해외 성장전략과 솔루션 비즈니스 확대에 힘쓰고 있다고 설명했다. 구체적으로는 사업 전개의 글로벌화에 대응한 특허출원, 라이선스 계약 강화, 특허 표창제도 운영 등의 활동이 소개됐다.\n\n특허청은 경영전략의 추진력을 높이는 지식재산 전략과 지재 체제 강화에 관한 동사의 설명을 매우 흥미롭게 들었다고 전했다. 이번 의견교환은 일본 특허청이 주요 기업 경영진과 직접 소통하며 기업의 지재 경영 실태를 파악하는 활동의 일환으로, 경영과 지식재산의 연계를 중시하는 일본 정부의 정책 기조를 반영한 행보로 볼 수 있다."
+   "headline": "일본 특허청, JFE스틸과 지재 전략 의견교환",
+   "detail": "일본 특허청(JPO)이 2026년 9월 30일 JFE스틸과 지식재산 전략에 관한 의견교환을 실시했다고 밝혔다. 이번 만남에는 JFE스틸의 히로세 대표이사 사장을 비롯한 경영진과 특허청의 가와니시 장관이 참석했다. 논의의 중심 주제는 경영전략과 연동된 지식재산 전략이었다.\n\nJFE스틸 측은 지식재산 전략을 사업 및 연구개발과 일체화된 경영 기반으로 자리매김하고 있다고 설명했다. 이를 바탕으로 해외 성장 전략과 솔루션 비즈니스 확대에 힘쓰고 있다는 점도 소개됐다. 회사의 지재 활동이 단순한 권리 확보를 넘어 경영전략 실행의 핵심 수단으로 운영되고 있음을 보여주는 대목이다.\n\n구체적으로는 사업 전개의 글로벌화에 대응한 특허 출원 전략, 라이선스 계약의 강화, 사내 특허 표창 제도 등의 활동에 대한 설명이 이뤄졌다. 특허청 측은 경영전략의 추진력을 높이는 지재 전략과 지재 체제 강화에 관한 설명을 매우 흥미롭게 들었다고 전했다.\n\n이번 의견교환은 일본 특허청이 주요 기업 경영진과 직접 소통하며 기업의 지재 경영 실태를 파악하는 활동의 일환이다. 정부와 산업계가 지식재산을 경영전략의 핵심 요소로 다루는 흐름을 확인할 수 있는 사례로, 기업의 글로벌 지재 활동과 정책 간 접점을 넓히는 계기가 될 것으로 보인다."
   },
   {
    "id": "fe8177f06d62",
@@ -359,6 +436,21 @@
    "title": "유럽 법률블로그 Kluwer, 유럽 혁신법(European Innovation Act)의 특허 특화 개선방안 제시",
    "summary": "Kluwer Patent Blog가 유럽 혁신법 논의와 관련해 특허는 브랜드와 다르다는 관점에서 네 가지 특허 특화 개선사항을 제안했다. EU 차원의 혁신 입법에서 특허제도의 고유한 특성을 반영해야 한다는 분석이다.",
    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQN0V4MV92QUFpVTVxNDVmMVdFTVg0YUdSOXQ2VlFTdFVKeWxSNnFEN3daNUpveE1jb2lITHNoSU9IQmJfUnRXSHJseS1iSkozdUplVGNQeUkyUm5jYU1PclQ3TEQxNEpMLU9WVnNROTBRRGhYcDBhcEx2UE54cGJSUVl4YlVFdUVOd1FKYkpvaWpWakxBVjdlNFJXcXNKY2ZmV2NJUlBPajQ5a2Nvc28yY29FVks1ZTFnVEM0bUhyWVQ0U1lCYVZGQi1icw?oc=5"
+  },
+  {
+   "id": "f3d1b442ca6a",
+   "date": "2026-09-29",
+   "added": "2026-10-02",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "US",
+   "source": "Al Jazeera(IP·기술 키워드)",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "미국 법원, 아이폰 특허침해 소송에서 애플에 57억 달러 배상 판결",
+   "summary": "애플이 아이폰 관련 특허침해 소송에서 패소하여 57억 달러의 배상금 지급을 명령받았다. 이는 스마트폰 분야 특허분쟁 가운데 역대 최대 규모급 배상액으로 주목된다.",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZWp0S29JamxWazVHSWZUN01PcENob3dtNEwzdEc4X016dWhfVEpHaDRERE92RUpibmtuQkEyWE1FT096alRmWlNadmpsVmpuUE1rWVdjdG9BUkFoTzB2QXExZGZKRTg1cHdNZ0ljTjlSak9mX3BNYkhnVXl2YkNQdktndVJRT3YwTjRKVVdhM0lLNGo2bkJHOEwzYnJhRDDSAaQBQVVfeXFMTVdGSGRKX0lXUDZnQUxtNnJ5cVp0eW9teVZOcndZalFZb1Radld5Q05iSmhXRVhPWHB5ZFI4RlZUT2M4OElrdVpIQ0MzaEk0OWd6YUxqTEVFU2RIX1JyMTExc0FxUTdSalhCWDJYQlIwbzI1cEJleDY0dEdZTjAyQkhfZTVhRVBENENkZnRHQTdRS196VDVrejU2a1EyNklSX1JnZV8?oc=5"
   },
   {
    "id": "ab8ff3c190c0",
