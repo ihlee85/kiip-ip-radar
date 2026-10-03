@@ -1,6 +1,23 @@
 {
- "updated": "2026-10-03",
+ "updated": "2026-10-04",
  "items": [
+  {
+   "id": "e24ce673deb7",
+   "date": "2026-10-04",
+   "added": "2026-10-04",
+   "reg": true,
+   "stage": null,
+   "deadline": null,
+   "country": "CN",
+   "source": "IPR Daily",
+   "topic": "심사·제도",
+   "ai": true,
+   "title": "중국 IPR Daily, 2026년 AI 특허 수권 신규칙 분석 게재",
+   "summary": "중국 전문매체 IPR Daily가 2026년 AI 특허 수권에 관한 새로운 규칙을 분석하는 기고를 게재했다. 윤리 심사가 필수 요건으로 자리잡고 창조성(진보성) 판단에 새로운 기준이 도입되었다는 점을 중점적으로 다루었다.",
+   "url": "https://www.iprdaily.cn/news_43209.html",
+   "headline": "中 2026년 AI 특허 심사 신규칙, 윤리·창조성 기준 명확화",
+   "detail": "IPR Daily가 주최한 'GIPC 2026 글로벌 지식재산 생태 대회'가 2026년 7월 24~25일 베이징에서 열렸고, 전직 특허심사관 출신인 완상톈친 로펌의 고급 특허고문 텅무(滕牧)가 2026년 1월 1일 시행된 신판 「특허심사지침」의 AI 특허 심사 기준을 해설하는 강연을 했다. AI 기술 확산으로 관련 특허 출원이 급증하자 중국 국가지식재산권국(CNIPA)이 심사 기준을 정비한 것이 배경이다. 개정안은 2025년 4월 30일 의견수렴 초안 공개를 거쳐 같은 해 11월 10일 제84호 국령으로 확정됐다.\n\n이번 개정에서 AI 분야는 네 가지 축으로 정비됐다. 첫째, 관련 장(章)의 제목에 '인공지능·빅데이터'를 명시해 심사 지침상 AI의 중심적 지위를 분명히 했다. 둘째, 특허법 제5조 1항에 근거한 윤리 심사 기준을 신설해 데이터 수집·라벨 관리·추천 의사결정 등이 법률이나 공서양속에 반하면 특허를 받을 수 없도록 했다. 셋째, 창조성 판단 기준을 명확히 하는 심사 사례 2건을 추가했고, 넷째, AI 모델의 '블랙박스' 특성을 고려해 명세서에 모델 구조·훈련 단계·파라미터 등을 명확히 기재하도록 하는 실시가능성 요건을 강화했다.\n\n지침에 신설된 사례를 보면, 상가에서 고객 얼굴을 인식해 매트리스 판매에 활용하는 시스템은 개인정보보호법 위반 소지로, 보행자의 성별·연령을 기준으로 충돌 대상을 선택하는 자율주행 의사결정 모델은 생명권 평등에 반한다는 이유로 각각 특허 불허 사례로 제시됐다. 창조성 관련해서는 과일 개수 식별 기술을 선박 수 식별에 단순 전용한 사례는 실질적 개선이 없어 창조성이 부정된 반면, 특징 추출과 신경망 구조를 대상에 맞게 실질적으로 변경한 폐철강 등급분류 모델은 창조성이 인정됐다.\n\n텅무는 AI 특허 명세서는 모델 훈련 단계의 기술적 문제를 중심으로 훈련 절차와 파라미터 최적화 논리를 완전하게 기재해야 한다고 강조했다. 또한 AI 보조 작성 도구 활용 시 'AI 환각'과 정보 유출 위험에 유의하고, 기업이 'AI 보조+인적 개입'의 협업 체계를 구축할 것을 권고했다. 신규칙이 이미 시행된 만큼, 심사 기준을 선제적으로 파악해 무효 심판에도 견딜 수 있는 고가치 특허를 만드는 것이 과제로 제시됐다."
+  },
   {
    "id": "db591b7982e4",
    "date": "2026-10-03",
@@ -64,6 +81,23 @@
    "url": "https://www.epo.org/en/news-events/news/have-your-say-user-satisfaction-surveys-2026-2027",
    "headline": "EPO, 2026~27년 이용자 만족도 조사 참여 요청",
    "detail": "유럽특허청(EPO)이 2026~2027년 주기의 이용자 만족도 조사를 시작하며 이용자들의 참여를 요청했다. EPO는 2년마다 유럽 특허 시스템 이용자들로부터 주요 서비스에 대한 피드백을 수집하고 있으며, 이는 ISO 9001 인증 품질관리 시스템의 일환이다. 수집된 의견은 특허 부여 절차와 이용자 지원 전반의 개선 방향을 설정하는 데 활용된다.\n\n이번 주기에는 총 7개 분야의 조사가 진행된다. 대상 분야는 출원, 조사(서치), 심사·최종 조치·공개, 이의신청, 고객 서비스, 주요 고객 관리, EPO 웹사이트 이용 경험이다. 이를 통해 특허 부여 절차의 각 단계와 이용자 지원, 온라인 서비스에 대한 이용자 경험을 종합적으로 파악하게 된다.\n\n조사는 외부 기관인 BERENT Deutschland GmbH가 수행하며 모든 응답은 익명으로 처리된다. 설문은 참여자의 시간을 존중하면서도 집중적이고 포괄적으로 설계됐다고 EPO는 설명했다. 익명 설문을 통한 정량적 분석은 이용자 단체와의 회의 등으로 수집되는 정성적 피드백을 보완해, 서비스별·시기별로 일관된 성과 평가를 가능하게 한다.\n\n조사 결과와 피드백에 대한 후속 조치 내용은 2027년 EPO 웹사이트에 공개될 예정이다. 직전 2024/2025년 조사에서는 EPO 서비스에 대한 높은 만족도와 함께 추가 개선이 필요한 영역이 확인된 바 있다. 이번 조사는 이용자 의견이 EPO 서비스 개선에 지속적으로 반영되는 통로가 될 전망이다."
+  },
+  {
+   "id": "bb8dbd42e2e7",
+   "date": "2026-10-02",
+   "added": "2026-10-04",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "EU",
+   "source": "IPKat",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "유럽 법률블로그 IPKat, 올림프(Olymp)의 EU 색채조합 상표 항소 기각 사례 분석",
+   "summary": "IPKat이 독일 의류업체 올림프가 EU 색채조합 상표 관련 항소에서 패소한 사례를 분석했다. EU 법원이 색채조합 상표의 등록 가능성을 인정하면서도 색채의 공공 사용 가능성 유지 필요성 등으로 실제 등록 문턱이 여전히 높다는 점을 조명했다.",
+   "url": "http://ipkitten.blogspot.com/2026/10/more-colours-same-problem-olymp-loses.html",
+   "headline": "올림프, EU 색채조합 상표 항소심서 패소",
+   "detail": "유럽의 지식재산 전문 법률 블로그 IPKat이 2026년 10월, 독일 셔츠 브랜드 올림프(Olymp)가 EU에서 색채조합 상표 등록과 관련한 항소에서 패소한 사례를 분석하는 글을 게재했다. 'More colours, same problem'이라는 제목에서 보듯, 색채조합 상표의 등록 요건을 둘러싼 기존 쟁점이 이번 사건에서도 반복됐음을 시사한다.\n\n다만 해당 게시물의 원문 본문은 접근 제한(자동 트래픽 차단 페이지)으로 확인할 수 없어, 항소 기각의 구체적 사유나 판단 기관, 적용된 법리 등 세부 내용은 본문에서 파악되지 않는다. 확인 가능한 사실은 IPKat이 올림프의 EU 색채조합 상표 항소 기각 사례를 다룬 분석 글을 발행했다는 점이다.\n\n색채조합 상표는 식별력 입증 등에서 등록 장벽이 높은 분야로 알려져 있어, 이번 사례 분석은 관련 출원을 검토하는 기업과 실무자에게 참고가 될 수 있다. 상세 내용은 추후 원문 접근이 가능해지면 확인이 필요하다."
   },
   {
    "id": "4231db8a47c0",
@@ -203,6 +237,21 @@
    "title": "유럽 통합특허법원(UPC), 신임 법률판사 취임 선서식 개최",
    "summary": "유럽 통합특허법원이 새로 임명된 법률자격 판사의 취임 선서식을 진행했다고 발표했다. 이는 UPC의 재판 인력 확충의 일환으로 평가된다.",
    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUVNrSzFOT0JtS2ZzemQtNTVQa2dZNTlNNTB2VmhKUWhWbnFWRElpYng3ZWllVkRfb3Vzd2NvVmNaQS1xeVRpaUMwMmppZ3NpV1R1UjZGYWI0NUZ6Mmg0WFJLSHVuRHVHNVpSWTNXRElwOU9iZGd0UDNSN3EwNUh5YmVERjJfQlZ2aXg0Wjl1ckZJTy1nYUtUamYyck0?oc=5"
+  },
+  {
+   "id": "4455859dbb43",
+   "date": "2026-10-01",
+   "added": "2026-10-04",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "EU",
+   "source": "Kluwer Patent Blog",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "유럽 법률블로그 Kluwer, 2026년 EU 경쟁법 제102조 가이드라인의 착취적 남용 쟁점 분석",
+   "summary": "Kluwer Patent Blog가 2026년 EU기능조약 제102조 가이드라인 이후 착취적 남용 규율의 공백을 분석하는 글을 게재했다. 특허 라이선싱 등 지식재산 실무와 경쟁법 규율의 교차 지점에서 가이드라인 체계의 미비점을 지적했다.",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTTFKbnlmUkZLSGZjSm1oM3J3MVpmMjF2SmpUU0s2bk1kbEhsTGdJaTFuUzgyNlM2ZmhSVzhvYWF0YnhSOXMxSl9RekxTd0lkVjF4UkdQZlpPWkcxWW83V1ZPSGV3c1R6YS1TdEVWbkhOT2hPY3N5S2NsSkdrbE1mdmZ6SHhNWHdiSmEtQ1FIa2REUGVKX1JPa3VjN2RsT1RFNTl5Z3V0Tzc1YkNyUlhMcGFDb3Eyd3lwMXVLN3RyUktsRWtVcTJ6M1o3UHVoeVNqNGdYamJYX2ZkWTdMVnc?oc=5"
   },
   {
    "id": "2a24dca2a59e",
