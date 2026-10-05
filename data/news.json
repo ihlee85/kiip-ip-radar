@@ -2,6 +2,53 @@
  "updated": "2026-10-05",
  "items": [
   {
+   "id": "25ec13c8867d",
+   "date": "2026-10-05",
+   "added": "2026-10-05",
+   "reg": true,
+   "stage": "확정·공포",
+   "deadline": null,
+   "country": "KR",
+   "source": "지식재산처(언론보도)",
+   "topic": "심사·제도",
+   "ai": false,
+   "title": "한국 지식재산처, 하역용 협동로봇 등 메가프로젝트 분야 신규 상품명칭 공개",
+   "summary": "지식재산처가 하역용 협동로봇 등 메가프로젝트 분야의 신규 상품명칭 72개를 발굴해 공개했다. 신산업 분야 상표 출원 시 상품 분류의 신속한 적용을 지원하기 위한 조치다.",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1CLW0yNlNWZl9QZWRIUHppSHo3QUFjdDBvVk00RDMyeDZPYkFqeUlGNENwNm9OVngxaDBpaGUySkJLaW9Oa2lDRmlUb0xKdWd6LWx0M1VBazRkSkZnSWc5a3dweWRkUdIBZkFVX3lxTE1CLW0yNlNWZl9QZWRIUHppSHo3QUFjdDBvVk00RDMyeDZPYkFqeUlGNENwNm9OVngxaDBpaGUySkJLaW9Oa2lDRmlUb0xKdWd6LWx0M1VBazRkSkZnSWc5a3dweWRkUQ?oc=5"
+  },
+  {
+   "id": "d27108e9e312",
+   "date": "2026-10-05",
+   "added": "2026-10-05",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "JP",
+   "source": "일본 특허청(JPO)",
+   "topic": "정책·법제",
+   "ai": false,
+   "title": "일본 특허청(JPO), 공업소유권정보연수관(INPIT) 규슈본부 개소식 개최",
+   "summary": "일본 공업소유권정보·연수관(INPIT)의 규슈본부(INPIT-KYUSHU) 개소식이 개최되었다. 지역 기업에 대한 지식재산 정보 제공 및 지원 서비스 확대가 기대된다.",
+   "url": "https://www.jpo.go.jp/news/ugoki/202610/2026100501.html",
+   "headline": "일본 INPIT 규슈본부, 후쿠오카에 개소",
+   "detail": "일본 독립행정법인 공업소유권정보연수관(INPIT)이 2026년 10월 1일 후쿠오카시에 지역 거점 'INPIT-KYUSHU'를 신설했다. 이는 오사카시의 'INPIT-KANSAI'에 이은 전국 두 번째 지역 거점이다. 이튿날인 10월 2일에는 현지에서 공식 개소식이 열렸으며, 일본 특허청(JPO)이 이 소식을 10월 5일 공지했다.\n\n새로 문을 연 INPIT-KYUSHU는 규슈와 오키나와 지역의 지식재산 관련 지원을 전담하는 거점으로 기능하게 된다. 개소식에는 특허청의 가사이 장관이 참석해 축사를 전했다. 가사이 장관은 이 자리에서 지재경영 지원 네트워크를 소개하며, 규슈·오키나와 지역에서 해당 네트워크의 활동을 한층 가속하는 중핵 거점으로서 INPIT-KYUSHU가 중요한 역할을 맡을 것이라는 기대를 표명했다.\n\nINPIT-KYUSHU는 향후 지역 내 관계 기관들과의 네트워크를 넓혀 나갈 계획이다. 이를 통해 지식재산 경영을 바탕으로 한 지역 기업들의 '수익 창출 역량' 향상에 기여할 것으로 기대되고 있다. 수도권 외 지역에 거점을 확대함으로써 지방 기업에 대한 지재 지원 접근성이 높아지는 셈이다.\n\n일본 특허청 역시 INPIT와의 연계를 통해 지재경영 지원 활동을 지속적으로 추진하겠다는 방침을 밝혔다. 이번 개소는 간사이에 이어 지역 지재 지원 체계가 규슈·오키나와로 확장됐다는 점에서 의미가 있다. 앞으로 INPIT-KYUSHU가 지역 혁신 주체들과 협력해 어떤 성과를 낼지 주목된다."
+  },
+  {
+   "id": "f597d706a545",
+   "date": "2026-10-05",
+   "added": "2026-10-05",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "저작권 정책(문체부·위원회)",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "한국 언론, 생성형 AI 시대 지식재산권이 경쟁력 핵심이라는 전문가 인터뷰 게재",
+   "summary": "부산일보가 생성형 AI의 발달로 지식재산권이 기업·국가 경쟁력의 핵심 요소가 되고 있다는 전문가 인터뷰를 게재했다. AI 시대 지식재산 확보 전략의 중요성을 강조하는 내용이다.",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1POU5Yb2Z6a09fZW9RVExMZ1g4eWJJaHJrYXN4cjZqRWVDWjdPM2hDUDJyQ3NkWlY2VzQ0T0FPbkNock9SNjBiLUJzdGlUclRDN1RyRFJmV19aSXZXblZfWVprNFNaRGxBREJnVWtlQV9JSVg4?oc=5"
+  },
+  {
    "id": "508fb02936c7",
    "date": "2026-10-05",
    "added": "2026-10-05",
@@ -14,7 +61,9 @@
    "ai": false,
    "title": "중국, 「지식재산 보호 및 활용 '15차 5개년' 규획」 발표",
    "summary": "중국이 2026~2030년을 포괄하는 지식재산 보호 및 활용 분야 '십오오(十五五)' 규획을 공표했다. 향후 5년간 중국 지식재산 정책의 방향을 제시하는 국가급 계획 문건이다.",
-   "url": "https://www.iprchn.com/Index_NewsList.aspx?NewsClassId=ztx&ztxclass=731&ztcl=131"
+   "url": "https://www.iprchn.com/Index_NewsList.aspx?NewsClassId=ztx&ztxclass=731&ztcl=131",
+   "headline": "중국, 지재권 보호·활용 15차 5개년 규획 발표",
+   "detail": "중국이 「지식재산 보호 및 활용 '15차 5개년' 규획」을 발표했다는 소식이 중국 지식재산 전문 매체를 통해 전해졌다. 해당 소식은 중국지식재산권보(中国知识产权报)가 운영하는 중국지식재산자신망에 게재됐다. 이 규획은 향후 5년간 중국의 지식재산 보호와 활용 정책 방향을 담는 국가 차원의 계획에 해당한다.\n\n다만 제공된 기사 발췌문에는 규획의 구체적인 내용, 세부 목표나 수치, 시행 일정 등 본문 정보가 포함되어 있지 않다. 발췌문은 매체의 뉴스 목록 페이지로, '4중전회 정신의 기층 실천'을 주제로 한 다수의 지역 산업·과학기술 관련 기사 제목들이 나열되어 있을 뿐이다. 따라서 규획의 주요 조치나 적용 범위에 대해서는 확인된 사실을 기술하기 어렵다.\n\n중국은 그간 5개년 규획 체계를 통해 지식재산 분야의 중장기 정책을 수립·추진해 왔으며, 이번 발표도 그 연장선에 있는 것으로 보인다. 규획의 구체적인 내용과 추진 과제는 중국 국가지식산권국 등 관계 당국의 공식 발표문을 통해 추가 확인이 필요하다."
   },
   {
    "id": "642741c14271",
@@ -64,6 +113,21 @@
    "url": "https://ised-isde.canada.ca/site/canadian-intellectual-property-office/en/access-tmob-rulings-confidentiality-orders-and-costs-awards",
    "headline": "캐나다, 상표이의 비밀유지·비용재정 결정 공개 페이지 신설",
    "detail": "캐나다 지식재산청(CIPO)이 2026년 10월 1일, 상표이의신청위원회(TMOB)의 비밀유지명령 및 비용재정 관련 신청과 결정을 열람할 수 있는 새 웹페이지를 공개했다. 이는 2025년 4월 발효된 법령 개정으로 상표등록관이 TMOB 절차에서 비밀유지명령 요청과 비용재정 요청에 대해 판단할 수 있는 새로운 권한을 부여받은 데 따른 후속 조치다.\n\n새 페이지에는 2025년 4월 1일 이후 해당 요청이 제기된 사건들이 목록으로 정리돼 있다. 비밀유지명령 요청과 비용재정 요청이 각각 별도의 표로 구분돼 있으며, 그에 따른 결정 내용도 함께 제공돼 당사자들이 관련 사건을 식별하고 추적하는 데 도움을 준다. 이용자는 '항목 필터' 검색창으로 표를 검색할 수 있고, 표시된 사건번호를 활용해 CIPO의 상표문서검색서비스(TDRS)에서 관련 문서를 찾아볼 수 있다.\n\n해당 페이지는 분기별로 업데이트될 예정이며, 추가 정보가 필요한 경우 CIPO 고객서비스센터를 통해 문의할 수 있다. 이번 조치는 2025년 4월 제도 개편으로 도입된 새 권한의 운용 현황을 외부에서 확인할 수 있게 한 것이다.\n\n이로써 상표이의 절차의 당사자와 대리인들은 비밀유지명령·비용재정 제도의 실제 적용 사례와 결정 동향을 정기적으로 파악할 수 있게 됐다. 절차 투명성이 높아지고 유사 사안에서 참고할 수 있는 선례 정보에 대한 접근성도 개선될 것으로 보인다."
+  },
+  {
+   "id": "39e6f96f440a",
+   "date": "2026-10-04",
+   "added": "2026-10-05",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "특허법원·심판 동향",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "한국 법률블로그, 헤어밴드 디자인 무효 사건의 창작용이성 판단 기준 분석",
+   "summary": "한국 법률블로그가 헤어밴드 디자인 무효 사건을 소재로 디자인보호법상 창작용이성 판단 기준을 분석했다. 공지 디자인의 결합·변형에 따른 창작 수준 평가 방법을 다루고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9vdlFLVXBMcld1RmNadHlkdkh0NEJUMHJzQTJQVUZmclZkNXhCNWtUcFI2ZVdUTmRRbmF1T3pNME1QVnpWWjJQUG9lRmtTeUFGMWRwZQ?oc=5"
   },
   {
    "id": "4d7bd8820c76",
@@ -145,6 +209,36 @@
    "detail": "IPR Daily가 주최한 'GIPC 2026 글로벌 지식재산 생태 대회'가 2026년 7월 24~25일 베이징에서 열렸고, 전직 특허심사관 출신인 완상톈친 로펌의 고급 특허고문 텅무(滕牧)가 2026년 1월 1일 시행된 신판 「특허심사지침」의 AI 특허 심사 기준을 해설하는 강연을 했다. AI 기술 확산으로 관련 특허 출원이 급증하자 중국 국가지식재산권국(CNIPA)이 심사 기준을 정비한 것이 배경이다. 개정안은 2025년 4월 30일 의견수렴 초안 공개를 거쳐 같은 해 11월 10일 제84호 국령으로 확정됐다.\n\n이번 개정에서 AI 분야는 네 가지 축으로 정비됐다. 첫째, 관련 장(章)의 제목에 '인공지능·빅데이터'를 명시해 심사 지침상 AI의 중심적 지위를 분명히 했다. 둘째, 특허법 제5조 1항에 근거한 윤리 심사 기준을 신설해 데이터 수집·라벨 관리·추천 의사결정 등이 법률이나 공서양속에 반하면 특허를 받을 수 없도록 했다. 셋째, 창조성 판단 기준을 명확히 하는 심사 사례 2건을 추가했고, 넷째, AI 모델의 '블랙박스' 특성을 고려해 명세서에 모델 구조·훈련 단계·파라미터 등을 명확히 기재하도록 하는 실시가능성 요건을 강화했다.\n\n지침에 신설된 사례를 보면, 상가에서 고객 얼굴을 인식해 매트리스 판매에 활용하는 시스템은 개인정보보호법 위반 소지로, 보행자의 성별·연령을 기준으로 충돌 대상을 선택하는 자율주행 의사결정 모델은 생명권 평등에 반한다는 이유로 각각 특허 불허 사례로 제시됐다. 창조성 관련해서는 과일 개수 식별 기술을 선박 수 식별에 단순 전용한 사례는 실질적 개선이 없어 창조성이 부정된 반면, 특징 추출과 신경망 구조를 대상에 맞게 실질적으로 변경한 폐철강 등급분류 모델은 창조성이 인정됐다.\n\n텅무는 AI 특허 명세서는 모델 훈련 단계의 기술적 문제를 중심으로 훈련 절차와 파라미터 최적화 논리를 완전하게 기재해야 한다고 강조했다. 또한 AI 보조 작성 도구 활용 시 'AI 환각'과 정보 유출 위험에 유의하고, 기업이 'AI 보조+인적 개입'의 협업 체계를 구축할 것을 권고했다. 신규칙이 이미 시행된 만큼, 심사 기준을 선제적으로 파악해 무효 심판에도 견딜 수 있는 고가치 특허를 만드는 것이 과제로 제시됐다."
   },
   {
+   "id": "f3d81f8cb73f",
+   "date": "2026-10-03",
+   "added": "2026-10-05",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "US",
+   "source": "IPWatchdog",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "미국 IPWatchdog, 제3순회항소법원 AI 공정이용 판결 공개 등 주간 지식재산 동향 보도",
+   "summary": "미국 제3순회항소법원이 AI 공정이용 관련 판결문을 공개했으며, 미국이 WIPO 글로벌혁신지수(GII) 2026에서 3위를 유지했다. 애플은 햅틱 기술 특허침해로 57억 달러 배상 평결을 받았다.",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNVFdQS29sNEctMk9WdERDOFNWTUczRFBZeWFYZFVsSHV3RmljU3JsVFRCaVNTRGl5cTNoVFQySzJDa2c2aEN1UXpHYnFHTnJOVEZiZUFRdXM3Nlk1YnU5UG5MYzVOTkl1bEpDa1NFbUJvOG5hY3I2UHE5TEp0RFBJWFZORHdid1FKUzFVZTk1YzVXcEtRQ25lV2drUTQ4UjRwUUJMYmZ4WmF5WWZsWERlQlNwN09BaS1XX0JXalhMdExhVGZldVA1RHJFeE5keVNKWFdhWklaUy11MC1wTnFlbg?oc=5"
+  },
+  {
+   "id": "6d67637e4d93",
+   "date": "2026-10-03",
+   "added": "2026-10-05",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "INT",
+   "source": "세계지식재산기구(WIPO)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "세계지식재산기구(WIPO), 비디오게임과 지식재산의 미래 전망 보고서 'PATHFINDERS' 공개",
+   "summary": "WIPO가 비디오게임 산업과 지식재산의 미래를 전망하는 'WIPO PATHFINDERS' 보고서를 공개했다. 게임 콘텐츠 분야의 지식재산 쟁점과 향후 과제를 조망하는 내용이다.",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMUVGdW9ZbWxLMHh2eE5xN2FZMWI4bV9oczMtbVpua0dHNENLamRnRTdrZEVhUTVXV3J4OFMzQ2RXcFh5UEM1dVRKTW9RT0c1QTBJMDUxVldIS3RROHE1Uk9DYUVtaHdoTnJiZDJ4MlVXM3RIZHU0dE9MajlIY1pwWHRpZmxEckxiTUJlU09OYjd5amti?oc=5"
+  },
+  {
    "id": "db591b7982e4",
    "date": "2026-10-03",
    "added": "2026-10-03",
@@ -207,6 +301,21 @@
    "url": "https://www.epo.org/en/news-events/news/have-your-say-user-satisfaction-surveys-2026-2027",
    "headline": "EPO, 2026~27년 이용자 만족도 조사 참여 요청",
    "detail": "유럽특허청(EPO)이 2026~2027년 주기의 이용자 만족도 조사를 시작하며 이용자들의 참여를 요청했다. EPO는 2년마다 유럽 특허 시스템 이용자들로부터 주요 서비스에 대한 피드백을 수집하고 있으며, 이는 ISO 9001 인증 품질관리 시스템의 일환이다. 수집된 의견은 특허 부여 절차와 이용자 지원 전반의 개선 방향을 설정하는 데 활용된다.\n\n이번 주기에는 총 7개 분야의 조사가 진행된다. 대상 분야는 출원, 조사(서치), 심사·최종 조치·공개, 이의신청, 고객 서비스, 주요 고객 관리, EPO 웹사이트 이용 경험이다. 이를 통해 특허 부여 절차의 각 단계와 이용자 지원, 온라인 서비스에 대한 이용자 경험을 종합적으로 파악하게 된다.\n\n조사는 외부 기관인 BERENT Deutschland GmbH가 수행하며 모든 응답은 익명으로 처리된다. 설문은 참여자의 시간을 존중하면서도 집중적이고 포괄적으로 설계됐다고 EPO는 설명했다. 익명 설문을 통한 정량적 분석은 이용자 단체와의 회의 등으로 수집되는 정성적 피드백을 보완해, 서비스별·시기별로 일관된 성과 평가를 가능하게 한다.\n\n조사 결과와 피드백에 대한 후속 조치 내용은 2027년 EPO 웹사이트에 공개될 예정이다. 직전 2024/2025년 조사에서는 EPO 서비스에 대한 높은 만족도와 함께 추가 개선이 필요한 영역이 확인된 바 있다. 이번 조사는 이용자 의견이 EPO 서비스 개선에 지속적으로 반영되는 통로가 될 전망이다."
+  },
+  {
+   "id": "771e30dfa9b0",
+   "date": "2026-10-02",
+   "added": "2026-10-05",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "EU",
+   "source": "Life Sciences IP Review",
+   "topic": "AI·IP",
+   "ai": true,
+   "title": "영국 Life Sciences IP Review, 사내 IP팀의 AI 활용 현황 분석 게재",
+   "summary": "Life Sciences IP Review가 기업 사내 지식재산 조직의 AI 도구 활용 현황을 분석하는 기사를 게재했다. 사내 IP팀들이 AI의 최적 활용 영역을 여전히 학습 중이라는 평가를 담고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMUFWTU1sZ1Y0MUQ0b0tieW1FTTcxRjNRSFpSeHlIYlgwVnRnSUNjTkFRQTVWd0M0XzdvZkF3WXY5VjU4dVRKRVdGNzJyc3FQQllxM1pfb2xkMTdkczlLdHNGQ0xZcEJNcFFQZDR3alc2RngtcFBvaFkxbDlYTGttdEQ4NXg1SVRCS1RDWndtRkNnOU5qS2VlNlloWS00a3JORVRzLWRJSQ?oc=5"
   },
   {
    "id": "f76866d4f0b5",
