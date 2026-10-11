@@ -461,10 +461,12 @@ def resolve_gnews(url):
     try:
         from googlenewsdecoder import gnewsdecoder
         r = gnewsdecoder(url, interval=1)
-        if r.get("status") and r.get("decoded_url"):
+        # 0.1.x는 {"status":True,...}, 0.2.x(2026-09-20~)는 {"success":True,...} 반환
+        if (r.get("status") or r.get("success")) and r.get("decoded_url"):
             return r["decoded_url"]
-    except Exception:
-        pass
+        print(f"[warn] 구글뉴스 디코드 실패: {str(r)[:120]}")
+    except Exception as ex:
+        print(f"[warn] 구글뉴스 디코드 예외: {type(ex).__name__}: {str(ex)[:120]}")
     return url
 
 def _fetch_body(url, limit=5000):
@@ -495,7 +497,8 @@ def enrich_details(items):
         body = _fetch_body(it["url"])
         if body:
             bodies[i] = body
-    print(f"상세요약: 구글뉴스 원문복원 {resolved}건, 본문 확보 {len(bodies)}/{len(items)}건")
+    unresolved = sum(1 for it in items if "news.google.com" in it["url"])
+    print(f"상세요약: 구글뉴스 원문복원 {resolved}건, 미복원 {unresolved}건, 본문 확보 {len(bodies)}/{len(items)}건")
     if not bodies:
         return items
     client = Anthropic()
@@ -599,7 +602,7 @@ def main():
     backlog = [i for i in archive["items"]
                if not i.get("detail")
                or i["detail"].count("\n\n") < 3
-               or len(i["detail"]) < 500][:12]
+               or len(i["detail"]) < 500][:30]  # 잔량 소진 후 12로 원복할 것
     if backlog:
         print(f"소급 대상(상세요약 없는 기존 기사): {len(backlog)}건 함께 처리")
     enrich_details(new_items + backlog)
