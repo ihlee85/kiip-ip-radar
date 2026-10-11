@@ -2,6 +2,21 @@
  "updated": "2026-10-11",
  "items": [
   {
+   "id": "edf65e31061a",
+   "date": "2026-10-11",
+   "added": "2026-10-11",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "KR",
+   "source": "지식재산처(언론보도)",
+   "topic": "보호·집행",
+   "ai": true,
+   "title": "한국 지식재산처, 연말까지 온라인 위조상품 민·관 합동 모니터링 실시",
+   "summary": "지식재산처가 상표권자 및 온라인 플랫폼사와 협력해 연말까지 온라인 위조상품 유통에 대한 민·관 합동 모니터링을 전개한다. AI 기술을 활용해 온라인상 위조상품을 집중 감시할 계획이다.",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VcHdNc3hoTUtrUWNtQk1UN1RRQWFwakgzMjFUNkJVa2Nta3NSQkJYQUlLVEx4MEx2LWU4RVJ2MWJqbWlYUWI1dTVpVURPTXNud0FmUzM3bmJTLUpVY292WdIBYEFVX3lxTE1VcHdNc3hoTUtrUWNtQk1UN1RRQWFwakgzMjFUNkJVa2Nta3NSQkJYQUlLVEx4MEx2LWU4RVJ2MWJqbWlYUWI1dTVpVURPTXNud0FmUzM3bmJTLUpVY292WQ?oc=5"
+  },
+  {
    "id": "8b51d960dac5",
    "date": "2026-10-11",
    "added": "2026-10-11",
@@ -15,8 +30,8 @@
    "title": "유럽 법률블로그 IPKat, 3D 프린팅 예비부품 관련 법령 초안의 지식재산·지속가능성 쟁점 분석 게재",
    "summary": "IPKat가 3D 프린팅을 활용한 예비부품 생산과 관련해 최근 공개된 법령 초안의 지식재산 쟁점을 분석하는 기고문을 게재했다. 수리권·지속가능성 정책과 특허·디자인 보호 간의 긴장 관계가 다뤄졌다.",
    "url": "http://ipkitten.blogspot.com/2026/10/guest-post-3d-printed-spare-parts-ip.html",
-   "headline": "IPKat, 3D 프린팅 예비부품 법령 초안 분석",
-   "detail": "유럽의 지식재산 전문 법률 블로그 IPKat이 3D 프린팅으로 제작되는 예비부품(스페어 파트)과 관련한 법령 초안의 지식재산 및 지속가능성 쟁점을 분석한 기고문(게스트 포스트)을 게재했다. 해당 글은 2026년 10월에 공개되었다.\n\n제목에 비추어 볼 때 이 기고문은 예비부품을 3D 프린팅으로 생산·공급하는 과정에서 발생할 수 있는 지식재산권 문제와, 부품 재활용·수리 촉진 등 지속가능성 측면의 정책 목표가 법령 초안에서 어떻게 다뤄지는지를 함께 검토하는 내용으로 보인다.\n\n다만 기사 원문은 접근 제한(보안문자 확인 페이지)으로 인해 분석 대상이 된 법령 초안의 명칭과 관할, 구체적인 쟁점 사항, 기고자의 견해 등 세부 내용은 본문에서 확인되지 않는다. 확인 가능한 정보는 기사 제목과 게재 매체, 게재 시점에 한정된다."
+   "headline": "IPKat, 3D 프린팅 부품 법령 초안 IP 쟁점 분석",
+   "detail": "유럽의 지식재산 전문 법률블로그 IPKat이 3D 프린팅 예비부품(스페어 파츠)과 관련한 법령 초안을 다루는 기고문을 게재했다. 해당 글은 3D 프린팅으로 제작되는 예비부품을 둘러싼 지식재산권 문제와 지속가능성 쟁점을 함께 분석하는 내용으로 소개됐다. 게재 시점은 2026년 10월로 확인된다.\n\n다만 수집 과정에서 원문 페이지가 자동 트래픽 감지에 따른 보안문자 확인 화면으로 대체되어 기사 본문 내용은 확인할 수 없었다. 이에 따라 법령 초안의 구체적 조항, 적용 범위, 기고자의 분석 내용 등 세부 사항은 파악되지 않는다.\n\n제목을 통해 확인되는 범위에서, 이 글은 수리권·순환경제 등 지속가능성 정책 흐름과 디자인·특허 등 지식재산 보호가 교차하는 영역을 다루는 것으로 보이며, 구체적 내용은 원문 접속이 가능해진 뒤 확인이 필요하다."
   },
   {
    "id": "43286ab0ffda",
@@ -188,6 +203,51 @@
    "detail": "안토니우 캄피노스 유럽특허청(EPO) 청장이 2026년 10월 2일 마드리드에서 열린 이베로아메리카 산업재산권 프로그램(IBEPI) 고위급 회의에서 기조연설을 했다. 이 회의는 스페인의 IBEPI 임시 의장국 수행과 제30차 이베로아메리카 정상회의를 계기로 스페인 특허상표청(SPTO)이 주최했다. 회의에는 이베로아메리카 각국 지식재산청, 국제기구, 공공기관, 혁신 금융 관계자들이 참석해 산업재산권과 무형자산을 담보로 한 자금조달 방안을 논의했다.\n\n캄피노스 청장은 특허 등 지식재산권이 혁신적인 중소기업, 스타트업, 대학, 연구기관이 지식을 인정받는 가치로 전환하고 자금 접근성을 높이는 데 기여할 수 있다고 강조했다. 특히 은행과 투자자가 무형자산을 금융 전략에 포함시킬 신뢰를 갖기 위해서는 고품질 특허, 법적 확실성, 신뢰할 수 있는 특허정보와 가치평가 체계가 필수적이라고 지적했다. 그는 EPO가 고품질 특허 부여, 방대한 선행기술 자료, 특허 인텔리전스 도구, 경제 분석 등을 통해 이 분야에 기여하고 있다고 설명했다.\n\n캄피노스 청장은 라틴아메리카·카리브 지역의 지식재산 활용에 관한 EPO-ECLAC/CEPAL 공동 연구와 최근 산티아고 회의의 결론을 기술이전, 산학협력, 현지 혁신 생태계 강화 등 실질적 후속조치의 기반으로 언급했다. 이번 회의는 EPO와 IBEPI 회원국 지식재산청 간 협력을 강화하는 계기가 됐으며, 그는 특허에 대한 신뢰 구축, 기관 역량 강화, 특허정보 접근성 개선, 금융기관·투자자 참여 확대를 위한 지속적 노력을 촉구했다. 앙헬 알레도 로페스 EPO 최고운영책임자도 주요 지식재산 기구의 무형자산 담보 금융 경험을 다룬 라운드테이블에 참여했다.\n\n이번 행사는 특허를 단순한 보호 수단을 넘어 금융 자산으로 활용하려는 국제적 논의가 확산되고 있음을 보여준다. EPO는 IBEPI와의 협력을 바탕으로 IP 담보 금융을 위한 실질적 해법 개발을 이어갈 방침이다."
   },
   {
+   "id": "b29f4f04c06d",
+   "date": "2026-10-09",
+   "added": "2026-10-11",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "INT",
+   "source": "세계지식재산기구(WIPO)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "세계지식재산기구(WIPO), 지식재산 분쟁 관련 사법 구조 및 절차 규칙 비교 보고서 발간",
+   "summary": "WIPO가 각국의 지식재산 분쟁 관련 사법 체계와 소송 절차 규칙을 비교 분석한 보고서를 공개했다. 국가별 IP 전문법원 구조와 절차 운영 방식에 대한 비교 자료를 제공한다.",
+   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOWHFVb2V0dzRzUzdzOS1zMW9Zc2pjNzNrbHY4REY1OTdjS1VZR2VzcERQVkVQd0FoYXF6QktPRWRTT3p0LTdUcGNSY2k5NGpKbnA2RTlCNFpkR3hpQWd3MTA4UUFBTURFdGxKSmtVQjFDY0lZS3hRemVCOXY2WGVqY20zWjdPTFoyUmwyRHNwX1psMmJMdmp0UUpuSmxWUDRzcUxpb2taUk9iUG1TNGJLVEg1dHJBd0FLUzBSRDBVN2o3UVJrMFlRNlRaVGdDckNNQzlOMVoxM2lGc2w4d19nTXZ5ZFRZQQ?oc=5"
+  },
+  {
+   "id": "d1cd15e203fa",
+   "date": "2026-10-09",
+   "added": "2026-10-11",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "EU",
+   "source": "통합특허법원(UPC) 동향",
+   "topic": "분쟁·소송",
+   "ai": false,
+   "title": "유럽 통합특허법원(UPC), 2026년 표준필수특허 소송에서 비디오 코덱 분쟁 비중 확대",
+   "summary": "2026년 들어 유럽 통합특허법원(UPC)에 제기된 표준필수특허(SEP) 소송에서 비디오 코덱 관련 분쟁이 다수를 차지하고 있는 것으로 분석됐다. 코덱 기술을 둘러싼 특허권자와 실시기업 간 소송이 UPC의 주요 SEP 사건 흐름을 주도하고 있다.",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaGtSUzA4bVZkLTRfNWMxXzJkOGtMb3VNeWV2dG96VVgwOVE0X25sM0x1V2htMzRaVmhPOHJXOHBkeFgzYmNhMmEtS0doblZ0TWtlY1U2dk9OUlV3UUtGQ0M3b2lQVXdKbjEzZEVTeWNCdEo3VWEtdHdPNnV3ZUVwZTh3d1JITFBvM2tYMkRPQ25LUQ?oc=5"
+  },
+  {
+   "id": "a7b51f1bceda",
+   "date": "2026-10-09",
+   "added": "2026-10-11",
+   "reg": false,
+   "stage": null,
+   "deadline": null,
+   "country": "EU",
+   "source": "독일 특허상표청(DPMA)",
+   "topic": "통계·보고서",
+   "ai": false,
+   "title": "독일 특허상표청(DPMA), 2026년 노벨 생리의학상 관련 특허 기술 소개",
+   "summary": "독일 특허상표청이 2026년 노벨 생리의학상 수상 연구와 관련된 특허 기술을 조명하는 자료를 게재했다. 수상 분야 연구성과와 지식재산의 연관성을 소개하는 내용이다.",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQR21YdE5wNmlXTWxnZjRFaTVEckhSS0R1R1dzSnNWbjBYaWFNR2h0VVlkSXg2SzVOc3N5RGxqZWkwMDd4MWJwRVFFVzZCMTIxeTdybGpKMHlhTXViOVpXWWp5LVd1MG5aeUxUNDVOeTR1Y1Qzb2R6eEFablZFYVpaQ0pmM1pUTzRINjJQdml5LVoyRnhLMWpadlNJSTJlcUM0WXI1N2cwX3pDaE4x?oc=5"
+  },
+  {
    "id": "ada9fc649249",
    "date": "2026-10-09",
    "added": "2026-10-11",
@@ -201,8 +261,8 @@
    "title": "독일 연방대법원, 추상적 색채상표의 사용에 의한 식별력 인정에 엄격한 기준 제시",
    "summary": "독일 연방대법원이 추상적 색채상표가 사용을 통해 식별력을 취득했는지 판단할 때 높은 입증 기준을 요구하는 판결을 내렸다. 전통적 증거방법만으로는 색채상표 보호 획득이 어렵다는 점이 재확인됐다.",
    "url": "http://ipkitten.blogspot.com/2026/10/colour-me-orange-german-supreme-court.html",
-   "headline": "독일 연방대법원, 색채상표 식별력에 엄격 기준",
-   "detail": "독일 연방대법원이 추상적 색채상표의 '사용에 의한 식별력' 인정과 관련해 엄격한 기준을 제시했다는 소식이 유럽 지식재산 전문 블로그 IPKat을 통해 전해졌다. 해당 게시물은 2026년 10월에 공개된 것으로, 오렌지색 색채상표를 둘러싼 판단을 다루고 있는 것으로 보인다.\n\n추상적 색채상표는 특정 도형이나 문자 없이 색 자체를 상표로 보호받으려는 것으로, 일반적으로 본래적 식별력이 인정되기 어려워 사용을 통해 수요자에게 출처표시로 인식되었음을 입증해야 한다. 이번 판결은 그러한 사용에 의한 식별력 취득의 인정 요건을 엄격하게 본 사례로 소개되었다.\n\n다만 해당 기사 원문은 접근 제한(보안문자 확인 페이지)으로 인해 구체적인 사건 당사자, 쟁점 색채의 지정상품, 법원이 제시한 세부 판단 기준 등 상세 내용은 본문에서 확인되지 않는다. 확인 가능한 정보는 기사 제목과 게재 매체, 게재 시점에 한정된다."
+   "headline": "독일 대법원, 색채상표 식별력에 엄격 기준",
+   "detail": "독일 연방대법원(BGH)이 추상적 색채상표가 사용에 의한 식별력(사용에 의한 2차적 의미 취득)을 인정받기 위한 요건에 관해 엄격한 기준을 제시했다는 소식이 유럽 지식재산 전문 블로그 IPKat에 게재됐다. 기사 제목에 따르면 오렌지색 색채상표가 쟁점이 된 사안으로 보이며, 게재 시점은 2026년 10월이다.\n\n그러나 수집 당시 원문 페이지가 비정상 트래픽 감지로 인한 보안문자 확인 화면으로 표시되어 기사 본문은 확인할 수 없었다. 이 때문에 사건의 당사자, 구체적 판시 내용, 대법원이 요구한 입증 기준의 세부 사항 등은 파악되지 않는다.\n\n제목에서 확인되는 사실에 한정하면, 이번 판결은 특정 색채 자체를 상표로 보호받고자 하는 출원인·권리자에게 사용에 의한 식별력 입증 부담이 높아질 수 있음을 시사하는 사안으로, 구체적 판결 내용은 원문 접근이 가능해진 뒤 추가 확인이 필요하다."
   },
   {
    "id": "020af964d320",
