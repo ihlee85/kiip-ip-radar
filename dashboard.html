@@ -59,6 +59,11 @@ section{background:var(--card);border:1px solid var(--line);border-radius:12px;p
   text-shadow:0 1px 2px rgba(0,0,0,.18)}
 .fitem:hover .bub{transform:scale(1.08)}
 .fitem .dt{font-size:12px;color:var(--sub);margin-top:8px;font-weight:600}
+.fitem .subs{margin-top:7px;display:flex;flex-direction:column;gap:2px;min-height:34px}
+.fitem .sub{font-size:11.5px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:1px 4px;border-radius:6px}
+.fitem .sub b{font-weight:700;color:var(--kiip-dark);font-variant-numeric:tabular-nums}
+.fitem .sub:hover{background:#EAF2FC;color:var(--kiip-dark)}
+.fitem .kwlab:hover{color:var(--kiip)}
 .fline{position:absolute;top:calc(50% - 8px);left:0;right:0;border-top:2px dashed #cdd5e0;z-index:0}
 .duo{display:grid;grid-template-columns:1.6fr 1fr;gap:18px}
 @media(max-width:820px){.duo{grid-template-columns:1fr}}
@@ -121,7 +126,7 @@ footer .wrap{padding:16px 20px;line-height:1.7}
 <section>
   <div class="stitle">이슈 흐름</div>
   <div class="flow" id="flow"><div class="fline"></div></div>
-  <p class="srcnote"><b>산출방법</b> — 최근 6일 각 날짜의 수집 후보 기사(선별 전)에서 가장 많이 언급된 키워드입니다. 원의 크기와 숫자는 그날의 언급 건수이며, 원을 누르면 관련 뉴스가 열립니다.<span class="basis" id="flowBasis">—</span></p>
+  <p class="srcnote"><b>산출방법</b> — 최근 6일 각 날짜의 수집 후보 기사(선별 전)에서 가장 많이 언급된 상위 3개 키워드입니다. 원의 크기와 숫자는 1위 키워드의 언급 건수이고 원 아래에 2·3위 키워드가 표시되며, 키워드나 원을 누르면 해당 키워드의 관련 뉴스가 열립니다.<span class="basis" id="flowBasis">—</span></p>
 </section>
 
 <!-- 3+4. 언급량 추이 / 연관어 분석 -->
@@ -369,16 +374,16 @@ function renderFlow(){
   if (APP.collect){
     const es = APP.stats.slice().sort((a,b)=>a.date.localeCompare(b.date)).slice(-6);
     APP.flows = es.map(e => {
-      const top = Object.entries(e.byKeyword||{}).sort((a,b)=>b[1]-a[1])[0];
-      return { key: e.date, kw: top ? top[0] : '—', cnt: top ? top[1] : 0 };
+      const tops = Object.entries(e.byKeyword||{}).sort((a,b)=>b[1]-a[1]).slice(0,3);
+      return { key: e.date, tops, kw: tops[0] ? tops[0][0] : '—', cnt: tops[0] ? tops[0][1] : 0 };
     });
   } else {
     for (let d = 0; APP.flows.length < 6 && d < 20; d++){
       const key = dayKey(new Date(Date.now() - d*DAY));
       const list = APP.dated.filter(x => dayKey(x.d) === key);
       if (list.length){
-        const top = Object.entries(countKw(list)).sort((a,b)=>b[1]-a[1])[0];
-        APP.flows.unshift({ key, kw: top[0], cnt: top[1] });
+        const tops = Object.entries(countKw(list)).sort((a,b)=>b[1]-a[1]).slice(0,3);
+        APP.flows.unshift({ key, tops, kw: tops[0][0], cnt: tops[0][1] });
       }
     }
   }
@@ -386,9 +391,12 @@ function renderFlow(){
   const mx = Math.max(1, ...APP.flows.map(f=>f.cnt));
   $('flow').innerHTML = '<div class="fline"></div>' + APP.flows.map((f,i) => {
     const sz = 54 + Math.round(34 * f.cnt / mx);
+    const subs = (f.tops || []).slice(1).map(([k,c],j) =>
+      '<div class="sub" data-k="' + (j+1) + '" title="' + esc(k) + ' · 언급 ' + c + '건">' + esc(k) + ' <b>' + c + '</b></div>').join('');
     return '<div class="fitem" data-i="' + i + '">' +
-      '<div class="kwlab">' + esc(f.kw) + '</div>' +
-      '<div class="bub" style="width:' + sz + 'px;height:' + sz + 'px;background:' + BUBBLE[i%6] + '">' + f.cnt + '</div>' +
+      '<div class="kwlab" data-k="0">' + esc(f.kw) + '</div>' +
+      '<div class="bub" data-k="0" style="width:' + sz + 'px;height:' + sz + 'px;background:' + BUBBLE[i%6] + '">' + f.cnt + '</div>' +
+      '<div class="subs">' + subs + '</div>' +
       '<div class="dt">' + f.key.slice(2).replace(/-/g,'/') + '</div></div>';
   }).join('');
 }
@@ -522,9 +530,13 @@ function bindEvents(){
   });
   $('flow').addEventListener('click', e => {
     const f = e.target.closest('.fitem'); if (!f) return;
-    const fl = APP.flows[+f.dataset.i];
-    openPop(fl.key.slice(5).replace('-','/') + ' 『' + fl.kw + '』 관련 뉴스',
-      articlesWith(fl.kw, APP.dated.filter(x => dayKey(x.d) === fl.key)));
+    const fl = APP.flows[+f.dataset.i]; if (!fl) return;
+    const kEl = e.target.closest('[data-k]');
+    const ki = kEl ? +kEl.dataset.k : 0;
+    const kw = (fl.tops && fl.tops[ki]) ? fl.tops[ki][0] : fl.kw;
+    if (kw === '—') return;
+    openPop(fl.key.slice(5).replace('-','/') + ' 『' + kw + '』 관련 뉴스',
+      articlesWith(kw, APP.dated.filter(x => dayKey(x.d) === fl.key)));
   });
   $('trend').addEventListener('click', e => {
     const c = e.target.closest('circle[data-i]'); if (!c) return;
